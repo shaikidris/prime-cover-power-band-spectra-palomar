@@ -2,7 +2,7 @@
 version: "v0.4"
 
 project:
-  name: "Prescribed and almost-all power-band spectra of prime-cover graphs"
+  name: "Density-one prescribed-rank spectra of prime-cover graphs"
   description: >-
     For finite prime-cover graphs, the ordered adjacency eigenvalues at
     prescribed arithmetic ranks obey density-one squared-error estimates in
@@ -22,11 +22,18 @@ classification:
   msc2020: [05C50, 11N05]
 
 sources:
-  - title: "Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs"
+  - id: "https://papers.ssrn.com/abstract=7441718"
+    title: "Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs"
     authors: ["Idris Ali Shaik"]
     type: "paper"
     relationship: "formalizes"
     note: >-
+      Paper II, SSRN abstract 7441718, submitted by Idris Ali Shaik on
+      10 September 2026. The author dashboard reports PRELIMINARY_UPLOAD;
+      the public abstract page is not yet available. This reference identifies
+      the submitted paper, not SSRN approval, peer review or a verified DOI.
+      Phase 1 formalizes Theorem 1.3 and Corollary 1.4 only; the sharp
+      Theorem 1.1 and Corollary 1.2 remain open Lean targets.
       Paper II mathematical source at prime-orthant-geometry commit
       df32cafb021c0ed90f14f045858525882d50ab9e, file
       draft/prescribed-eigenvalues-in-prime-cover-power-bands.md, SHA-256
@@ -66,12 +73,15 @@ automation:
 
 status:
   scope: >-
-    D31 source snapshot with the two selected almost-all results proved and two
+    Phase 1 D31 entry: Theorem 1.3 and Corollary 1.4 are the two selected
+    almost-all results proved, with two
     sharp terminal-band obligations open on the preserved development branch.
     This D31 submission tree contains no Solution admissions.
-    P0--P4 local source-freeze checks are complete. Public-source, protected
-    replay and handoff receipts are maintained on the separate readiness audit
-    branch, so recording them does not change the verified source commit.
+    The unchanged proof source passed local and private protected checks
+    before this SSRN-reference metadata update. Exact-source verification,
+    public-access and handoff receipts are maintained on the separate
+    readiness audit branch; only receipts matching the intended intake
+    commit establish its final readiness.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: [propext, Classical.choice, Quot.sound]
@@ -88,7 +98,7 @@ status:
       comparator_config: "almost-all-comparator.json"
 
 review:
-  status: "agent-reviewed local source freeze; external verification receipts tracked separately"
+  status: "phase 1 metadata aligned with SSRN submission; exact verification receipts tracked separately"
   notes: >-
     R1--R8 passed the local D31 checklist. Both public almost-all roots have
     standard-axiom proofs. Terminal and global conclusions use the same error
@@ -115,7 +125,10 @@ review:
     standard axioms; all 15 controls pass. The strict snapshot has zero errors
     and zero unreachable modules. The 93 inherited semantic-lint findings and
     one inherited Unicode-style finding are disclosed without a clean-lint claim.
-    Current Linux preflight/full Comparator/NanoDa replay, rendered Challenge,
+    The prior source checkpoint passed private Linux full Comparator replay
+    with both Lean and NanoDa kernel acceptance, and its Challenge render
+    passed reader inspection. This SSRN-reference update changes metadata
+    and documentation only; new exact-source preflight/full/render receipts,
     public source access and the final immutable handoff are separate gates.
     The selected intake commit must match clean HEAD and the pushed canonical
     branch. No separate human line-by-line review, established novelty,

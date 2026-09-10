@@ -15,7 +15,13 @@ account is the **squared-eigenvalue error**
 E(a,X) = |lambda_{j_S(a)}(A_{S,X})^2 - pi_S(X/a) - M_{S,a,X}|.
 ```
 
-## The D31 entry
+## Phase 1: the two-result D31 entry
+
+This entry corresponds to **Theorem 1.3 and Corollary 1.4** of
+[*Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs*](https://papers.ssrn.com/abstract=7441718).
+SSRN abstract 7441718 was submitted on 10 September 2026. The author dashboard
+reports `PRELIMINARY_UPLOAD`; the public abstract is not yet available.
+This is a submission reference, not an SSRN approval or peer-review claim.
 
 For every fixed finite `S` and `0 < theta < 1/2`, Theorem 1.3 bounds this error
 outside `o(X^theta)` allowed centres `a <= X^theta` by a constant times
@@ -84,8 +90,8 @@ The native source is *Prescribed Eigenvalues in Power Bands of Finite
 Prime-Cover Graphs*, with its D31 ordered-comparison proof record, at
 `prime-orthant-geometry` commit `df32cafb021c0ed90f14f045858525882d50ab9e`.
 [SOURCE_PROVENANCE.md](SOURCE_PROVENANCE.md) gives exact paths and hashes.
-These identify the author's source; a publicly accessible manuscript archive
-has not been established here. The proof laboratory is provenance, not a Lake
+The SSRN submission reference above identifies Paper II; its public manuscript
+availability remains pending. The proof laboratory is provenance, not a Lake
 dependency. Paper I, PNTA and Mathlib are pinned dependencies.
 
 The formal D31 chain uses the sufficient molecule error `O(a/log X)` where
@@ -103,9 +109,11 @@ porting, documentation and verification are disclosed in
 [formalization.yaml](formalization.yaml); no separate human line-by-line
 review or external novelty review is claimed.
 
-**At source freeze, P0--P4 local checks pass (5/8 tasks).** The
-[source-freeze task board](PALOMAR_RELEASE_CONE.md) records those checks.
-Subsequent progress and exact Linux/render/handoff receipts continue on the
+**The unchanged proof source passed the local checks and the private protected
+Comparator, Lean/NanoDa and Challenge-render rehearsals.** This phase-1 update
+adds the SSRN submission reference and aligns the metadata. Fresh receipts
+must bind the intended intake commit; previous receipts do not certify a new
+source SHA automatically. Progress and exact Linux/render/handoff receipts continue on the
 [`palomar-readiness-2026-09-10` audit branch](https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/blob/palomar-readiness-2026-09-10/PALOMAR_RELEASE_CONE.md),
 preserving the source commit under verification. The
 [submission analysis](PALOMAR_SUBMISSION_ANALYSIS.md) and

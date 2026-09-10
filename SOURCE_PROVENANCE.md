@@ -3,6 +3,7 @@
 | Role | Repository | Commit |
 |---|---|---|
 | Authoritative substantive Lean development | this repository, `shaikidris/prime-cover-power-band-spectra-palomar` | the exact immutable commit selected at intake; require clean HEAD and the pushed canonical branch to match it |
+| Prior admission-free D31 source; passed private protected Lean/NanoDa verification and Challenge render before SSRN-reference update | this repository | `454743470f6aff2e7f7f8ac79a7a2a7279e60ada` |
 | Audited and pushed R1--R8 development checkpoint; not a submission-ready revision | this repository | `0e23075e18eb2569f1b95217ceee955de7554345` |
 | Historical submission-analysis checkpoint; baseline for the P0--P7 repair goal | this repository | `11ca6f6ea208aaf65b61186678440bd69f7009f5` |
 | Preserved compatible sharp development, with two open Solution obligations; outside the D31 submission tree | this repository, branch `sharp-development` | `11e71d0cec4f2e8de8e2542bb0b7a4888782607f` |
@@ -53,3 +54,11 @@ commit. The D31 paper is source-derived mathematics; it is not an original
 proof invented by the formalization agent. The current Mathlib pin passed the
 canonical-branch ancestry check against PalomarSubmission
 `ef2fa1eadcb246c2346ddba39b52eaa53d4bb763` on 10 September 2026.
+
+Paper II was submitted to SSRN as
+[abstract 7441718](https://papers.ssrn.com/abstract=7441718) on 10 September
+2026. The author dashboard confirms the title and author and reports
+`PRELIMINARY_UPLOAD`. The public page does not yet expose the manuscript.
+No DOI, SSRN approval, peer review or public PDF hash is inferred from that
+record. The phase-1 metadata update selects only Theorem 1.3 and Corollary 1.4;
+it does not change Lean sources, dependencies or Comparator selection.
