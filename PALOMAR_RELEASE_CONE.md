@@ -34,8 +34,8 @@ P6 substeps remain individually tracked without changing the eight-task denomina
 
 | Substep | Status | Evidence required |
 |---|---|---|
-| P6a private preflight | RETRY_READY | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
-| P6b private full protected replay | PENDING_PREFLIGHT | Unmodified current execute path reports `pass`, with successful protected Comparator and NanoDa checks. |
+| P6a private preflight | VERIFIED (34465598832) | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
+| P6b private full protected replay | RUNNING (34465598832) | Unmodified current execute path reports `pass`, with successful protected Comparator and NanoDa checks. |
 | P6c private Challenge render | RUNNING (34465135183) | Current pinned renderer reports `pass`; inspect actual module overview and 2/2 selected theorem docstrings. |
 
 
@@ -1378,3 +1378,21 @@ verification only and does not restart or narrow the render obligation.
 Both final receipts must bind the same source and tool revisions. Publication
 remains deferred until P6/P7 complete. Evidence: `readiness/p6-private-runs.json`
 and `readiness/p6a-first-preflight-failure.json`. Progress remains 5/8.
+
+## P6a verified — exact private preflight receipt
+
+The corrected private preflight in run `34465598832` reports `pending` at
+`prepared`, the successful preflight condition, with no errors or warnings.
+The downloaded receipt binds source `454743470f6aff2e7f7f8ac79a7a2a7279e60ada`,
+Lean v4.32.0, exporter `4e7915201d3f9f04470d9eae002fa695f7cdc589`, the two D31
+roots and sixteen definition selections. Comparator, formalization, lakefile
+and manifest hashes all match the frozen source; wrapper-recorded verifier and
+renderer hashes match the unchanged pinned upstream checkout. No credential
+was persisted in the source Git configuration. The official classification
+labels agree with the mathematical account.
+
+P6a is VERIFIED; P6b is running in this second run, while P6c retains the
+original live render run. Overall progress remains 5/8 until all P6 substeps
+finish. Receipts: `readiness/p6a-preflight-report.json` and
+`readiness/p6a-preflight-report.transport.json`. Public availability has not
+been asserted and publication remains the final P5 step.

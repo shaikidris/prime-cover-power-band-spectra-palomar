@@ -16,5 +16,18 @@
       "last_verified_stage": "Build, sanitize, and hash Challenge rendering under Landrun"
     },
     "render_restarted": false
+  },
+  {
+    "workflow_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/actions/runs/34465598832",
+    "orchestration_commit": "65c7baadcfd587689e10bb9ea512e31839916d95",
+    "source_commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+    "visibility": "private",
+    "verify_job": {
+      "id": 102833318097,
+      "status": "in_progress",
+      "preflight": "verified from downloaded report; exact source and configuration hashes match",
+      "full": "prepared; tool setup and protected replay remain in progress"
+    },
+    "render_job": "intentionally skipped; consume the unchanged source render from run 34465135183"
   }
 ]

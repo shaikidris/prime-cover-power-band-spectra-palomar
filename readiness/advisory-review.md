@@ -49,8 +49,9 @@ No novelty, priority, external reception or separate human proof review is
 claimed. The source has Apache-2.0 licensing and records AI assistance.
 
 The selected adjacency spectrum and arithmetic prime-counting estimates make
-math.CO, math.NT, MSC 05C50 and 11N05 pertinent. Exact official code labels
-are to be reconciled against the mechanical report when available.
+math.CO, math.NT, MSC 05C50 and 11N05 pertinent. The exact official code labels were reconciled against the private preflight
+report: Combinatorics, Number Theory, Graphs and linear algebra (matrices,
+eigenvalues, etc.), and Distribution of primes.
 
 ## Research interest and bounded literature check
 
