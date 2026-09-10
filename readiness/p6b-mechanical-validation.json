@@ -1,0 +1,65 @@
+{
+  "status": "verified",
+  "checked_at": "2026-09-10T11:08:32.070299+00:00",
+  "scope": "Private Linux protected rehearsal of the exact D31 pair; no Palomar submission and no anonymous source-availability claim.",
+  "source_commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+  "workflow_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/actions/runs/34465598832",
+  "job_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/actions/runs/34465598832/job/102833318097",
+  "status_and_stage": [
+    "pass",
+    "complete"
+  ],
+  "file_hashes_matched": {
+    "PrimeCoverPowerBandChallenge.lean": "d2e99fd97cf315102f5d3918e4aa5ee403f2e4be41217dfec88f98d8cbc0ec96",
+    "PrimeCoverPowerBandSolution.lean": "48fa71cf846ae34d32e810182f17d96b15b0a12f0f2f8317fed836a15927d645",
+    "almost-all-comparator.json": "4d5e30bf1d9895f8b9d433d6a694528a350d013385ddec4ce3a5ae975ecb2838",
+    "formalization.yaml": "ef8442300dff197cdf31b97178c065d4986f9c000e61d699f1511f66465edf51",
+    "lakefile.lean": "b30c2d624309b8bf3327a38f99faeb2f00dfc7bfa26ed473be2861b7e13aae23",
+    "lake-manifest.json": "80b0516b6a6972fb8696cb994eec168344f80f5f536cff04d81ed352fc1405d5",
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "all_dependency_pins_matched": 15,
+  "selected_theorems": [
+    "PrimeCoverPowerBand.palomar_almostAll_powerBand",
+    "PrimeCoverPowerBand.palomar_almostAll_subBlock"
+  ],
+  "selected_definition_count": 16,
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "challenge_trust_level": "high",
+  "challenge_audited_source_count": 8,
+  "challenge_untrusted_sources": [],
+  "canonical_challenge_olean_sha256": "d948cba519633e60bda7a35bffb55f238b80e0e84ef26fcd7761ea3cef74080e",
+  "pinned_tools": {
+    "comparator_commit": "575674928e239f5bc452aab72d1dd7b0f1326494",
+    "nanoda_commit": "68d5ca9db226849b41a6fff59d796ff19d0a8840",
+    "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+    "lean4export_commit": "4e7915201d3f9f04470d9eae002fa695f7cdc589"
+  },
+  "verifier_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
+  "protected_selected_build_jobs": 4236,
+  "kernel_and_comparator_acceptance_lines": [
+    "nanoda kernel accepts the solution",
+    "Lean default kernel accepts the solution",
+    "Your solution is okay!"
+  ],
+  "comparator_resource_usage": {
+    "elapsed_seconds": 1955.37,
+    "max_rss_kib": 5642096,
+    "peak_tasks_observed": 1,
+    "phase": "comparator",
+    "returncode": 0,
+    "system_cpu_seconds": 214.192,
+    "user_cpu_seconds": 3179.623,
+    "workspace_disk_peak_bytes": 1230065664
+  },
+  "preflight_full_render_source_bindings_match": true,
+  "credential_free_protected_execution": true,
+  "report_errors": [],
+  "report_warnings": [],
+  "build_lint_note": "Successful build log retains inherited Lean lint/info messages. The empty report warning array is not a zero-lint assertion.",
+  "preparer_receipt_check_note": "An initial local receipt script expected a Challenge hash in preflight; preflight carries its module only. Corrected the schema expectation. Challenge hash was verified against frozen source and full/render reports; no CI or source change."
+}

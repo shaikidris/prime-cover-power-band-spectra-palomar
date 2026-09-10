@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-09-10T11:13:48.692855+00:00",
+  "status": "awaiting_user_scope_decision",
+  "verified_entry_scope": [
+    "Theorem 1.3",
+    "Corollary 1.4"
+  ],
+  "open_lean_targets": [
+    "Theorem 1.1",
+    "Corollary 1.2"
+  ],
+  "selected_config": "almost-all-comparator.json",
+  "source_commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+  "private_protected_verification": "pass; both selected proofs accepted by NanoDa and Lean default kernels",
+  "publication": "on hold pending first-entry scope clarification",
+  "visibility_changed": false,
+  "palomar_submission_created": false,
+  "policy_url": "https://github.com/PalomarRegistry/PalomarPolicy/blob/main/CONTRIBUTING.md#23-comparator-configuration",
+  "policy_observation": "The configuration fixes verified claims; deliberate Challenge holes are allowed. No certification of unselected sharp claims is implied."
+}

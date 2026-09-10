@@ -1,0 +1,553 @@
+{
+  "challenge": {
+    "bytes": 12581,
+    "canonical_olean_sha256": "d948cba519633e60bda7a35bffb55f238b80e0e84ef26fcd7761ea3cef74080e",
+    "dependencies": [
+      {
+        "provenance": "allowlisted",
+        "repository": "leanprover-community/mathlib4"
+      }
+    ],
+    "direct_imports": [
+      "Mathlib.Analysis.InnerProductSpace.Spectrum",
+      "Mathlib.Analysis.Matrix.Spectrum",
+      "Mathlib.Combinatorics.SimpleGraph.AdjMatrix",
+      "Mathlib.Combinatorics.SimpleGraph.LapMatrix",
+      "Mathlib.Data.Nat.Prime.Basic",
+      "Mathlib.NumberTheory.PrimeCounting",
+      "Mathlib.Topology.Instances.Nat"
+    ],
+    "lines": 284,
+    "module": "PrimeCoverPowerBandChallenge",
+    "path": "PrimeCoverPowerBandChallenge.lean",
+    "sha256": "d2e99fd97cf315102f5d3918e4aa5ee403f2e4be41217dfec88f98d8cbc0ec96",
+    "transitive_source_count": 8,
+    "trust_level": "high",
+    "untrusted_sources": []
+  },
+  "checked_at": "2026-09-10T11:02:37Z",
+  "classification": {
+    "arxiv": [
+      {
+        "code": "math.CO",
+        "name": "Combinatorics"
+      },
+      {
+        "code": "math.NT",
+        "name": "Number Theory"
+      }
+    ],
+    "msc2020": [
+      {
+        "code": "05C50",
+        "name": "Graphs and linear algebra (matrices, eigenvalues, etc.)"
+      },
+      {
+        "code": "11N05",
+        "name": "Distribution of primes"
+      }
+    ]
+  },
+  "comparator": {
+    "challenge_module": "PrimeCoverPowerBandChallenge",
+    "definition_names": [
+      "PrimeCoverPowerBand.arithmeticStarDegree",
+      "PrimeCoverPowerBand.actualUpStarRatio",
+      "PrimeCoverPowerBand.upStarCorrection",
+      "PrimeCoverPowerBand.downStarCorrection",
+      "PrimeCoverPowerBand.firstExitCorrection",
+      "PrimeCoverPowerBand.FirstExitCorrectionRegular",
+      "PrimeCoverPowerBand.powerScale",
+      "PrimeCoverPowerBand.InPowerRange",
+      "PrimeCoverPowerBand.InTerminalPowerBand",
+      "PrimeCoverPowerBand.powerBandErrorScale",
+      "PrimeCoverPowerBand.powerBandBadCenters",
+      "PrimeCoverPowerBand.terminalPowerBandBadCenters",
+      "PrimeCoverPowerBand.powerBandBadDensity",
+      "PrimeCoverPowerBand.subBlockMargin",
+      "PrimeCoverPowerBand.subBlockBadCenters",
+      "PrimeCoverPowerBand.subBlockBadDensity"
+    ],
+    "path": "almost-all-comparator.json",
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "sha256": "4d5e30bf1d9895f8b9d433d6a694528a350d013385ddec4ce3a5ae975ecb2838",
+    "solution_module": "PrimeCoverPowerBandSolution",
+    "theorem_names": [
+      "PrimeCoverPowerBand.palomar_almostAll_powerBand",
+      "PrimeCoverPowerBand.palomar_almostAll_subBlock"
+    ]
+  },
+  "comparator_commit": "575674928e239f5bc452aab72d1dd7b0f1326494",
+  "comparator_log_tail": "tive* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n\u2139 [4222/4236] Built PrimeStar.FixedCenterCorrectionBridge (4.5s)\ninfo: PrimeStar/FixedCenterCorrectionBridge.lean:347:57: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: PrimeStar/FixedCenterCorrectionBridge.lean:439:55: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n\u2714 [4223/4236] Built PrimeStar.LogarithmicWindow (2.0s)\n\u2714 [4224/4236] Built PrimeStar.LogarithmicWindowDegreeIsolation (10s)\n\u2139 [4225/4236] Built PrimeStar.LogarithmicWindowSpectral (7.1s)\ninfo: PrimeStar/LogarithmicWindowSpectral.lean:236:51: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n\u2714 [4226/4236] Built PrimeStar.LogarithmicWindowDegreeGap (9.4s)\n\u2714 [4227/4236] Built PrimeStar.LogarithmicWindowSourceNorm (6.3s)\n\u26a0 [4228/4236] Built PrimeStar.LogarithmicWindowSourceArithmetic (9.5s)\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:310:45: This simp argument is unused:\n  da\n\nHint: Omit it from the simp argument list.\n  simp [M, d\u0335a\u0335,\u0335 \u0335Y, A]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:310:49: This simp argument is unused:\n  Y\n\nHint: Omit it from the simp argument list.\n  simp [M, da, Y\u0335,\u0335 \u0335A]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:310:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:310:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:416:45: This simp argument is unused:\n  da\n\nHint: Omit it from the simp argument list.\n  simp [M, d\u0335a\u0335,\u0335 \u0335Y, A]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:416:49: This simp argument is unused:\n  Y\n\nHint: Omit it from the simp argument list.\n  simp [M, da, Y\u0335,\u0335 \u0335A]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:449:6: 'push_cast' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:416:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: PrimeStar/LogarithmicWindowSourceArithmetic.lean:416:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n\u26a0 [4229/4236] Built PrimeStar.LogarithmicWindowSourceResolvent (8.8s)\nwarning: PrimeStar/LogarithmicWindowSourceResolvent.lean:179:45: 'positivity' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeStar/LogarithmicWindowSourceResolvent.lean:179:45: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n\u2714 [4230/4236] Built PrimeStar.LogarithmicWindowFeshbachRemainder (52s)\n\u26a0 [4231/4236] Built PrimeCoverPowerBand.FirstExitTarget (134s)\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:888:2: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:1103:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:1105:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:2260:5: Variable name `heps` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:2654:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:2657:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:4692:5: Variable name `heps` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:4692:26: Variable name `heta` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:4713:28: Variable name `hS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:4715:5: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:4816:28: Variable name `hS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:4818:5: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:5274:10: 'change\n  \u27eabt,\n      PrimeStar.restrictEuclideanToFinset F\n        (PrimeStar.firstExitStarResolventVector S X (squareRootCutoff X) a lambda\n          (exactBoundaryModeInteriorSource S X a eps))\u27eb_\u211d =\n    _' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:5865:40: This simp argument is unused:\n  neg_one_mul\n\nHint: Omit it from the simp argument list.\n  simp only [one_mul, neg_mul, one_mul, n\u0335e\u0335g\u0335_\u0335o\u0335n\u0335e\u0335_\u0335m\u0335u\u0335l\u0335,\u0335 \u0335div_eq_mul_inv]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:6271:28: Variable name `hS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:6273:5: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:6275:17: Variable name `hgamma` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:7786:5: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/FirstExitTarget.lean:8537:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n\u26a0 [4232/4236] Built PrimeCoverPowerBand.FullSpectrumTransfer (64s)\nwarning: PrimeCoverPowerBand/FullSpectrumTransfer.lean:1865:8: automatically included section variable(s) unused in theorem `_private.PrimeCoverPowerBand.FullSpectrumTransfer.0.PrimeCoverPowerBand.rclike_injective_of_lowerBound`:\n  [FiniteDimensional \ud835\udd5c V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional \ud835\udd5c V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nwarning: PrimeCoverPowerBand/FullSpectrumTransfer.lean:1912:0: automatically included section variable(s) unused in theorem `PrimeCoverPowerBand.rclikeShiftedEndomorphism_apply`:\n  [FiniteDimensional \ud835\udd5c V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional \ud835\udd5c V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nwarning: PrimeCoverPowerBand/FullSpectrumTransfer.lean:2084:0: automatically included section variable(s) unused in theorem `PrimeCoverPowerBand.rclike_shifted_lowerBound_of_quadratic_upper`:\n  [FiniteDimensional \ud835\udd5c V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional \ud835\udd5c V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n\u26a0 [4233/4236] Built PrimeCoverPowerBand.TerminalSchur (52s)\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:589:39: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:561:20: Variable name `hqS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:562:5: Variable name `hr` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:562:20: Variable name `hrS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:562:34: Variable name `hrY` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:622:20: Variable name `hrS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:622:34: Variable name `hrY` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:695:20: Variable name `hrS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:695:34: Variable name `hrY` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:2428:5: Variable name `hqS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:2428:25: Variable name `hrS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:2430:5: Variable name `hrY` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:2712:15: Variable name `heps` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\ninfo: PrimeCoverPowerBand/TerminalSchur.lean:2866:2: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3287:12: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3305:12: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3312:12: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3325:10: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3287:12: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3305:12: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3312:12: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3325:10: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3294:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3547:5: Variable name `hda` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3919:12: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3919:12: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3976:12: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:3976:12: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:4118:5: Variable name `hcenterBound` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:4859:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:4906:10: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:4906:10: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:4913:5: Variable name `hD` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: PrimeCoverPowerBand/TerminalSchur.lean:5113:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n\u2139 [4234/4236] Built PrimeCoverPowerBand.AlmostAllSpectralBudget (157s)\ninfo: PrimeCoverPowerBand/AlmostAllSpectralBudget.lean:10440:27: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: PrimeCoverPowerBand/AlmostAllSpectralBudget.lean:10440:27: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n\u2714 [4235/4236] Built PrimeCoverPowerBand.AlmostAllAssembly (42s)\n\u2714 [4236/4236] Built PrimeCoverPowerBandSolution (2.9s)\nBuild completed successfully (4236 jobs).\nExporting #[Nat, String, String.mk, Char, Quot, Quot.mk, Quot.lift, Quot.ind, PrimeCoverPowerBand.palomar_almostAll_powerBand, PrimeCoverPowerBand.palomar_almostAll_subBlock, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, PrimeCoverPowerBand.arithmeticStarDegree, PrimeCoverPowerBand.actualUpStarRatio, PrimeCoverPowerBand.upStarCorrection, PrimeCoverPowerBand.downStarCorrection, PrimeCoverPowerBand.firstExitCorrection, PrimeCoverPowerBand.FirstExitCorrectionRegular, PrimeCoverPowerBand.powerScale, PrimeCoverPowerBand.InPowerRange, PrimeCoverPowerBand.InTerminalPowerBand, PrimeCoverPowerBand.powerBandErrorScale, PrimeCoverPowerBand.powerBandBadCenters, PrimeCoverPowerBand.terminalPowerBandBadCenters, PrimeCoverPowerBand.powerBandBadDensity, PrimeCoverPowerBand.subBlockMargin, PrimeCoverPowerBand.subBlockBadCenters, PrimeCoverPowerBand.subBlockBadDensity] from PrimeCoverPowerBandSolution\nRunning nanoda kernel on solution\nnanoda kernel accepts the solution\nRunning Lean default kernel on solution.\nLean default kernel accepts the solution\nYour solution is okay!",
+  "errors": [],
+  "existing_id": null,
+  "formalization": {
+    "automation_method_count": 1,
+    "path": "formalization.yaml",
+    "project_name": "Prescribed and almost-all power-band spectra of prime-cover graphs",
+    "review_status": "agent-reviewed local source freeze; external verification receipts tracked separately",
+    "sha256": "ef8442300dff197cdf31b97178c065d4986f9c000e61d699f1511f66465edf51",
+    "source_count": 2
+  },
+  "lake_manifest": {
+    "path": "lake-manifest.json",
+    "sha256": "80b0516b6a6972fb8696cb994eec168344f80f5f536cff04d81ed352fc1405d5"
+  },
+  "lakefile": {
+    "format": "lean",
+    "path": "lakefile.lean",
+    "sha256": "b30c2d624309b8bf3327a38f99faeb2f00dfc7bfa26ed473be2861b7e13aae23"
+  },
+  "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+  "lean4export_commit": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "lean_toolchain_path": "lean-toolchain",
+  "license": {
+    "declared_identifier": "Apache-2.0",
+    "detected_identifier": "Apache-2.0",
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "mathlib_cache": {
+    "available": true,
+    "required": true
+  },
+  "nanoda_commit": "68d5ca9db226849b41a6fff59d796ff19d0a8840",
+  "orcid_validation": {
+    "checked_at": "2026-09-10T10:21:46Z",
+    "records": [],
+    "registry": "https://orcid.org",
+    "schema_version": 1
+  },
+  "phase": "verification",
+  "project_dependencies": [
+    {
+      "name": "mathlib",
+      "repository": "leanprover-community/mathlib4",
+      "revision": "3dffaf2f18b47d11948f6390838ea6f2ae662aaf",
+      "url": "https://github.com/leanprover-community/mathlib4.git"
+    },
+    {
+      "name": "PrimeNumberTheoremAnd",
+      "repository": "AlexKontorovich/PrimeNumberTheoremAnd",
+      "revision": "7715064f690d0689f30889846f4e2c5e7ec0c47e",
+      "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
+    },
+    {
+      "name": "primeStarFormalization",
+      "repository": "shaikidris/prime-star-spectra-formalization",
+      "revision": "59176e4ce57e7d6578cafd1de0029fed6fc13ccf",
+      "url": "https://github.com/shaikidris/prime-star-spectra-formalization.git"
+    },
+    {
+      "name": "plausible",
+      "repository": "leanprover-community/plausible",
+      "revision": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+      "url": "https://github.com/leanprover-community/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "repository": "leanprover-community/LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "url": "https://github.com/leanprover-community/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "repository": "leanprover-community/import-graph",
+      "revision": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+      "url": "https://github.com/leanprover-community/import-graph"
+    },
+    {
+      "name": "proofwidgets",
+      "repository": "leanprover-community/ProofWidgets4",
+      "revision": "d662197a9ca6f411c5738c45ec0192c786462f5d",
+      "url": "https://github.com/leanprover-community/ProofWidgets4"
+    },
+    {
+      "name": "aesop",
+      "repository": "leanprover-community/aesop",
+      "revision": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+      "url": "https://github.com/leanprover-community/aesop"
+    },
+    {
+      "name": "Qq",
+      "repository": "leanprover-community/quote4",
+      "revision": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+      "url": "https://github.com/leanprover-community/quote4"
+    },
+    {
+      "name": "batteries",
+      "repository": "leanprover-community/batteries",
+      "revision": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+      "url": "https://github.com/leanprover-community/batteries"
+    },
+    {
+      "name": "PrimeCert",
+      "repository": "b-mehta/PrimeCert",
+      "revision": "6cac6fcb55fe9070afc4c42cad1d0eaa1c59e6a1",
+      "url": "https://github.com/b-mehta/PrimeCert"
+    },
+    {
+      "name": "leancert",
+      "repository": "alerad/leancert",
+      "revision": "6b11513512c9d27183fb4725bfc291ab38b4a6d7",
+      "url": "https://github.com/alerad/leancert.git"
+    },
+    {
+      "name": "checkdecls",
+      "repository": "PatrickMassot/checkdecls",
+      "revision": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+      "url": "https://github.com/PatrickMassot/checkdecls.git"
+    },
+    {
+      "name": "LeanArchitect",
+      "repository": "hanwenzhu/LeanArchitect",
+      "revision": "d9013cc08bd2b5483e837368dfa4cc7ead92a5c2",
+      "url": "https://github.com/hanwenzhu/LeanArchitect.git"
+    },
+    {
+      "name": "Cli",
+      "repository": "leanprover/lean4-cli",
+      "revision": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+      "url": "https://github.com/leanprover/lean4-cli"
+    }
+  ],
+  "provenance": {
+    "mathematical_sources": [
+      {
+        "author_endorsement": "participated",
+        "authors": [
+          {
+            "name": "Idris Ali Shaik"
+          }
+        ],
+        "license": "unknown",
+        "note": "Paper II mathematical source at prime-orthant-geometry commit df32cafb021c0ed90f14f045858525882d50ab9e, file draft/prescribed-eigenvalues-in-prime-cover-power-bands.md, SHA-256 b145e0a4ed2078fca969ed127d00c73d8758a76b559971988501693c1b60cfa3. This identifies the native paper, not a completed Lean proof.",
+        "relationship": "formalizes",
+        "title": "Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs",
+        "type": "paper"
+      },
+      {
+        "author_endorsement": "participated",
+        "authors": [
+          {
+            "name": "Idris Ali Shaik"
+          }
+        ],
+        "license": "unknown",
+        "note": "D31 native proof record at the same mathematical-source commit, file analysis/paper2-ordered-comparison-strengthening-2026-09-09.md. Uses global PNT and full-star frame/complement estimates, not BHP or Guth--Maynard. This is native provenance, not formal closure.",
+        "relationship": "formalizes",
+        "title": "Ordered comparison and density-one power-band estimates",
+        "type": "other"
+      }
+    ],
+    "related_formalizations": [
+      {
+        "identifier": "https://github.com/shaikidris/prime-star-spectra-formalization/tree/59176e4ce57e7d6578cafd1de0029fed6fc13ccf",
+        "note": "Pinned Paper I graph, star-forest, first-exit, and analytic infrastructure.",
+        "relationship": "builds-on"
+      }
+    ],
+    "repository_role": "substantive-development",
+    "responsible_maintainers": [
+      {
+        "name": "Idris Ali Shaik"
+      }
+    ],
+    "result_origin": "source-based"
+  },
+  "resource_usage": [
+    {
+      "elapsed_seconds": 0.004,
+      "max_rss_kib": 13264,
+      "peak_tasks_observed": 1,
+      "phase": "touch",
+      "returncode": 0,
+      "system_cpu_seconds": 0.002,
+      "user_cpu_seconds": 0.002,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.007,
+      "max_rss_kib": 13560,
+      "peak_tasks_observed": 1,
+      "phase": "landrun",
+      "returncode": 0,
+      "system_cpu_seconds": 0.007,
+      "user_cpu_seconds": 0.0,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.004,
+      "max_rss_kib": 13436,
+      "peak_tasks_observed": 1,
+      "phase": "touch",
+      "returncode": 1,
+      "system_cpu_seconds": 0.002,
+      "user_cpu_seconds": 0.002,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.022,
+      "max_rss_kib": 13252,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 0,
+      "system_cpu_seconds": 0.01,
+      "user_cpu_seconds": 0.012,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.022,
+      "max_rss_kib": 13432,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 1,
+      "system_cpu_seconds": 0.007,
+      "user_cpu_seconds": 0.015,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.022,
+      "max_rss_kib": 13244,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 1,
+      "system_cpu_seconds": 0.01,
+      "user_cpu_seconds": 0.012,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.019,
+      "max_rss_kib": 13296,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 1,
+      "system_cpu_seconds": 0.006,
+      "user_cpu_seconds": 0.013,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 3.464,
+      "max_rss_kib": 885236,
+      "peak_tasks_observed": 1,
+      "phase": "lake",
+      "returncode": 0,
+      "system_cpu_seconds": 0.536,
+      "user_cpu_seconds": 2.857,
+      "workspace_disk_peak_bytes": 1851392
+    },
+    {
+      "elapsed_seconds": 0.065,
+      "max_rss_kib": 98760,
+      "peak_tasks_observed": 1,
+      "phase": "lean",
+      "returncode": 0,
+      "system_cpu_seconds": 0.031,
+      "user_cpu_seconds": 0.039,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 127.91,
+      "max_rss_kib": 1000636,
+      "peak_tasks_observed": 1,
+      "phase": "lake",
+      "returncode": 0,
+      "system_cpu_seconds": 28.476,
+      "user_cpu_seconds": 54.405,
+      "workspace_disk_peak_bytes": 7668334592
+    },
+    {
+      "elapsed_seconds": 11.864,
+      "max_rss_kib": 977672,
+      "peak_tasks_observed": 1,
+      "phase": "lake",
+      "returncode": 0,
+      "system_cpu_seconds": 3.246,
+      "user_cpu_seconds": 5.59,
+      "workspace_disk_peak_bytes": 1449984
+    },
+    {
+      "elapsed_seconds": 4.858,
+      "max_rss_kib": 872560,
+      "peak_tasks_observed": 1,
+      "phase": "lake",
+      "returncode": 0,
+      "system_cpu_seconds": 0.552,
+      "user_cpu_seconds": 1.747,
+      "workspace_disk_peak_bytes": 675840
+    },
+    {
+      "elapsed_seconds": 26.193,
+      "max_rss_kib": 3062616,
+      "peak_tasks_observed": 1,
+      "phase": "lean",
+      "returncode": 0,
+      "system_cpu_seconds": 1.325,
+      "user_cpu_seconds": 2.324,
+      "workspace_disk_peak_bytes": 4096
+    },
+    {
+      "elapsed_seconds": 0.078,
+      "max_rss_kib": 88584,
+      "peak_tasks_observed": 1,
+      "phase": "lean",
+      "returncode": 0,
+      "system_cpu_seconds": 0.038,
+      "user_cpu_seconds": 0.044,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.067,
+      "max_rss_kib": 88556,
+      "peak_tasks_observed": 1,
+      "phase": "lean",
+      "returncode": 0,
+      "system_cpu_seconds": 0.035,
+      "user_cpu_seconds": 0.041,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.004,
+      "max_rss_kib": 13432,
+      "peak_tasks_observed": 1,
+      "phase": "touch",
+      "returncode": 0,
+      "system_cpu_seconds": 0.001,
+      "user_cpu_seconds": 0.003,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.006,
+      "max_rss_kib": 13560,
+      "peak_tasks_observed": 1,
+      "phase": "landrun",
+      "returncode": 0,
+      "system_cpu_seconds": 0.004,
+      "user_cpu_seconds": 0.002,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.004,
+      "max_rss_kib": 13268,
+      "peak_tasks_observed": 1,
+      "phase": "touch",
+      "returncode": 1,
+      "system_cpu_seconds": 0.003,
+      "user_cpu_seconds": 0.001,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.021,
+      "max_rss_kib": 13432,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 0,
+      "system_cpu_seconds": 0.005,
+      "user_cpu_seconds": 0.016,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.022,
+      "max_rss_kib": 13264,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 0,
+      "system_cpu_seconds": 0.006,
+      "user_cpu_seconds": 0.015,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.148,
+      "max_rss_kib": 13296,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 1,
+      "system_cpu_seconds": 0.007,
+      "user_cpu_seconds": 0.015,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.022,
+      "max_rss_kib": 13432,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 1,
+      "system_cpu_seconds": 0.005,
+      "user_cpu_seconds": 0.017,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 0.02,
+      "max_rss_kib": 13268,
+      "peak_tasks_observed": 1,
+      "phase": "python3.11",
+      "returncode": 1,
+      "system_cpu_seconds": 0.007,
+      "user_cpu_seconds": 0.013,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 4.125,
+      "max_rss_kib": 830924,
+      "peak_tasks_observed": 1,
+      "phase": "lake",
+      "returncode": 0,
+      "system_cpu_seconds": 0.752,
+      "user_cpu_seconds": 0.698,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 1.278,
+      "max_rss_kib": 831972,
+      "peak_tasks_observed": 1,
+      "phase": "lake",
+      "returncode": 0,
+      "system_cpu_seconds": 0.663,
+      "user_cpu_seconds": 0.643,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "elapsed_seconds": 1955.37,
+      "max_rss_kib": 5642096,
+      "peak_tasks_observed": 1,
+      "phase": "comparator",
+      "returncode": 0,
+      "system_cpu_seconds": 214.192,
+      "user_cpu_seconds": 3179.623,
+      "workspace_disk_peak_bytes": 1230065664
+    }
+  ],
+  "schema_version": 1,
+  "solution": {
+    "module": "PrimeCoverPowerBandSolution",
+    "path": "PrimeCoverPowerBandSolution.lean",
+    "sha256": "48fa71cf846ae34d32e810182f17d96b15b0a12f0f2f8317fed836a15927d645"
+  },
+  "source": {
+    "bytes": 1919037,
+    "commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+    "repository": "shaikidris/prime-cover-power-band-spectra-palomar",
+    "repository_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar",
+    "tree_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/tree/454743470f6aff2e7f7f8ac79a7a2a7279e60ada"
+  },
+  "stage": "complete",
+  "status": "pass",
+  "submission": {
+    "authorization": {
+      "relationship": "maintainer"
+    },
+    "requested_paths": {
+      "comparator_config_path": "almost-all-comparator.json",
+      "formalization_metadata_path": "",
+      "project_path": ""
+    },
+    "submission_id": "50619a20c97a"
+  },
+  "warnings": [],
+  "workflow_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/actions/runs/34465598832"
+}

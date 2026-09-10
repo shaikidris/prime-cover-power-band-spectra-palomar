@@ -1,14 +1,16 @@
-# Advisory source review — pending mechanical/render reconciliation
+# Advisory source review — reconciled with protected verification and render
 
 Source: `454743470f6aff2e7f7f8ac79a7a2a7279e60ada`.
 Policy: `e9c8c238f5695b10f75db7175648a1d0195352c1`.
 Public reviewer implementation: `a7f00885a0cfaedf70abbd835c32b6899656c3db`.
 This is the preparing agent's bounded assessment, not a Palomar review,
-independent human review, acceptance prediction or completed P7 gate.
-The protected mechanical report remains outstanding. The exact render passed,
-and its static module overview and both selected theorem docstrings were
-visually inspected; see `p6c-render-inspection.json` for the current upstream
-declaration-only display behavior and literal-math presentation limit.
+independent human review or acceptance prediction. P7 is complete as a preparer
+assessment. The exact protected mechanical report passes, both NanoDa and Lean
+default kernels accept the selected D31 solution, and its source/configuration/
+dependency/tool bindings match the frozen source and render. The static module
+overview and both selected theorem docstrings were visually inspected; see
+`p6c-render-inspection.json` for the upstream declaration-only display behavior
+and literal-math presentation limit.
 
 ## Selected mathematics and assessability
 
@@ -79,5 +81,13 @@ comparisons. Two primary papers provide relevant, distinct context:
 
 These checks support the stated audience and distinctions, not a claim of
 literature completeness. No affirmative source/account blocker was found in
-this bounded review. P7 remains open until the exact protected mechanical report is inspected
-and all source bindings are reconciled with the already verified render.
+this bounded review. The protected mechanical and render receipts are now
+reconciled with the same immutable source. No affirmative mathematical-account,
+selected-statement, trust or rendering blocker was found in this scope.
+
+The current D31 selection is Theorem 1.3 and Corollary 1.4 only. Challenge also
+retains Theorem 1.1 and Corollary 1.2 as unchanged open targets. Theorem 10.1
+and Corollaries 10.2--10.3 are proved internal results and are not additional
+selected claims in this receipt. P5, publication followed by an anonymous exact
+source fetch, remains the final pre-submission gate. This assessment neither
+submits the entry nor predicts a nonblocking editorial outcome or registration.

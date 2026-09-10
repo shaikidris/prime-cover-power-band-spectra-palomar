@@ -1,0 +1,23 @@
+{
+  "status": "verified",
+  "checked_at": "2026-09-10T11:11:02.802286+00:00",
+  "source_commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+  "scope": "Preparer advisory and exact handoff reconciled; no official Palomar editorial review or submission.",
+  "mechanical_receipt": "p6b-mechanical-validation.json",
+  "render_receipt": "p6c-render-inspection.json",
+  "advisory": "advisory-review.md",
+  "handoff": "../PALOMAR_HANDOFF.md",
+  "source_configuration_tool_dependency_bindings": "match",
+  "selected_theorems": [
+    "PrimeCoverPowerBand.palomar_almostAll_powerBand",
+    "PrimeCoverPowerBand.palomar_almostAll_subBlock"
+  ],
+  "proof_account_and_classification": "reconciled",
+  "sharp_route_status": "unchanged open Lean targets; retained in Challenge and preserved development branch",
+  "internal_results": "Theorem 10.1 and Corollaries 10.2--10.3 proved internally, outside current selection",
+  "novelty_status": "not established",
+  "independent_human_review": "not claimed",
+  "affirmative_blockers_in_reviewed_scope": [],
+  "remaining_gate": "P5 final publication and anonymous exact source fetch",
+  "overall_progress": "7/8"
+}

@@ -14,8 +14,8 @@ packet, and P5 is the final publication/access gate. The source SHA and full
 verification requirements are unchanged. Earlier blocked records below are
 historical and are superseded by this sequencing correction.
 
-**Dashboard:** P0--P4 VERIFIED; P6 IN_PROGRESS privately; P7 IN_PROGRESS; P5 DEFERRED until both finish.
-**5/8 tasks verified** counts release tasks, not equal effort or mathematical
+**Dashboard:** P0--P4, P6 and P7 VERIFIED for the two-result D31 entry; P5 awaits the user's first-entry scope clarification before publication.
+**7/8 tasks verified** counts release tasks, not equal effort or mathematical
 proof percentage. R1--R8 remains 8/8 local; both sharp proofs remain open on
 the preserved `sharp-development` branch.
 
@@ -26,16 +26,16 @@ the preserved `sharp-development` branch.
 | P2 | Admission-free D31 tree; preserved sharp development | P1 | VERIFIED | Final full build 4239 jobs; zero Solution admissions and zero snapshot errors; sharp revision `11e71d0cec4f2e8de8e2542bb0b7a4888782607f`. |
 | P3 | Mathematical account, Challenge prose and metadata | P0, P2 | VERIFIED | Source semantics/current metadata contract pass; 2/2 selected English docstrings present. Render is P6. |
 | P4 | Local release audit of exact source | P1--P3 | VERIFIED | Strict statement/definition comparison, eight standard-axiom closures, 15 controls, zero unreachable modules; inherited lint disclosed. See `readiness/p4-final-validation.json`. |
-| P5 | Final authorized publication and anonymous source check | P4, P6, P7 | DEFERRED | Source and sharp branch pushed; all 15 dependencies anonymously accessible. Keep the repository private until the other readiness work is complete, then perform the final authorized publication/access check. |
-| P6 | Current protected Linux preflight/full and Challenge render, privately | P4 | IN_PROGRESS | Private Actions orchestration prepared for unchanged verifier/tool code. Require exact reports, Comparator/NanoDa/Landrun evidence and visible selected documentation. |
-| P7 | Advisory assessment and exact handoff packet | P0--P4, P6 | IN_PROGRESS | Source/account advisory and exact fields are prepared; reconcile private mechanical/render results before the final P5 publication gate. No Palomar state mutation. |
+| P5 | Final authorized publication and anonymous source check | P4, P6, P7 | AWAITING_SCOPE_DECISION | All private D31 gates pass. User asked how open sharp proofs affect acceptance; clarify two proved results versus waiting for all four before publication. No visibility change performed. |
+| P6 | Current protected Linux preflight/full and Challenge render, privately | P4 | VERIFIED | Actual full report pass/complete, both kernels accept, all source/config/tool/dependency bindings match; actual render and reader inspection pass. See `readiness/p6b-mechanical-validation.json` and `readiness/p6c-render-inspection.json`. |
+| P7 | Advisory assessment and exact handoff packet | P0--P4, P6 | VERIFIED | Actual protected report/render reconcile with the frozen source, mathematical account and exact intake fields; advisory limits disclosed. See `readiness/p7-reconciliation.json` and `PALOMAR_HANDOFF.md`. |
 
 P6 substeps remain individually tracked without changing the eight-task denominator:
 
 | Substep | Status | Evidence required |
 |---|---|---|
 | P6a private preflight | VERIFIED (34465598832) | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
-| P6b private full protected replay | RUNNING (34465598832) | Unmodified current execute path reports `pass`, with successful protected Comparator and NanoDa checks. |
+| P6b private full protected replay | VERIFIED (34465598832) | Actual pass/complete report; protected 4236-job selected build, NanoDa and Lean kernel acceptance. Exact source and all pins match. |
 | P6c private Challenge render | VERIFIED (34465135183) | Actual report `pass`; 18 file hashes match. Static module overview and 2/2 selected docstrings visually inspected; upstream interactive declaration isolation disclosed. |
 
 
@@ -1424,3 +1424,67 @@ same remote job is alive. It was not restarted. Overall progress remains 5/8.
 Receipts: `readiness/p6c-render-report.json`, its transport sidecar,
 `readiness/p6c-render-artifact-manifest.json` and
 `readiness/p6c-render-inspection.json`.
+
+## P6b/P6 verified — protected D31 proof replay
+
+Run `34465598832` completed successfully. The downloaded full report has
+`status: pass`, `stage: complete`, no report errors or warnings, and the same
+frozen source as preflight and render. All seven reported file hashes, both
+theorem selections, sixteen definition selections, three permitted axioms,
+fifteen dependency pins and pinned tool revisions match. The protected
+Challenge provenance has `trust_level: high`, eight audited sources and no
+untrusted sources. Its canonical olean hash is
+`d948cba519633e60bda7a35bffb55f238b80e0e84ef26fcd7761ea3cef74080e`.
+
+The actual Comparator log records a successful 4236-job selected build,
+`nanoda kernel accepts the solution`, `Lean default kernel accepts the solution`
+and `Your solution is okay!`. Comparator returned zero after 1955.37 seconds,
+with reported maximum RSS 5,642,096 KiB. This duration includes its selected
+build and checks; it is not a kernel-only timing. The full protected step ran
+from 10:26:09 to 11:02:38 UTC. Inherited build lint/info messages remain; the
+empty top-level warning array does not assert a warning-free Lean build.
+
+P6a, P6b and P6c are now VERIFIED, closing P6. Overall progress is 6/8.
+P7 must reconcile the advisory and exact handoff before the final P5 publication
+and anonymous-fetch gate. No Palomar record was created. Receipts:
+`readiness/p6b-mechanical-report.json`, its transport sidecar and
+`readiness/p6b-mechanical-validation.json`.
+
+## P7 verified — final packet reconciled before publication
+
+The source/account assessment and exact handoff now consume the actual
+protected mechanical and render receipts at source `4547434`. Both selected
+D31 results, all sixteen definitions, all fifteen dependency pins, the current
+classification labels and source/proof provenance are consistent. The packet
+explicitly preserves the sharp open targets and separates the proved internal
+Section 10 exports from the two-result selection. The source's existing review
+status is supplemented by these audit receipts without rewriting the frozen
+source to embed later evidence.
+
+No affirmative blocker was found in this bounded preparer review. Novelty and
+a separate human review remain unestablished; inherited lint and the upstream
+render presentation limits are disclosed. The successful private rehearsal is
+not a Palomar submission and does not itself prove anonymous source access.
+P7 is VERIFIED; overall progress is 7/8. All private preparation is finished.
+P5 is now the final publication and exact anonymous-fetch step, honoring the
+user's sequencing instruction. Evidence: `readiness/p7-reconciliation.json`,
+`readiness/advisory-review.md` and `PALOMAR_HANDOFF.md`.
+
+## Scope clarification — certified D31 pair versus open sharp targets
+
+The user asked whether the stronger headline statements remain in Challenge,
+and then how Palomar could accept them while their Lean proofs are open.
+All four statements remain, but the successful protected receipt selects only
+Theorem 1.3 and Corollary 1.4. Theorem 1.1 and Corollary 1.2 are not certified
+by that receipt. Palomar's current policy explicitly fixes the verified claims
+through the selected Comparator configuration and allows deliberate Challenge
+holes; this does not permit representing open targets as proved results.
+
+An explicit scope question is pending: proceed with the two proved D31
+results, or hold publication until all four headline results have proofs.
+Publication remains on hold while that material scope question is answered.
+This is not a failed mechanical check. P0--P4, P6 and P7 remain verified for
+the D31-only packet, at 7/8 tasks; a four-result entry would reopen the proof
+and submission-scope work. No public visibility or Palomar state changed.
+The protected verification job has completed successfully.
+Policy: https://github.com/PalomarRegistry/PalomarPolicy/blob/main/CONTRIBUTING.md#23-comparator-configuration

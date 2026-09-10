@@ -27,9 +27,12 @@
     "visibility": "private",
     "verify_job": {
       "id": 102833318097,
-      "status": "in_progress",
+      "status": "completed",
       "preflight": "verified from downloaded report; exact source and configuration hashes match",
-      "full": "Running protected Comparator and challenge provenance audit; all pinned tool builds and credential-free execution guard passed."
+      "full": "Verified from actual pass/complete report; NanoDa and Lean default kernels accept; exact source, configuration and all 15 dependency pins match.",
+      "conclusion": "success",
+      "receipt": "p6b-mechanical-report.json",
+      "validation": "p6b-mechanical-validation.json"
     },
     "render_job": "intentionally skipped; consume the unchanged source render from run 34465135183"
   }
