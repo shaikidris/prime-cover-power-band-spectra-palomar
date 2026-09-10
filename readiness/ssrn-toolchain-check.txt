@@ -1,0 +1,6 @@
+Palomar exact-toolchain exporter gate passed
+toolchain: leanprover/lean4:v4.32.0
+Palomar minimum: v4.28.0
+Palomar policy commit: ef2fa1eadcb246c2346ddba39b52eaa53d4bb763
+lean4export tag: v4.32.0
+lean4export commit: 4e7915201d3f9f04470d9eae002fa695f7cdc589

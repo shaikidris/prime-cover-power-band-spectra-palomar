@@ -2,7 +2,7 @@
 # Copyright (c) 2026 Kim Morrison; MIT notice: readiness/PalomarSubmission-MIT-LICENSE.
 # D31 private rehearsal. Tool code, protected commands and pins are upstream.
 # Source authentication is confined to trusted preparation. Publication is a later gate.
-# Verification retry only: preserve the live render in run 34465135183.
+# SSRN-linked phase-one snapshot: refresh verification and render bindings together.
 name: D31 private readiness
 run-name: D31 private readiness ${{ github.run_id }} attempt ${{ github.run_attempt }}
 'on':
@@ -303,4 +303,3 @@ jobs:
       if: always()
       run: |
         python -c 'import json, os, pathlib, sys; p = pathlib.Path(os.environ["RUNNER_TEMP"]) / "palomar-render" / "report.json"; sys.exit(0 if json.loads(p.read_text())["status"] == "pass" else 1)'
-    if: ${{ false }}

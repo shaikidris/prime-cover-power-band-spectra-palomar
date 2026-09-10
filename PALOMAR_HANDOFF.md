@@ -1,22 +1,21 @@
 # D31 handoff packet — final publication gate pending
 
-**Preparation: 7/8 tasks verified for the two proved D31 results.** P0--P4,
-private protected verification and render (P6), and the reconciled
-advisory/handoff (P7) are complete. P5 is the
-final step: publish the repository, then confirm anonymous access to the exact
-source. The active task board is `PALOMAR_RELEASE_CONE.md` on this audit branch.
-The user confirmed the first-entry scope: Theorem 1.3 and Corollary 1.4 only.
-The latest sequence is SSRN Paper II first, then its verified reference in
-Palomar metadata, verification of the resulting immutable source, and final
-repository publication. This packet and its passed receipts remain bound to
-`4547434`; it must be refreshed after that metadata change. This packet
-certifies neither Theorem 1.1 nor Corollary 1.2.
-No Palomar submission or registration has been performed.
+**Preparation: 5/8 tasks verified for the current SSRN-linked source.**
+Theorem 1.3 and Corollary 1.4 are the phase-1 selection. The author submitted
+Paper II as [SSRN 7441718](https://papers.ssrn.com/abstract=7441718); its
+confirmed dashboard status is `PRELIMINARY_UPLOAD`, not public approval.
+Metadata/local checks pass. Refreshed private protected verification and
+render (P6) and their final reconciliation (P7) are pending. Publish the
+repository and verify anonymous access (P5) only after those pass.
+
+The previous source `454743470f6aff2e7f7f8ac79a7a2a7279e60ada` has passed receipts below;
+those are historical proof evidence, not exact-source certification of the
+new metadata commit. No Palomar submission or registration has been performed.
 
 | Field | Exact value |
 |---|---|
 | Repository | `shaikidris/prime-cover-power-band-spectra-palomar` |
-| Source commit | `454743470f6aff2e7f7f8ac79a7a2a7279e60ada` |
+| Source commit | `72288e1f32ba491a873e63647023b70d195f7139` |
 | Project directory | leave blank / omit `project_path` (repository root) |
 | Comparator configuration | `almost-all-comparator.json` |
 | Challenge | `PrimeCoverPowerBandChallenge.lean` |
@@ -47,7 +46,7 @@ remain open on `sharp-development`. Challenge holes are deliberate statement
 holes, not a proof-status claim. Theorem 10.1 and Corollaries 10.2--10.3 are
 proved internal exports, outside this two-result Comparator selection.
 
-## Exact verification evidence
+## Historical exact verification evidence for 4547434
 
 | Check | Result / receipt |
 |---|---|

@@ -1,0 +1,22 @@
+{
+  "source_commit": "72288e1f32ba491a873e63647023b70d195f7139",
+  "previous_verified_source": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+  "changed_paths": [
+    "README.md",
+    "SOURCE_PROVENANCE.md",
+    "formalization.yaml"
+  ],
+  "lean_and_build_inputs_unchanged": true,
+  "full_local_build": "pass; 4239 jobs",
+  "full_build_log_sha256": "6bfd37646a16cab906c2841d0f636b295e2097137d6974a7483fb94fda4842e1",
+  "metadata_validation": "pass",
+  "snapshot_errors": 0,
+  "fresh_toolchain_and_dependency_checks": "pass",
+  "prior_proof_closure_controls": "retained for unchanged Lean inputs; no new run claimed",
+  "remaining": [
+    "private exact-source preflight/full/render",
+    "final advisory reconciliation",
+    "public visibility and anonymous source fetch"
+  ],
+  "source_metadata_sha256": "966c6abbc0e1525bc78c3f7da89e04df72299003a014117c28f6690e1750b16f"
+}

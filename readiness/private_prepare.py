@@ -27,7 +27,7 @@ def main():
     pipeline = args.pipeline.resolve()
     values = json.loads(args.inputs.read_text())
     expected_repo = "shaikidris/prime-cover-power-band-spectra-palomar"
-    expected_commit = "454743470f6aff2e7f7f8ac79a7a2a7279e60ada"
+    expected_commit = "72288e1f32ba491a873e63647023b70d195f7139"
     expected_verifier = "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763"
     if values["repository"] != expected_repo or values["commit"] != expected_commit:
         raise ValueError("Inputs differ from the reviewed D31 source freeze")

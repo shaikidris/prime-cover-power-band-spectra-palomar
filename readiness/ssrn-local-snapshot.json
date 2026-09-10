@@ -1,0 +1,87 @@
+{
+  "advisory": true,
+  "errors": 0,
+  "warnings": 3,
+  "findings": [
+    {
+      "severity": "INFO",
+      "check": "git",
+      "message": "HEAD 454743470f6aff2e7f7f8ac79a7a2a7279e60ada"
+    },
+    {
+      "severity": "WARN",
+      "check": "git-cleanliness",
+      "message": "worktree is dirty; audit the exact committed snapshot"
+    },
+    {
+      "severity": "INFO",
+      "check": "git",
+      "message": "origin git@github.com:shaikidris/prime-cover-power-band-spectra-palomar.git"
+    },
+    {
+      "severity": "INFO",
+      "check": "licence",
+      "message": "root licence file: LICENSE"
+    },
+    {
+      "severity": "INFO",
+      "check": "repository-size",
+      "message": "tracked working-tree bytes: 1921172"
+    },
+    {
+      "severity": "WARN",
+      "check": "comparator-definition-semantics",
+      "message": "definition_names establish Challenge/Solution identity, not mathematical meaning. Run the editorial assessability/vacuity audit for every selected definition: PrimeCoverPowerBand.arithmeticStarDegree, PrimeCoverPowerBand.actualUpStarRatio, PrimeCoverPowerBand.upStarCorrection, PrimeCoverPowerBand.downStarCorrection, ... (16 total)"
+    },
+    {
+      "severity": "INFO",
+      "check": "challenge-size",
+      "message": "Challenge: 284 lines, 12581 bytes"
+    },
+    {
+      "severity": "INFO",
+      "check": "challenge-docs",
+      "message": "renderable selected-declaration docstrings: 2/2"
+    },
+    {
+      "severity": "INFO",
+      "check": "comparator",
+      "message": "selected declaration count: 18"
+    },
+    {
+      "severity": "INFO",
+      "check": "manifest",
+      "message": "checked 15 Git package pin(s)"
+    },
+    {
+      "severity": "INFO",
+      "check": "metadata",
+      "message": "run the current official formalization validator; this script does not parse the schema"
+    },
+    {
+      "severity": "INFO",
+      "check": "commit-role",
+      "message": "public metadata names 11 distinct full commit SHA(s): README.md=3, SOURCE_PROVENANCE.md=11, formalization.yaml=2"
+    },
+    {
+      "severity": "WARN",
+      "check": "commit-role",
+      "message": "multiple public metadata SHAs require formalization.yaml to name the authoritative substantive source repository and commit"
+    },
+    {
+      "severity": "INFO",
+      "check": "release-cone",
+      "message": "local modules=9 lines=33517; Challenge cone=1 lines=284; Solution cone=7 lines=32990; selected cone=9 lines=33517; unreachable=0"
+    },
+    {
+      "severity": "INFO",
+      "check": "release-cone-delta",
+      "message": "changed Lean modules=0; newly introduced=0"
+    },
+    {
+      "severity": "INFO",
+      "check": "challenge-holes",
+      "message": "PrimeCoverPowerBandChallenge.lean: sorry=4, admit=0, axiom=0 (review deliberate statement holes manually)"
+    }
+  ]
+}

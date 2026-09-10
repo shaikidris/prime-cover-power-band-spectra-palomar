@@ -1,0 +1,3 @@
+Palomar dependency-provenance gate passed
+Palomar policy commit: ef2fa1eadcb246c2346ddba39b52eaa53d4bb763
+mathlib: leanprover-community/mathlib4@3dffaf2f18b47d11948f6390838ea6f2ae662aaf (canonical ancestor of refs/heads/master)

@@ -4,13 +4,13 @@
 
 This is the continuation of the source-freeze board on the separate audit
 branch `palomar-readiness-2026-09-10`. The immutable D31 source is
-`454743470f6aff2e7f7f8ac79a7a2a7279e60ada` on `main`; verification and handoff
+`72288e1f32ba491a873e63647023b70d195f7139` on `main`; verification and handoff
 must use that commit, never this later receipt commit. The user authorized
 analysis and the before-submission goal. No Palomar state change is included.
 
 The user clarified: **making the repository public is the last step before
 Palomar**. P6 therefore runs privately, P7 prepares the final assessment and
-packet, and P5 is the final publication/access gate. The source SHA and full
+packet, and P5 is the final publication/access gate. The source SHA now includes the SSRN metadata update; full
 verification requirements are unchanged. Earlier blocked records below are
 historical and are superseded by this sequencing correction.
 
@@ -22,13 +22,12 @@ preprint, capture its receipt and public reference, update the Palomar YAML,
 and revalidate the resulting immutable source before final publication. Never
 substitute Paper I's SSRN identifier or invent a Paper II DOI.
 
-**Dashboard:** P0--P4, P6 and P7 remain VERIFIED at source `4547434` for the
-two-result D31 entry. P5 now awaits the SSRN prerequisite and the resulting
-metadata/source reconciliation before publication. A future metadata commit
-does not inherit the exact-source status of these receipts.
-**7/8 tasks verified** counts release tasks, not equal effort or mathematical
-proof percentage. R1--R8 remains 8/8 local; both sharp proofs remain open on
-the preserved `sharp-development` branch.
+**Dashboard: 5/8 verified for the current source.** P0--P4 pass: the formal
+source is unchanged and the SSRN-linked metadata and full local build pass.
+P6 is reopened for private exact-source preflight/full/render; P7 awaits those
+new receipts. P5 remains the final publication/access gate. The previous 7/8
+receipts remain valid only for historical source `4547434`. Task counts are
+not mathematical proof percentages. Both sharp Lean proofs remain open.
 
 | ID | Output / existing owner | Depends on | Status | Exit test / evidence |
 |---|---|---|---|---|
@@ -37,17 +36,17 @@ the preserved `sharp-development` branch.
 | P2 | Admission-free D31 tree; preserved sharp development | P1 | VERIFIED | Final full build 4239 jobs; zero Solution admissions and zero snapshot errors; sharp revision `11e71d0cec4f2e8de8e2542bb0b7a4888782607f`. |
 | P3 | Mathematical account, Challenge prose and metadata | P0, P2 | VERIFIED | Source semantics/current metadata contract pass; 2/2 selected English docstrings present. Render is P6. |
 | P4 | Local release audit of exact source | P1--P3 | VERIFIED | Strict statement/definition comparison, eight standard-axiom closures, 15 controls, zero unreachable modules; inherited lint disclosed. See `readiness/p4-final-validation.json`. |
-| P5 | Final authorized publication and anonymous source check | SSRN reference, P4, P6, P7 | WAITING_FOR_SSRN_REFERENCE | Two-result scope confirmed. Submit Paper II to SSRN first, capture its verified reference, then align/revalidate Palomar metadata. No visibility change performed. |
-| P6 | Current protected Linux preflight/full and Challenge render, privately | P4 | VERIFIED | Actual full report pass/complete, both kernels accept, all source/config/tool/dependency bindings match; actual render and reader inspection pass. See `readiness/p6b-mechanical-validation.json` and `readiness/p6c-render-inspection.json`. |
-| P7 | Advisory assessment and exact handoff packet | P0--P4, P6 | VERIFIED | Actual protected report/render reconcile with the frozen source, mathematical account and exact intake fields; advisory limits disclosed. See `readiness/p7-reconciliation.json` and `PALOMAR_HANDOFF.md`. |
+| P5 | Final authorized publication and anonymous source check | P4, P6, P7 | WAITING_FOR_P6_P7 | SSRN 7441718 is confirmed and cited. Publish only after the refreshed private checks and handoff assessment. |
+| P6 | Current protected Linux preflight/full and Challenge render, privately | P4 | IN_PROGRESS | Replaying unchanged current verifier on SSRN-linked source `72288e1`; prior source receipts are retained separately. |
+| P7 | Advisory assessment and exact handoff packet | P0--P4, P6 | IN_PROGRESS | Two-result scope and SSRN status reconciled; final exact-source report/render binding remains pending. |
 
 P6 substeps remain individually tracked without changing the eight-task denominator:
 
 | Substep | Status | Evidence required |
 |---|---|---|
-| P6a private preflight | VERIFIED (34465598832) | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
-| P6b private full protected replay | VERIFIED (34465598832) | Actual pass/complete report; protected 4236-job selected build, NanoDa and Lean kernel acceptance. Exact source and all pins match. |
-| P6c private Challenge render | VERIFIED (34465135183) | Actual report `pass`; 18 file hashes match. Static module overview and 2/2 selected docstrings visually inspected; upstream interactive declaration isolation disclosed. |
+| P6a private preflight | REPLAY_PENDING for 72288e1; previous pass 34465598832 | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
+| P6b private full protected replay | REPLAY_PENDING for 72288e1; previous pass 34465598832 | Actual pass/complete report; protected 4236-job selected build, NanoDa and Lean kernel acceptance. Exact source and all pins match. |
+| P6c private Challenge render | REPLAY_PENDING for 72288e1; previous pass 34465135183 | Actual report `pass`; 18 file hashes match. Static module overview and 2/2 selected docstrings visually inspected; upstream interactive declaration isolation disclosed. |
 
 
 ### SSRN-first prerequisite tasks
@@ -56,10 +55,10 @@ P6 substeps remain individually tracked without changing the eight-task denomina
 |---|---|---|---|
 | S0 | Confirm sequence and two-result formal scope | VERIFIED | User explicitly selected two proved results and SSRN first. |
 | S1 | Freeze Paper II identity and prepare PDF/metadata | DRAFT_PREPARED | Separate `prime-orthant-geometry/submission/ssrn-paper2/` packet: 34-page PDF SHA-256 `d9c4e05c2d9f67d0973798601ed5078630f2d2406416af73533658a68a273e5e`, copy-safe abstract, metadata and exact build/packet manifests. Mathematical body unchanged. |
-| S2 | Check source fidelity, SSRN compliance and final render | IN_PROGRESS | Source/render checks pass; all 137 equation tags present. Official SSRN guidelines and AI policy checked 10 September. Author details and live portal checks remain pending; no new independent whole-paper proof audit claimed. |
-| S3 | Submit exact PDF; capture actual SSRN receipt/reference | WAITING_FOR_SIGN_IN | SSRN authentication page identified the correct author/email; user sign-in requested. No new submission exists in this preparation record. |
-| S4 | Insert actual Paper II reference in Palomar metadata | WAITING_FOR_S3 | Keep two selected declarations; preserve sharp-route open status. |
-| S5 | Reconcile and verify resulting immutable Palomar source | WAITING_FOR_S4 | Refresh affected metadata/build/render bindings before P5. |
+| S2 | Source fidelity, SSRN compliance and render | LOCAL_PACKET_VERIFIED | Source/render checks pass; all 137 equation tags present. Author performed the live submission. Remote PDF bytes remain unverified; no fresh independent whole-paper audit claimed. |
+| S3 | Author submission and SSRN reference | REFERENCE_VERIFIED | User supplied 7441718; My Papers confirms exact title/author/date and PRELIMINARY_UPLOAD. Public page unavailable; remote PDF hash unverified. See `readiness/ssrn-7441718-receipt.json`. |
+| S4 | Insert Paper II reference in Palomar metadata | VERIFIED | Source `72288e1` cites SSRN 7441718 and retains exactly the two selected results; schema and Palomar contract pass. |
+| S5 | Verify resulting immutable Palomar source | IN_PROGRESS | Local 4239-job build and exact toolchain/provenance checks pass; P6 private replay is being refreshed. |
 
 These prerequisites do not silently enlarge the original eight-task denominator;
 the historical 7/8 is an exact-source result, not current end-to-end readiness.

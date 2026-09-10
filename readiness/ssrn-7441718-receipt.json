@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-09-10T12:12:39.357114+00:00",
+  "abstract_id": "7441718",
+  "url": "https://papers.ssrn.com/abstract=7441718",
+  "canonical_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7441718",
+  "paper_title": "Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs",
+  "author": "Idris Ali Shaik",
+  "date_created": "2026-09-10",
+  "date_updated": "2026-09-10",
+  "author_dashboard_status": "PRELIMINARY_UPLOAD",
+  "author_dashboard_edocument": "Yes",
+  "author_dashboard_public_view": "Yes",
+  "public_page_notice": "This paper is under review or has been removed from SSRN at the request of the author, SSRN, or the rights holder.",
+  "evidence": "User supplied the reference after manual submission; authenticated SSRN My Papers row independently matched ID, title, author, dates, status and eDocument field. Public abstract URL was visited separately.",
+  "public_abstract_available": false,
+  "doi_verified": false,
+  "uploaded_pdf_hash_verified": false,
+  "prepared_pdf_sha256": "d9c4e05c2d9f67d0973798601ed5078630f2d2406416af73533658a68a273e5e",
+  "prepared_pdf_note": "Local supplied packet only; the remote uploaded PDF was not accessible for a byte comparison.",
+  "palomar_selected_source": "72288e1f32ba491a873e63647023b70d195f7139",
+  "selected_paper_results": [
+    "Theorem 1.3",
+    "Corollary 1.4"
+  ],
+  "palomar_submission_created": false
+}
