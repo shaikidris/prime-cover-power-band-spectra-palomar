@@ -1,0 +1,31 @@
+{
+  "status": "verified",
+  "scope": "Private render rehearsal; actual downloaded sanitized artifact inspected. No Palomar intake or anonymous source check.",
+  "source_commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+  "workflow_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/actions/runs/34465135183",
+  "job_id": 102831818269,
+  "renderer_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
+  "artifact_tree_sha256": "0c7542a512ededb34cafc21a5d8a90aefb546be2fe04f43428d94e9fa7dbdc1d",
+  "artifact_files": 18,
+  "artifact_bytes": 625731,
+  "checks": {
+    "all_file_sizes_and_sha256_match_manifest": true,
+    "canonical_manifest_hash_matches_report": true,
+    "source_and_challenge_hash_match_frozen_source": true,
+    "verifier_and_renderer_hashes_match_pinned_upstream": true,
+    "selected_theorem_docstrings_visible": 2,
+    "selected_definition_formulas_present": 16,
+    "module_overview_present_in_sanitized_html_and_metadata": true,
+    "module_overview_visually_inspected_in_unchanged_static_html": true,
+    "normal_selected_declaration_view_restored_after_inspection": true
+  },
+  "visual_inspection": {
+    "method": "Codex browser screenshots and accessibility text against the exact artifact served on localhost",
+    "normal_view": "Both selected English theorem docstrings and signatures are present; the current upstream isolateComparedDeclarations function selects configured declarations and omits the separate module overview from this interactive view.",
+    "static_view": "Temporarily disabled script execution in the inspection tab, reloaded the same unmodified HTML, and visually read the overview. It retains the full range, squared-error comparison, complete-prefix sorting, unchanged BHP sharp route, sharp branch scope, and excluded endpoints. Restored normal script execution afterwards.",
+    "presentation_limits": "Corollary docstring math remains readable literal dollar-delimited notation in the current renderer. No claim that the public intake UI has been inspected or that the declaration-only view displays the overview.",
+    "source_or_artifact_modified": false,
+    "readiness_judgment": "The overview and 2/2 selected English docstrings exist and were read in the actual render. The interactive narrowing is explained by pinned upstream code; no candidate documentation was dropped."
+  },
+  "checked_at": "2026-09-10T10:40:43.184880+00:00"
+}

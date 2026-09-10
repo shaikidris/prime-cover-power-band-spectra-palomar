@@ -36,7 +36,7 @@ P6 substeps remain individually tracked without changing the eight-task denomina
 |---|---|---|
 | P6a private preflight | VERIFIED (34465598832) | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
 | P6b private full protected replay | RUNNING (34465598832) | Unmodified current execute path reports `pass`, with successful protected Comparator and NanoDa checks. |
-| P6c private Challenge render | RUNNING (34465135183) | Current pinned renderer reports `pass`; inspect actual module overview and 2/2 selected theorem docstrings. |
+| P6c private Challenge render | VERIFIED (34465135183) | Actual report `pass`; 18 file hashes match. Static module overview and 2/2 selected docstrings visually inspected; upstream interactive declaration isolation disclosed. |
 
 
 Full delivery scope remains: Theorem 1.3 and Corollary 1.4 are the first entry;
@@ -1396,3 +1396,31 @@ original live render run. Overall progress remains 5/8 until all P6 substeps
 finish. Receipts: `readiness/p6a-preflight-report.json` and
 `readiness/p6a-preflight-report.transport.json`. Public availability has not
 been asserted and publication remains the final P5 step.
+
+## P6c verified — exact render and reader inspection
+
+The original render job completed successfully despite its sibling's earlier
+intake-input failure. Its actual report has `status: pass`, `stage: complete`,
+no errors, the frozen source and Challenge hash, and the pinned renderer/Lean/
+Landrun revisions. Recomputed all 18 artifact file hashes and the canonical
+tree hash; they match `0c7542a512ededb34cafc21a5d8a90aefb546be2fe04f43428d94e9fa7dbdc1d`.
+No renderer or artifact bytes were modified.
+
+Browser inspection confirmed both selected English docstrings and their
+statements in the normal view. Current upstream `isolateComparedDeclarations`
+intentionally narrows that view to configured declarations, so it omits the
+module overview there. The overview remains in the sanitized HTML and metadata.
+It was visually inspected in that exact static HTML with script execution
+temporarily disabled, then normal execution was restored. Its BHP distinction,
+full range, squared-error comparison and endpoint exclusions are intact. This
+explains the display difference; it does not assert that the intake UI displays
+the overview. Literal dollar-delimited math in the Corollary prose remains
+readable. No candidate documentation regression was found.
+
+P6a and P6c are VERIFIED; P6b is still running its protected Comparator and
+challenge provenance audit after successful pinned tool builds. The local
+watch process lost its API connection, but a fresh job snapshot confirms the
+same remote job is alive. It was not restarted. Overall progress remains 5/8.
+Receipts: `readiness/p6c-render-report.json`, its transport sidecar,
+`readiness/p6c-render-artifact-manifest.json` and
+`readiness/p6c-render-inspection.json`.

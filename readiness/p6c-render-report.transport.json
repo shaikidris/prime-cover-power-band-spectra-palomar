@@ -1,0 +1,23 @@
+{
+  "scope": "private Linux rehearsal; anonymous source availability is deferred to the final publication gate",
+  "mode": "render",
+  "source_commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+  "verifier_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
+  "request_id": "56ed9db6c13f43b1a839187a9ca6d02f",
+  "inputs": {
+    "repository": "shaikidris/prime-cover-power-band-spectra-palomar",
+    "commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+    "challenge_sha256": "d2e99fd97cf315102f5d3918e4aa5ee403f2e4be41217dfec88f98d8cbc0ec96",
+    "request_id": "56ed9db6c13f43b1a839187a9ca6d02f",
+    "challenge_path": "PrimeCoverPowerBandChallenge.lean",
+    "solution_path": "PrimeCoverPowerBandSolution.lean",
+    "comparator_config_path": "almost-all-comparator.json",
+    "lakefile_path": "lakefile.lean",
+    "lean_toolchain_path": "lean-toolchain"
+  },
+  "source_transport": "ephemeral repository-scoped Actions read token during trusted preparation only",
+  "git_credentials_persisted": false,
+  "verifier_source_modified": false,
+  "verifier_sha256": "ad5ac059305d5c1c5d07a25bc600a3bb6cab4d1feae5ad747408253a3c312d45",
+  "renderer_sha256": "8bfc2dec3e851de83ae2821ce0b13c7d6b6e3c9e7884e52c1064bbc39092d2cb"
+}

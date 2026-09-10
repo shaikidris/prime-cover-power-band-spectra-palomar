@@ -5,7 +5,10 @@ Policy: `e9c8c238f5695b10f75db7175648a1d0195352c1`.
 Public reviewer implementation: `a7f00885a0cfaedf70abbd835c32b6899656c3db`.
 This is the preparing agent's bounded assessment, not a Palomar review,
 independent human review, acceptance prediction or completed P7 gate.
-The protected mechanical report and actual render remain outstanding.
+The protected mechanical report remains outstanding. The exact render passed,
+and its static module overview and both selected theorem docstrings were
+visually inspected; see `p6c-render-inspection.json` for the current upstream
+declaration-only display behavior and literal-math presentation limit.
 
 ## Selected mathematics and assessability
 
@@ -76,5 +79,5 @@ comparisons. Two primary papers provide relevant, distinct context:
 
 These checks support the stated audience and distinctions, not a claim of
 literature completeness. No affirmative source/account blocker was found in
-this bounded review. P7 remains open until the exact protected report and
-render are inspected and all source bindings are reconciled.
+this bounded review. P7 remains open until the exact protected mechanical report is inspected
+and all source bindings are reconciled with the already verified render.

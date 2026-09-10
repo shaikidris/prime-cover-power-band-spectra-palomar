@@ -12,8 +12,11 @@
     },
     "render_job": {
       "id": 102831818269,
-      "status": "in_progress",
-      "last_verified_stage": "Build, sanitize, and hash Challenge rendering under Landrun"
+      "status": "completed",
+      "conclusion": "success",
+      "receipt": "p6c-render-report.json",
+      "inspection": "p6c-render-inspection.json",
+      "verification": "Actual report pass; all artifact hashes and source bindings match; static overview and both selected docstrings visually inspected."
     },
     "render_restarted": false
   },
@@ -26,7 +29,7 @@
       "id": 102833318097,
       "status": "in_progress",
       "preflight": "verified from downloaded report; exact source and configuration hashes match",
-      "full": "prepared; tool setup and protected replay remain in progress"
+      "full": "Running protected Comparator and challenge provenance audit; all pinned tool builds and credential-free execution guard passed."
     },
     "render_job": "intentionally skipped; consume the unchanged source render from run 34465135183"
   }
