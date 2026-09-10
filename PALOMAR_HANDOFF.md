@@ -19,7 +19,7 @@ The active task board is `PALOMAR_RELEASE_CONE.md` on this audit branch.
 | Sharp development | `11e71d0cec4f2e8de8e2542bb0b7a4888782607f` on `sharp-development` |
 
 Use the source commit above, not the later audit-branch commit. The source is
-clean and pushed. Local full build (4239 jobs), strict statement/definition
+clean and pushed; all 15 pinned dependencies are anonymously accessible. Local full build (4239 jobs), strict statement/definition
 comparison, eight standard-axiom closures, 15 controls and the admission/cone
 audit pass. The exact 93 inherited semantic-lint findings and one style
 finding remain disclosed. Native mathematical sources are privately identified;

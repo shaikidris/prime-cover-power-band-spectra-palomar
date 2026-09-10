@@ -8,5 +8,16 @@
   "verifier_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
   "rehearsal_sync": "unchanged upstream fast-forward c605f23466450a52999fcfb3c6d68ed8febc56bf to ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
   "public_visibility": "pending explicit approval; not changed",
-  "workflow_dispatches": []
+  "workflow_dispatches": [],
+  "visibility_rechecked_at": "2026-09-10T10:01:09.975933+00:00",
+  "visibility_recheck": {
+    "private": true,
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  "anonymous_dependencies": {
+    "checked": 15,
+    "pass": true,
+    "receipt": "p5-anonymous-dependencies.json"
+  }
 }

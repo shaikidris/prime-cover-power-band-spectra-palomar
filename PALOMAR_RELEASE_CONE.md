@@ -20,7 +20,7 @@ the preserved `sharp-development` branch.
 | P2 | Admission-free D31 tree; preserved sharp development | P1 | VERIFIED | Final full build 4239 jobs; zero Solution admissions and zero snapshot errors; sharp revision `11e71d0cec4f2e8de8e2542bb0b7a4888782607f`. |
 | P3 | Mathematical account, Challenge prose and metadata | P0, P2 | VERIFIED | Source semantics/current metadata contract pass; 2/2 selected English docstrings present. Render is P6. |
 | P4 | Local release audit of exact source | P1--P3 | VERIFIED | Strict statement/definition comparison, eight standard-axiom closures, 15 controls, zero unreachable modules; inherited lint disclosed. See `readiness/p4-final-validation.json`. |
-| P5 | Authorized public immutable source | P4 | WAITING_FOR_USER | Source and sharp branch pushed; independent SSH readback matches. Explicit public-visibility approval is pending; anonymous source check must follow. |
+| P5 | Authorized public immutable source | P4 | WAITING_FOR_USER | Source and sharp branch pushed; independent SSH readback matches. All 15 pinned dependencies are anonymously accessible. Explicit public-visibility approval is pending; the source access check must follow. |
 | P6 | Current protected Linux preflight/full and Challenge render | P4, P5 | TODO | Exact verifier/Comparator/NanoDa/Landrun receipts and visible selected documentation required. |
 | P7 | Advisory review and exact manual handoff | P0--P6 | IN_PROGRESS | Source/account advisory and exact draft fields prepared; mechanical/render reconciliation remains open. No Palomar state mutation. |
 
@@ -1282,3 +1282,19 @@ preflight/full/render are prepared but not dispatched. The source visibility
 has not been changed while the explicit approval question is pending.
 P7's source/account advisory and draft handoff are prepared independently;
 its mechanical/render evidence gates remain open. Progress remains 5/8.
+
+## Continuation — dependency availability verified
+
+The previous goal turn made concrete progress by committing/pushing the source
+freeze and audit receipts. This continuation rechecked the clean source at
+`454743470f6aff2e7f7f8ac79a7a2a7279e60ada` and confirmed that GitHub still
+reports the source repository as private. No publication approval has arrived.
+
+An independent P5 requirement is now verified: unauthenticated GitHub reads
+returned the exact commit and a tree for all 15 pinned Lake dependencies.
+The first Python request attempt hit a local certificate-store error; the
+system curl retry retained TLS verification and passed all 15. This is source
+availability evidence, not a protected build. Receipt:
+`readiness/p5-anonymous-dependencies.json`. No source or dependency was changed.
+Progress remains **5/8**, with P5 awaiting the same public-visibility approval,
+P6 not dispatched and P7's final reconciliation pending those results.
