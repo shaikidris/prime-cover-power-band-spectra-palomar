@@ -3,6 +3,7 @@
 | Role | Repository or source | Commit |
 |---|---|---|
 | Authoritative substantive Lean development | this repository, `shaikidris/prime-cover-power-band-spectra-palomar` | the exact immutable commit selected at intake; require clean HEAD and the pushed canonical branch to match it |
+| Audited and pushed R1--R8 development checkpoint; not a submission-ready revision | this repository | `0e23075e18eb2569f1b95217ceee955de7554345` |
 | Historical planning checkpoint; not the substantive proof source | this repository | `e887e0b6fc2d46eb7cec3921dd7898c9f1335d25` |
 | Historical Paper II Lean laboratory | `shaikidris/prime-cover-power-band-spectra-formalization` | parent `a6f8efa91346a6401ba9191d1b12f8552727e380`; dirty batch not yet checkpointed |
 | Paper II mathematical source (native paper, not Lean evidence) | `shaikidris/prime-orthant-geometry` | `df32cafb021c0ed90f14f045858525882d50ab9e` |
@@ -26,6 +27,9 @@ owners that were untracked at the R8 audit. Its complete Git tree is the
 reproducible source inventory; local audit outputs remain in `.lake/d31-r8/`.
 The user authorized commit and push on 10 September 2026. That checkpoint
 does not establish public source availability or independent Palomar replay.
+The post-push [submission analysis](PALOMAR_SUBMISSION_ANALYSIS.md) records a
+confirmed strict Comparator identity blocker on that unchanged Lean source.
+Its later documentation commit is not a new proof implementation.
 The D31 manuscript is `draft/prescribed-eigenvalues-in-prime-cover-power-bands.md`
 at SHA-256 `b145e0a4ed2078fca969ed127d00c73d8758a76b559971988501693c1b60cfa3`.
 The paper commit above fixes native mathematical provenance only. Paper I,

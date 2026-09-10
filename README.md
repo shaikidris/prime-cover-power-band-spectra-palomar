@@ -32,6 +32,12 @@ axioms only. Their frozen Challenge types are unchanged. The two sharp
 terminal-band proofs remain open. R8 scoped D31 verification is complete;
 final Palomar submission readiness is **PARTIAL**.
 
+The [10 September submission analysis](PALOMAR_SUBMISSION_ANALYSIS.md)
+confirms a strict Comparator identity blocker in the shared Challenge/Core
+definitions, despite the passing local definitional-equality check. The source
+checkpoint is pushed. An admission-free D31 Solution surface, public source
+access and exact protected verification remain release gates.
+
 ## Progress and reuse
 
 - Existing code after R8 (unchanged from R7): nine local modules, six proof owners, 33,559 Lean lines

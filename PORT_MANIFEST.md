@@ -2436,6 +2436,41 @@ inside that commit. R8's earlier no-commit/no-push and untracked-file statements
 are historical audit facts, superseded for this development checkpoint.
 Exact current Palomar replay and the two sharp proofs remain open.
 
+## Post-push submission analysis — 10 September 2026
+
+The full R1--R8 source checkpoint is
+`0e23075e18eb2569f1b95217ceee955de7554345`. SSH push succeeded; a subsequent
+independent SSH branch read returned the same hash, with a clean worktree.
+This section and `PALOMAR_SUBMISSION_ANALYSIS.md` record the analysis requested
+in that same authorization. They change no Lean source, selection, manuscript
+or pin, and do not repair or promote any theorem.
+
+Freshly inspecting pinned Comparator
+`575674928e239f5bc452aab72d1dd7b0f1326494` revealed that non-selected reachable
+constants require structural equality. A compiled-environment diagnostic
+using its equality instances confirms a blocker: the selected
+`powerBandBadCenters` type reaches `Vertex`, which is an explicit subtype
+in Challenge but a Paper I abbreviation in Core. Both public D31 theorem
+types match structurally. Additional rank/operator definitions and a generated
+Fintype instance reference differ. R8's local definitional-equality pass was
+valid for its stated method but did not test this stricter contract. No
+official protected Comparator run or mathematical proof failure is claimed.
+
+The first proposed entry remains the existing almost-all pair. Repair the
+shared statement surface, isolate an admission-free D31 Solution, verify
+public source access, then complete exact protected preflight/full replay and
+the editorial account. The sharp holes are outside D31's audited proof
+closure; separating their Solution surface satisfies the local release rule
+without making the sharp theorem a new D31 proof prerequisite. The source
+API remains anonymously unavailable (404), and visibility was not changed.
+No supported Linux runner, official replay or registry action is recorded.
+
+The report freezes current policy, verifier, schema and kernel-tool revisions;
+native source files were also matched to their cited mathematical-source
+commit. Detailed evidence is retained in
+`.lake/palomar-submission-analysis-2026-09-10/`. R8 remains **8/8 local**,
+public proofs **2/4**, and submission readiness **PARTIAL**.
+
 ## Historical next-migration table (superseded for D31)
 
 The following historical declarations were checked adapters or finite

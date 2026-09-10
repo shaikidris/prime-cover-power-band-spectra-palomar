@@ -105,7 +105,14 @@ review:
     roots have 71747 constants in their transitive union, with standard axioms
     only. Local namespace-isolated Lean comparison passes 34 shared types and
     26 definition values, covering all selections; this is not official
-    Comparator or independent-kernel evidence. The declaration/source-reference
+    Comparator or independent-kernel evidence. A subsequent compiled-environment
+    diagnostic confirms a strict Comparator identity blocker: the selected
+    powerBandBadCenters type reaches non-selected Vertex, defined explicitly
+    in the Challenge but as a Paper I abbreviation in Core; generated instance
+    references also differ. Public D31 root types remain structurally equal.
+    Repair this shared surface and isolate an admission-free D31 Solution;
+    the sharp holes are outside the D31 proof closure but violate the local
+    zero-Solution-hole release rule. The declaration/source-reference
     inventory preserves shared/sharp support and does not assert that the
     combined tree is minimal for D31 alone. Metadata schema, current Palomar
     contract, source provenance, source editorial assessment, exporter-tag
@@ -119,4 +126,5 @@ review:
     preflight/full Comparator/NanoDa/render replay remain required; the two
     sharp proofs also block a combined four-root release. The selected intake
     commit must match clean HEAD and the pushed canonical branch. No
-    Palomar-ready claim or submission is made.
+    Palomar-ready claim or submission is made. The detailed current assessment
+    is PALOMAR_SUBMISSION_ANALYSIS.md; this audit has not established novelty.

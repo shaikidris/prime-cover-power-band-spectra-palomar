@@ -1,6 +1,6 @@
 # Palomar selected-root blocker map
 
-## Current authority — 9 September 2026
+## Current authority — 10 September 2026
 
 Use the D31 rebase at the top of `PALOMAR_RELEASE_CONE.md`.
 The old rule that only BHP or Guth--Maynard work could proceed is superseded.
@@ -8,6 +8,10 @@ The paper proof is internal. R1 statement alignment is validated by a fresh
 4,222-job build and local definitional comparison. R2's literal reuse audit
 also passed. R3's finite ordered comparison and controls passed. R7 now
 closes both D31 public proofs. Two sharp Solution holes remain.
+The post-push submission analysis confirms a structural Comparator blocker
+in the Challenge/Core shared definitions; see
+[PALOMAR_SUBMISSION_ANALYSIS.md](PALOMAR_SUBMISSION_ANALYSIS.md).
+R8 remains a completed local audit, not official statement compatibility.
 
 ## D31: project-local formalization first
 
@@ -77,14 +81,26 @@ retained shared/sharp declarations outside D31 are explicitly inventoried.
 
 Final Palomar submission readiness is **PARTIAL**:
 
-- This checkpoint includes the complete substantive source. Before intake,
-  match its clean HEAD to the pushed canonical branch and verify public access.
+- The complete D31 source checkpoint was committed and pushed; an independent
+  SSH branch read matched it and the worktree was clean. Before intake,
+  match the final selected clean HEAD to the pushed branch and verify public access.
   The 10 September anonymous GitHub API probe returned 404 while the authorized
   SSH remote was reachable. Visibility has not been changed.
+- The pinned Comparator requires structural equality of non-selected
+  dependencies. A compiled-environment diagnostic confirms that the selected
+  `powerBandBadCenters` type reaches the non-selected `Vertex`, whose explicit
+  Challenge subtype differs from Core's Paper I abbreviation. Generated
+  instance references also differ. Local definitional equality does not close
+  this blocker; repair the shared surface without weakening the Challenge.
+- Isolate an admission-free D31 Solution surface. The two sharp holes are
+  outside the D31 proof closure, but the configured shared Solution fails
+  this repository's zero-Solution-hole release rule and snapshot audit.
 - Exact current Palomar preflight and full protected Linux replay, including
   Comparator, NanoDa and the rendered Challenge, have not run. This host has
   no supported Linux runner. Local definitional equality is separate evidence.
 - Both sharp proofs remain open for the combined four-root release.
+- A concise public mathematical-interest and source account should accompany
+  the D31 entry. Novelty has not been established by this audit.
 
 Current upstream schema and Palomar metadata validation pass, with explicit
 AI disclosure and corrected provenance roles. Toolchain/exporter compatibility

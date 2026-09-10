@@ -6,6 +6,9 @@ This section supersedes the execution order, almost-all dependency map, and
 progress denominator in the historical contract below. MG1 (R1--R2),
 MG2 (R3--R4), MG3 (R5--R6), and MG4 (R7--R8) are validated locally.
 D31 is 8/8; final Palomar submission readiness is PARTIAL.
+The [10 September post-push analysis](PALOMAR_SUBMISSION_ANALYSIS.md) records
+a confirmed structural Comparator incompatibility in the shared definitions.
+That release blocker is separate from the completed D31 proof checklist.
 Both D31 public proofs are closed; the sharp pair remains open. The
 10 September R5 reconciliation below uses saved validation evidence,
 freshly matched to the unchanged source hashes.
