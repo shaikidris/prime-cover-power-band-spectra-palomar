@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-09-10T10:16:31Z",
+  "diagnostics": [
+    {
+      "code": "submission.invalid",
+      "explanation": "Project path must be a safe repository-relative POSIX path",
+      "next_action": "Update the repository, commit the correction, then make a new submission using the new commit SHA.",
+      "owner": "submitter",
+      "repairable": false,
+      "retryable": false,
+      "stage": "intake",
+      "summary": "Project path must be a safe repository-relative POSIX path"
+    }
+  ],
+  "diagnostics_schema_version": 1,
+  "errors": [
+    "Project path must be a safe repository-relative POSIX path"
+  ],
+  "formalization_profile_version": 4,
+  "phase": "preparation",
+  "schema_version": 1,
+  "stage": "intake",
+  "status": "fail",
+  "warnings": []
+}

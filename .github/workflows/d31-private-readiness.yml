@@ -2,6 +2,7 @@
 # Copyright (c) 2026 Kim Morrison; MIT notice: readiness/PalomarSubmission-MIT-LICENSE.
 # D31 private rehearsal. Tool code, protected commands and pins are upstream.
 # Source authentication is confined to trusted preparation. Publication is a later gate.
+# Verification retry only: preserve the live render in run 34465135183.
 name: D31 private readiness
 run-name: D31 private readiness ${{ github.run_id }} attempt ${{ github.run_attempt }}
 'on':
@@ -11,12 +12,12 @@ run-name: D31 private readiness ${{ github.run_id }} attempt ${{ github.run_atte
     paths:
     - .github/workflows/d31-private-readiness.yml
     - readiness/private_prepare.py
+    - readiness/preflight-inputs.json
+    - readiness/full-inputs.json
+    - readiness/render-inputs.json
   workflow_dispatch: {}
 permissions:
   contents: read
-concurrency:
-  group: d31-private-readiness
-  cancel-in-progress: false
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -182,20 +183,23 @@ jobs:
         PALOMAR_READY: ${{ steps.prepare.outputs.ready }}
       run: |
         python - <<'PYTHON'
-        import json, pathlib, sys, os
-        report = json.loads(pathlib.Path(os.environ["RUNNER_TEMP"], "mechanical-report.json").read_text())
-        mode = os.environ.get("PALOMAR_MODE", "full")
-        status = report.get("status")
-        if (mode == "preflight" and os.environ.get("PALOMAR_READY") == "true"
-                and status == "pending"):
+        import json, os, pathlib, sys
+        base = pathlib.Path(os.environ["RUNNER_TEMP"])
+        full = base / "mechanical-report.json"
+        if full.is_file() and json.loads(full.read_text()).get("status") == "pass":
             sys.exit(0)
-        if status == "pass":
-            sys.exit(0)
-        print(f"::error::mechanical verification did not pass: {status}")
-        for problem in report.get("errors", []):
-            print(f"::error::{problem}")
+        for path in [base / "preflight-report.json", full]:
+            if path.is_file():
+                report = json.loads(path.read_text())
+                print(f"::error::{path.name}: {report.get('status')}")
+                for problem in report.get("errors", []):
+                    print(f"::error::{problem}")
+        print("::error::A passing full mechanical report is required")
         sys.exit(1)
         PYTHON
+    concurrency:
+      group: d31-private-verification
+      cancel-in-progress: false
   render:
     runs-on: ubuntu-latest
     timeout-minutes: 360
@@ -299,3 +303,4 @@ jobs:
       if: always()
       run: |
         python -c 'import json, os, pathlib, sys; p = pathlib.Path(os.environ["RUNNER_TEMP"]) / "palomar-render" / "report.json"; sys.exit(0 if json.loads(p.read_text())["status"] == "pass" else 1)'
+    if: ${{ false }}

@@ -34,9 +34,9 @@ P6 substeps remain individually tracked without changing the eight-task denomina
 
 | Substep | Status | Evidence required |
 |---|---|---|
-| P6a private preflight | PREPARED | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
-| P6b private full protected replay | PREPARED | Unmodified current execute path reports `pass`, with successful protected Comparator and NanoDa checks. |
-| P6c private Challenge render | PREPARED | Current pinned renderer reports `pass`; inspect actual module overview and 2/2 selected theorem docstrings. |
+| P6a private preflight | RETRY_READY | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
+| P6b private full protected replay | PENDING_PREFLIGHT | Unmodified current execute path reports `pass`, with successful protected Comparator and NanoDa checks. |
+| P6c private Challenge render | RUNNING (34465135183) | Current pinned renderer reports `pass`; inspect actual module overview and 2/2 selected theorem docstrings. |
 
 
 Full delivery scope remains: Theorem 1.3 and Corollary 1.4 are the first entry;
@@ -1358,3 +1358,23 @@ credential-step scope and exact retained protected commands were reviewed.
 Private Actions is enabled. No new Lean module, theorem, source change or
 visibility change is included. P6 results remain unclaimed until the run ends
 and its bounded reports and rendering have been inspected.
+
+## Private rehearsal iteration — root-path intake repair
+
+Run `34465135183` started privately from orchestration `0ce5069`. Its verify
+job completed with a preflight input failure before any proof build: current
+intake rejects literal `project_path: "."`; a root project must omit that
+field. Both preflight/full packets and the exact handoff value are corrected.
+The current request parser confirms both now carry an empty root field and the
+same frozen source SHA. No source revision or theorem change is needed.
+The final job-status guard now preserves that actual preflight error instead
+of adding a missing-full-report traceback. This is reporting only; a full
+`status: pass` report remains required.
+
+The independent render job successfully fetched private source, installed the
+exact toolchain and Landrun, and passed the credential-free execution guard.
+It is still running protected rendering. Keep that run; the next push retries
+verification only and does not restart or narrow the render obligation.
+Both final receipts must bind the same source and tool revisions. Publication
+remains deferred until P6/P7 complete. Evidence: `readiness/p6-private-runs.json`
+and `readiness/p6a-first-preflight-failure.json`. Progress remains 5/8.

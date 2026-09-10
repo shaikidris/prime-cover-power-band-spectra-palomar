@@ -10,7 +10,7 @@ The active task board is `PALOMAR_RELEASE_CONE.md` on this audit branch.
 |---|---|
 | Repository | `shaikidris/prime-cover-power-band-spectra-palomar` |
 | Source commit | `454743470f6aff2e7f7f8ac79a7a2a7279e60ada` |
-| Project directory | repository root (`.`) |
+| Project directory | leave blank / omit `project_path` (repository root) |
 | Comparator configuration | `almost-all-comparator.json` |
 | Challenge | `PrimeCoverPowerBandChallenge.lean` |
 | Solution | `PrimeCoverPowerBandSolution.lean` |
