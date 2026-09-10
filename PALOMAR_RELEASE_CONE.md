@@ -14,7 +14,18 @@ packet, and P5 is the final publication/access gate. The source SHA and full
 verification requirements are unchanged. Earlier blocked records below are
 historical and are superseded by this sequencing correction.
 
-**Dashboard:** P0--P4, P6 and P7 VERIFIED for the two-result D31 entry; P5 awaits the user's first-entry scope clarification before publication.
+**Current sequencing decision (10 September):** the user confirmed that phase 1
+contains exactly Theorem 1.3 and Corollary 1.4, then changed the order to
+**SSRN Paper II first**, so the Palomar metadata can cite its actual reference.
+The scope question is resolved. Prepare and submit the distinct Paper II
+preprint, capture its receipt and public reference, update the Palomar YAML,
+and revalidate the resulting immutable source before final publication. Never
+substitute Paper I's SSRN identifier or invent a Paper II DOI.
+
+**Dashboard:** P0--P4, P6 and P7 remain VERIFIED at source `4547434` for the
+two-result D31 entry. P5 now awaits the SSRN prerequisite and the resulting
+metadata/source reconciliation before publication. A future metadata commit
+does not inherit the exact-source status of these receipts.
 **7/8 tasks verified** counts release tasks, not equal effort or mathematical
 proof percentage. R1--R8 remains 8/8 local; both sharp proofs remain open on
 the preserved `sharp-development` branch.
@@ -26,7 +37,7 @@ the preserved `sharp-development` branch.
 | P2 | Admission-free D31 tree; preserved sharp development | P1 | VERIFIED | Final full build 4239 jobs; zero Solution admissions and zero snapshot errors; sharp revision `11e71d0cec4f2e8de8e2542bb0b7a4888782607f`. |
 | P3 | Mathematical account, Challenge prose and metadata | P0, P2 | VERIFIED | Source semantics/current metadata contract pass; 2/2 selected English docstrings present. Render is P6. |
 | P4 | Local release audit of exact source | P1--P3 | VERIFIED | Strict statement/definition comparison, eight standard-axiom closures, 15 controls, zero unreachable modules; inherited lint disclosed. See `readiness/p4-final-validation.json`. |
-| P5 | Final authorized publication and anonymous source check | P4, P6, P7 | AWAITING_SCOPE_DECISION | All private D31 gates pass. User asked how open sharp proofs affect acceptance; clarify two proved results versus waiting for all four before publication. No visibility change performed. |
+| P5 | Final authorized publication and anonymous source check | SSRN reference, P4, P6, P7 | WAITING_FOR_SSRN_REFERENCE | Two-result scope confirmed. Submit Paper II to SSRN first, capture its verified reference, then align/revalidate Palomar metadata. No visibility change performed. |
 | P6 | Current protected Linux preflight/full and Challenge render, privately | P4 | VERIFIED | Actual full report pass/complete, both kernels accept, all source/config/tool/dependency bindings match; actual render and reader inspection pass. See `readiness/p6b-mechanical-validation.json` and `readiness/p6c-render-inspection.json`. |
 | P7 | Advisory assessment and exact handoff packet | P0--P4, P6 | VERIFIED | Actual protected report/render reconcile with the frozen source, mathematical account and exact intake fields; advisory limits disclosed. See `readiness/p7-reconciliation.json` and `PALOMAR_HANDOFF.md`. |
 
@@ -38,6 +49,20 @@ P6 substeps remain individually tracked without changing the eight-task denomina
 | P6b private full protected replay | VERIFIED (34465598832) | Actual pass/complete report; protected 4236-job selected build, NanoDa and Lean kernel acceptance. Exact source and all pins match. |
 | P6c private Challenge render | VERIFIED (34465135183) | Actual report `pass`; 18 file hashes match. Static module overview and 2/2 selected docstrings visually inspected; upstream interactive declaration isolation disclosed. |
 
+
+### SSRN-first prerequisite tasks
+
+| ID | Task | Status | Evidence / next exit test |
+|---|---|---|---|
+| S0 | Confirm sequence and two-result formal scope | VERIFIED | User explicitly selected two proved results and SSRN first. |
+| S1 | Freeze Paper II identity and prepare PDF/metadata | DRAFT_PREPARED | Separate `prime-orthant-geometry/submission/ssrn-paper2/` packet: 34-page PDF SHA-256 `d9c4e05c2d9f67d0973798601ed5078630f2d2406416af73533658a68a273e5e`, copy-safe abstract, metadata and exact build/packet manifests. Mathematical body unchanged. |
+| S2 | Check source fidelity, SSRN compliance and final render | IN_PROGRESS | Source/render checks pass; all 137 equation tags present. Official SSRN guidelines and AI policy checked 10 September. Author details and live portal checks remain pending; no new independent whole-paper proof audit claimed. |
+| S3 | Submit exact PDF; capture actual SSRN receipt/reference | WAITING_FOR_SIGN_IN | SSRN authentication page identified the correct author/email; user sign-in requested. No new submission exists in this preparation record. |
+| S4 | Insert actual Paper II reference in Palomar metadata | WAITING_FOR_S3 | Keep two selected declarations; preserve sharp-route open status. |
+| S5 | Reconcile and verify resulting immutable Palomar source | WAITING_FOR_S4 | Refresh affected metadata/build/render bindings before P5. |
+
+These prerequisites do not silently enlarge the original eight-task denominator;
+the historical 7/8 is an exact-source result, not current end-to-end readiness.
 
 Full delivery scope remains: Theorem 1.3 and Corollary 1.4 are the first entry;
 Theorem 10.1 and Corollaries 10.2--10.3 are already compiled internal exports;

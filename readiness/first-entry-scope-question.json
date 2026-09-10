@@ -1,6 +1,8 @@
 {
   "checked_at": "2026-09-10T11:13:48.692855+00:00",
-  "status": "awaiting_user_scope_decision",
+  "status": "resolved_two_proved_results_ssrn_first",
+  "resolved_on": "2026-09-10",
+  "user_decision": "Phase 1 selects Theorem 1.3 and Corollary 1.4 only. Submit SSRN Paper II first so Palomar metadata can provide its reference.",
   "verified_entry_scope": [
     "Theorem 1.3",
     "Corollary 1.4"
@@ -12,7 +14,7 @@
   "selected_config": "almost-all-comparator.json",
   "source_commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
   "private_protected_verification": "pass; both selected proofs accepted by NanoDa and Lean default kernels",
-  "publication": "on hold pending first-entry scope clarification",
+  "publication": "last before Palomar, after the SSRN reference and affected metadata/source checks",
   "visibility_changed": false,
   "palomar_submission_created": false,
   "policy_url": "https://github.com/PalomarRegistry/PalomarPolicy/blob/main/CONTRIBUTING.md#23-comparator-configuration",

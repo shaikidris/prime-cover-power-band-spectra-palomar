@@ -5,8 +5,12 @@ private protected verification and render (P6), and the reconciled
 advisory/handoff (P7) are complete. P5 is the
 final step: publish the repository, then confirm anonymous access to the exact
 source. The active task board is `PALOMAR_RELEASE_CONE.md` on this audit branch.
-The user's first-entry scope decision is pending: this packet certifies neither
-Theorem 1.1 nor Corollary 1.2. Publication is on hold until that scope is clear.
+The user confirmed the first-entry scope: Theorem 1.3 and Corollary 1.4 only.
+The latest sequence is SSRN Paper II first, then its verified reference in
+Palomar metadata, verification of the resulting immutable source, and final
+repository publication. This packet and its passed receipts remain bound to
+`4547434`; it must be refreshed after that metadata change. This packet
+certifies neither Theorem 1.1 nor Corollary 1.2.
 No Palomar submission or registration has been performed.
 
 | Field | Exact value |
