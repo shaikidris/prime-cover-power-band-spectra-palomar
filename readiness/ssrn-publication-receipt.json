@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-09-10T12:33:28.063589+00:00",
+  "repository": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar",
+  "visibility": "PUBLIC",
+  "authorization": "User explicitly instructed make public, superseding earlier timing",
+  "source_commit": "72288e1f32ba491a873e63647023b70d195f7139",
+  "anonymous_formalization_sha256": "966c6abbc0e1525bc78c3f7da89e04df72299003a014117c28f6690e1750b16f",
+  "remaining": [
+    "full protected replay",
+    "render artifact inspection",
+    "P7 reconciliation",
+    "anonymous exact source archive verification"
+  ]
+}

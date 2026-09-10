@@ -1,17 +1,12 @@
 {
   "advisory": true,
   "errors": 0,
-  "warnings": 3,
+  "warnings": 2,
   "findings": [
     {
       "severity": "INFO",
       "check": "git",
-      "message": "HEAD 454743470f6aff2e7f7f8ac79a7a2a7279e60ada"
-    },
-    {
-      "severity": "WARN",
-      "check": "git-cleanliness",
-      "message": "worktree is dirty; audit the exact committed snapshot"
+      "message": "HEAD 72288e1f32ba491a873e63647023b70d195f7139"
     },
     {
       "severity": "INFO",

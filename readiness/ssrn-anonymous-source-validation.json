@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-09-10T12:35:41.227034+00:00",
+  "status": "pass",
+  "source_commit": "72288e1f32ba491a873e63647023b70d195f7139",
+  "anonymous_url": "https://codeload.github.com/shaikidris/prime-cover-power-band-spectra-palomar/tar.gz/72288e1f32ba491a873e63647023b70d195f7139",
+  "archive_sha256": "86afd3433c9715ed879d65e69170449d85488cd40d2caa633ad7e3f8de10c5b7",
+  "tracked_blobs_compared": 23,
+  "verification": "Exact path set and every blob byte compared to local frozen Git tree; no credentials supplied."
+}

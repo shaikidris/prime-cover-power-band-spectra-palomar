@@ -1,3 +1,5 @@
+Current update: repository is PUBLIC at the user's explicit request. Anonymous frozen-source archive matches all 23 Git blobs. Preflight and render pass; full protected replay remains running in run 34475728330. Current progress: 6/8; P6/P7 remain incomplete. Earlier private/publication-last statements below are historical.
+
 # D31 handoff packet — final publication gate pending
 
 **Preparation: 5/8 tasks verified for the current SSRN-linked source.**

@@ -1,0 +1,166 @@
+{
+  "challenge": {
+    "module": "PrimeCoverPowerBandChallenge"
+  },
+  "checked_at": "2026-09-10T12:16:48Z",
+  "classification": {
+    "arxiv": [
+      {
+        "code": "math.CO",
+        "name": "Combinatorics"
+      },
+      {
+        "code": "math.NT",
+        "name": "Number Theory"
+      }
+    ],
+    "msc2020": [
+      {
+        "code": "05C50",
+        "name": "Graphs and linear algebra (matrices, eigenvalues, etc.)"
+      },
+      {
+        "code": "11N05",
+        "name": "Distribution of primes"
+      }
+    ]
+  },
+  "comparator": {
+    "challenge_module": "PrimeCoverPowerBandChallenge",
+    "definition_names": [
+      "PrimeCoverPowerBand.arithmeticStarDegree",
+      "PrimeCoverPowerBand.actualUpStarRatio",
+      "PrimeCoverPowerBand.upStarCorrection",
+      "PrimeCoverPowerBand.downStarCorrection",
+      "PrimeCoverPowerBand.firstExitCorrection",
+      "PrimeCoverPowerBand.FirstExitCorrectionRegular",
+      "PrimeCoverPowerBand.powerScale",
+      "PrimeCoverPowerBand.InPowerRange",
+      "PrimeCoverPowerBand.InTerminalPowerBand",
+      "PrimeCoverPowerBand.powerBandErrorScale",
+      "PrimeCoverPowerBand.powerBandBadCenters",
+      "PrimeCoverPowerBand.terminalPowerBandBadCenters",
+      "PrimeCoverPowerBand.powerBandBadDensity",
+      "PrimeCoverPowerBand.subBlockMargin",
+      "PrimeCoverPowerBand.subBlockBadCenters",
+      "PrimeCoverPowerBand.subBlockBadDensity"
+    ],
+    "path": "almost-all-comparator.json",
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "sha256": "4d5e30bf1d9895f8b9d433d6a694528a350d013385ddec4ce3a5ae975ecb2838",
+    "solution_module": "PrimeCoverPowerBandSolution",
+    "theorem_names": [
+      "PrimeCoverPowerBand.palomar_almostAll_powerBand",
+      "PrimeCoverPowerBand.palomar_almostAll_subBlock"
+    ]
+  },
+  "errors": [],
+  "existing_id": null,
+  "formalization": {
+    "automation_method_count": 1,
+    "path": "formalization.yaml",
+    "project_name": "Density-one prescribed-rank spectra of prime-cover graphs",
+    "review_status": "phase 1 metadata aligned with SSRN submission; exact verification receipts tracked separately",
+    "sha256": "966c6abbc0e1525bc78c3f7da89e04df72299003a014117c28f6690e1750b16f",
+    "source_count": 2
+  },
+  "lake_manifest": {
+    "path": "lake-manifest.json",
+    "sha256": "80b0516b6a6972fb8696cb994eec168344f80f5f536cff04d81ed352fc1405d5"
+  },
+  "lakefile": {
+    "format": "lean",
+    "path": "lakefile.lean",
+    "sha256": "b30c2d624309b8bf3327a38f99faeb2f00dfc7bfa26ed473be2861b7e13aae23"
+  },
+  "lean4export_commit": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "lean_toolchain_path": "lean-toolchain",
+  "license": {
+    "declared_identifier": "Apache-2.0",
+    "detected_identifier": "Apache-2.0",
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "orcid_validation": {
+    "checked_at": "2026-09-10T12:16:48Z",
+    "records": [],
+    "registry": "https://orcid.org",
+    "schema_version": 1
+  },
+  "phase": "preparation",
+  "provenance": {
+    "mathematical_sources": [
+      {
+        "author_endorsement": "participated",
+        "authors": [
+          {
+            "name": "Idris Ali Shaik"
+          }
+        ],
+        "identifier": "https://papers.ssrn.com/abstract=7441718",
+        "license": "unknown",
+        "note": "Paper II, SSRN abstract 7441718, submitted by Idris Ali Shaik on 10 September 2026. The author dashboard reports PRELIMINARY_UPLOAD; the public abstract page is not yet available. This reference identifies the submitted paper, not SSRN approval, peer review or a verified DOI. Phase 1 formalizes Theorem 1.3 and Corollary 1.4 only; the sharp Theorem 1.1 and Corollary 1.2 remain open Lean targets. Paper II mathematical source at prime-orthant-geometry commit df32cafb021c0ed90f14f045858525882d50ab9e, file draft/prescribed-eigenvalues-in-prime-cover-power-bands.md, SHA-256 b145e0a4ed2078fca969ed127d00c73d8758a76b559971988501693c1b60cfa3. This identifies the native paper, not a completed Lean proof.",
+        "relationship": "formalizes",
+        "title": "Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs",
+        "type": "paper"
+      },
+      {
+        "author_endorsement": "participated",
+        "authors": [
+          {
+            "name": "Idris Ali Shaik"
+          }
+        ],
+        "license": "unknown",
+        "note": "D31 native proof record at the same mathematical-source commit, file analysis/paper2-ordered-comparison-strengthening-2026-09-09.md. Uses global PNT and full-star frame/complement estimates, not BHP or Guth--Maynard. This is native provenance, not formal closure.",
+        "relationship": "formalizes",
+        "title": "Ordered comparison and density-one power-band estimates",
+        "type": "other"
+      }
+    ],
+    "related_formalizations": [
+      {
+        "identifier": "https://github.com/shaikidris/prime-star-spectra-formalization/tree/59176e4ce57e7d6578cafd1de0029fed6fc13ccf",
+        "note": "Pinned Paper I graph, star-forest, first-exit, and analytic infrastructure.",
+        "relationship": "builds-on"
+      }
+    ],
+    "repository_role": "substantive-development",
+    "responsible_maintainers": [
+      {
+        "name": "Idris Ali Shaik"
+      }
+    ],
+    "result_origin": "source-based"
+  },
+  "schema_version": 1,
+  "solution": {
+    "module": "PrimeCoverPowerBandSolution"
+  },
+  "source": {
+    "bytes": 1921172,
+    "commit": "72288e1f32ba491a873e63647023b70d195f7139",
+    "repository": "shaikidris/prime-cover-power-band-spectra-palomar",
+    "repository_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar",
+    "tree_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/tree/72288e1f32ba491a873e63647023b70d195f7139"
+  },
+  "stage": "prepared",
+  "status": "pending",
+  "submission": {
+    "authorization": {
+      "relationship": "maintainer"
+    },
+    "requested_paths": {
+      "comparator_config_path": "almost-all-comparator.json",
+      "formalization_metadata_path": "",
+      "project_path": ""
+    },
+    "submission_id": "1c5659b43b92"
+  },
+  "warnings": []
+}

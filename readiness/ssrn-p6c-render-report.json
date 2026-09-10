@@ -1,0 +1,155 @@
+{
+  "artifact_tree_sha256": "0c7542a512ededb34cafc21a5d8a90aefb546be2fe04f43428d94e9fa7dbdc1d",
+  "entrypoint": "Challenge/index.html",
+  "errors": [],
+  "format": "verso-html",
+  "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "limits": {
+    "artifact_bytes": 26214400,
+    "artifact_files": 2000,
+    "artifact_nodes": 4000,
+    "build_file_bytes": 2147483648,
+    "memory_bytes": 12884901888,
+    "open_files": 4096,
+    "per_file_bytes": 8388608,
+    "tasks": 512,
+    "wall_seconds": 21600,
+    "workspace_bytes": 12884901888
+  },
+  "mathlib_cache": {
+    "bytes": 439434990,
+    "downloaded": 8643,
+    "requested": 8643
+  },
+  "prepared_at": "2026-09-10T12:17:41Z",
+  "rendered_at": "2026-09-10T12:25:44Z",
+  "renderer_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
+  "schema_version": 2,
+  "source": {
+    "challenge_path": "PrimeCoverPowerBandChallenge.lean",
+    "challenge_sha256": "d2e99fd97cf315102f5d3918e4aa5ee403f2e4be41217dfec88f98d8cbc0ec96",
+    "commit": "72288e1f32ba491a873e63647023b70d195f7139",
+    "comparator_config_path": "almost-all-comparator.json",
+    "lakefile_path": "lakefile.lean",
+    "lean_toolchain_path": "lean-toolchain",
+    "project_path": "",
+    "repository": "shaikidris/prime-cover-power-band-spectra-palomar",
+    "repository_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar",
+    "solution_path": "PrimeCoverPowerBandSolution.lean"
+  },
+  "stage": "complete",
+  "status": "pass",
+  "surface": {
+    "audit_declarations": [
+      {
+        "declaration": "theorem PrimeCoverPowerBand.palomar_almostAll_powerBand (S : Finset Nat) (hS : \u2200 (p : Nat), Membership.mem S p \u2192 Nat.Prime p)\n  {\u03b8 : Real} (h\u03b8low : LT.lt 0 \u03b8) (h\u03b8high : LT.lt \u03b8 (1 / 2)) (R : Real) :\n  LT.lt 0 R \u2192\n    Exists fun D =>\n      Exists fun C =>\n        Exists fun Cexc =>\n          And (LT.lt 0 C)\n            (And (LT.lt 0 Cexc)\n              (And\n                (Filter.Eventually\n                  (fun X =>\n                    LE.le (\u2191(Finset.card (PrimeCoverPowerBand.terminalPowerBandBadCenters S \u03b8 C D X)))\n                      (HDiv.hDiv (HMul.hMul Cexc (PrimeCoverPowerBand.powerScale \u03b8 X)) (HPow.hPow (Real.log \u2191X) R)))\n                  Filter.atTop)\n                (Filter.Tendsto (PrimeCoverPowerBand.powerBandBadDensity S \u03b8 C D) Filter.atTop (nhds 0))))",
+        "name": "PrimeCoverPowerBand.palomar_almostAll_powerBand"
+      },
+      {
+        "declaration": "theorem PrimeCoverPowerBand.palomar_almostAll_subBlock (S : Finset Nat) (hS : \u2200 (p : Nat), Membership.mem S p \u2192 Nat.Prime p)\n  {\u03b8 : Real} (h\u03b8low : LT.lt 0 \u03b8) (h\u03b8high : LT.lt \u03b8 (1 / 2)) :\n  And (LT.lt 0 (PrimeCoverPowerBand.subBlockMargin \u03b8))\n    (\u2200 (\u03b4 : Real),\n      LT.lt 0 \u03b4 \u2192\n        LT.lt \u03b4 (PrimeCoverPowerBand.subBlockMargin \u03b8) \u2192\n          Exists fun C =>\n            And (LT.lt 0 C) (Filter.Tendsto (PrimeCoverPowerBand.subBlockBadDensity S \u03b8 \u03b4 C) Filter.atTop (nhds 0)))",
+        "name": "PrimeCoverPowerBand.palomar_almostAll_subBlock"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.arithmeticStarDegree (S : Finset Nat) (c X : Nat) : Real",
+        "name": "PrimeCoverPowerBand.arithmeticStarDegree"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.actualUpStarRatio (S : Finset Nat) (c X q : Nat) : Real",
+        "name": "PrimeCoverPowerBand.actualUpStarRatio"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.upStarCorrection (r : Real) : Real",
+        "name": "PrimeCoverPowerBand.upStarCorrection"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.downStarCorrection (s : Real) : Real",
+        "name": "PrimeCoverPowerBand.downStarCorrection"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.firstExitCorrection (S : Finset Nat) (X : Nat) (a : PrimeCoverPowerBand.Vertex S X) : Real",
+        "name": "PrimeCoverPowerBand.firstExitCorrection"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.FirstExitCorrectionRegular (S : Finset Nat) (X : Nat) (a : PrimeCoverPowerBand.Vertex S X) : Prop",
+        "name": "PrimeCoverPowerBand.FirstExitCorrectionRegular"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.powerScale (\u03b8 : Real) (X : Nat) : Real",
+        "name": "PrimeCoverPowerBand.powerScale"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.InPowerRange (\u03b8 : Real) (X a : Nat) : Prop",
+        "name": "PrimeCoverPowerBand.InPowerRange"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.InTerminalPowerBand (\u03b8 : Real) (X a : Nat) : Prop",
+        "name": "PrimeCoverPowerBand.InTerminalPowerBand"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.powerBandErrorScale (D X a : Nat) : Real",
+        "name": "PrimeCoverPowerBand.powerBandErrorScale"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.powerBandBadCenters (S : Finset Nat) (\u03b8 C : Real) (D X : Nat) :\n  Finset (PrimeCoverPowerBand.Vertex S X)",
+        "name": "PrimeCoverPowerBand.powerBandBadCenters"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.terminalPowerBandBadCenters (S : Finset Nat) (\u03b8 C : Real) (D X : Nat) :\n  Finset (PrimeCoverPowerBand.Vertex S X)",
+        "name": "PrimeCoverPowerBand.terminalPowerBandBadCenters"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.powerBandBadDensity (S : Finset Nat) (\u03b8 C : Real) (D X : Nat) : Real",
+        "name": "PrimeCoverPowerBand.powerBandBadDensity"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.subBlockMargin (\u03b8 : Real) : Real",
+        "name": "PrimeCoverPowerBand.subBlockMargin"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.subBlockBadCenters (S : Finset Nat) (\u03b8 \u03b4 C : Real) (X : Nat) :\n  Finset (PrimeCoverPowerBand.Vertex S X)",
+        "name": "PrimeCoverPowerBand.subBlockBadCenters"
+      },
+      {
+        "declaration": "def PrimeCoverPowerBand.subBlockBadDensity (S : Finset Nat) (\u03b8 \u03b4 C : Real) (X : Nat) : Real",
+        "name": "PrimeCoverPowerBand.subBlockBadDensity"
+      }
+    ],
+    "declarations": [
+      "PrimeCoverPowerBand.palomar_almostAll_powerBand",
+      "PrimeCoverPowerBand.palomar_almostAll_subBlock",
+      "PrimeCoverPowerBand.arithmeticStarDegree",
+      "PrimeCoverPowerBand.actualUpStarRatio",
+      "PrimeCoverPowerBand.upStarCorrection",
+      "PrimeCoverPowerBand.downStarCorrection",
+      "PrimeCoverPowerBand.firstExitCorrection",
+      "PrimeCoverPowerBand.FirstExitCorrectionRegular",
+      "PrimeCoverPowerBand.powerScale",
+      "PrimeCoverPowerBand.InPowerRange",
+      "PrimeCoverPowerBand.InTerminalPowerBand",
+      "PrimeCoverPowerBand.powerBandErrorScale",
+      "PrimeCoverPowerBand.powerBandBadCenters",
+      "PrimeCoverPowerBand.terminalPowerBandBadCenters",
+      "PrimeCoverPowerBand.powerBandBadDensity",
+      "PrimeCoverPowerBand.subBlockMargin",
+      "PrimeCoverPowerBand.subBlockBadCenters",
+      "PrimeCoverPowerBand.subBlockBadDensity"
+    ],
+    "imports": [
+      "Mathlib.Analysis.InnerProductSpace.Spectrum",
+      "Mathlib.Analysis.Matrix.Spectrum",
+      "Mathlib.Combinatorics.SimpleGraph.AdjMatrix",
+      "Mathlib.Combinatorics.SimpleGraph.LapMatrix",
+      "Mathlib.Data.Nat.Prime.Basic",
+      "Mathlib.NumberTheory.PrimeCounting",
+      "Mathlib.Topology.Instances.Nat"
+    ],
+    "module_doc": "# Prescribed power-band spectra of finite prime-cover graphs\n\nThis Mathlib-only Challenge surface states the two principal Paper II\ntheorem families and their immediate prime-counting and sub-block consequences.  The terminal\nband and almost-all families have separate Comparator configurations. This\nsnapshot selects the almost-all pair; the sharp configuration and its open\nSolution are preserved on the `sharp-development` branch.\n\nThe almost-all entry covers every fixed `0 < theta < 1/2`. Its squared-error\nestimate improves the positive-star block baseline `O(sqrt(X)/log X)` on a\ndensity-one set of prescribed arithmetic ranks. Theorem 1.3 also controls\nterminal-band exception counts; its full-range density conclusion uses the\nsame error parameters and retains the initial segment. Corollary 1.4 states\nthe strict positive power improvement. The underlying comparison sorts values\non a complete prefix, including plateaus, and uses global PNT.\n\nThe sharp every-terminal-centre family retains `21/61 < theta < 1/2` and\nerror `O(a/log X)`. Its current proof uses BHP and Brun--Titchmarsh; its two\nSolution obligations remain open on the preserved development branch. The weaker\nevery-centre operator corollary is an internal result, not a selection here.\nAll these errors concern squared eigenvalues. Neither endpoint is included.",
+    "schema_version": 3,
+    "solution_imports": [
+      "PrimeCoverPowerBand.AlmostAllAssembly"
+    ]
+  },
+  "verso_commit": "e09d21a5f7f66c9fc985b73197708298569bf583",
+  "workflow_url": "https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/actions/runs/34475728330"
+}

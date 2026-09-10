@@ -1,0 +1,19 @@
+{
+  "scope": "private Linux rehearsal; anonymous source availability is deferred to the final publication gate",
+  "mode": "preflight",
+  "source_commit": "72288e1f32ba491a873e63647023b70d195f7139",
+  "verifier_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
+  "request_id": "1c5659b43b92",
+  "inputs": {
+    "repository": "shaikidris/prime-cover-power-band-spectra-palomar",
+    "commit": "72288e1f32ba491a873e63647023b70d195f7139",
+    "request_id": "1c5659b43b92",
+    "mode": "preflight",
+    "options": "{\"authorization_relationship\":\"I am a responsible author or maintainer\",\"comparator_config_path\":\"almost-all-comparator.json\"}"
+  },
+  "source_transport": "ephemeral repository-scoped Actions read token during trusted preparation only",
+  "git_credentials_persisted": false,
+  "verifier_source_modified": false,
+  "verifier_sha256": "ad5ac059305d5c1c5d07a25bc600a3bb6cab4d1feae5ad747408253a3c312d45",
+  "renderer_sha256": "8bfc2dec3e851de83ae2821ce0b13c7d6b6e3c9e7884e52c1064bbc39092d2cb"
+}

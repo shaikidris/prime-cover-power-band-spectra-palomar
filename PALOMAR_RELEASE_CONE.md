@@ -1,6 +1,8 @@
 # Paper II Palomar release-cone contract
 
-## Resumed pre-submission goal — publication last
+## Resumed pre-submission goal — publication timing superseded
+
+Latest instruction: the user explicitly requested **make public** before P6/P7 finished. Visibility is now PUBLIC; anonymous metadata at the frozen SHA matches. Full replay, render inspection, and final reconciliation remain required. This supersedes the earlier publication-last sequencing below.
 
 This is the continuation of the source-freeze board on the separate audit
 branch `palomar-readiness-2026-09-10`. The immutable D31 source is
@@ -22,10 +24,10 @@ preprint, capture its receipt and public reference, update the Palomar YAML,
 and revalidate the resulting immutable source before final publication. Never
 substitute Paper I's SSRN identifier or invent a Paper II DOI.
 
-**Dashboard: 5/8 verified for the current source.** P0--P4 pass: the formal
+**Dashboard: 6/8 verified for the current source.** P0--P4 pass: the formal
 source is unchanged and the SSRN-linked metadata and full local build pass.
 P6 is reopened for private exact-source preflight/full/render; P7 awaits those
-new receipts. P5 remains the final publication/access gate. The previous 7/8
+new receipts. P5 passed following the user's explicit instruction to publish now. The previous 7/8
 receipts remain valid only for historical source `4547434`. Task counts are
 not mathematical proof percentages. Both sharp Lean proofs remain open.
 
@@ -36,7 +38,7 @@ not mathematical proof percentages. Both sharp Lean proofs remain open.
 | P2 | Admission-free D31 tree; preserved sharp development | P1 | VERIFIED | Final full build 4239 jobs; zero Solution admissions and zero snapshot errors; sharp revision `11e71d0cec4f2e8de8e2542bb0b7a4888782607f`. |
 | P3 | Mathematical account, Challenge prose and metadata | P0, P2 | VERIFIED | Source semantics/current metadata contract pass; 2/2 selected English docstrings present. Render is P6. |
 | P4 | Local release audit of exact source | P1--P3 | VERIFIED | Strict statement/definition comparison, eight standard-axiom closures, 15 controls, zero unreachable modules; inherited lint disclosed. See `readiness/p4-final-validation.json`. |
-| P5 | Final authorized publication and anonymous source check | P4, P6, P7 | WAITING_FOR_P6_P7 | SSRN 7441718 is confirmed and cited. Publish only after the refreshed private checks and handoff assessment. |
+| P5 | Final authorized publication and anonymous source check | P4, P6, P7 | VERIFIED | User explicitly superseded publication-last timing with "make public". GitHub PUBLIC; anonymous archive has exactly the same 23 blobs as frozen source. See `readiness/ssrn-anonymous-source-validation.json`. |
 | P6 | Current protected Linux preflight/full and Challenge render, privately | P4 | IN_PROGRESS | Replaying unchanged current verifier on SSRN-linked source `72288e1`; prior source receipts are retained separately. |
 | P7 | Advisory assessment and exact handoff packet | P0--P4, P6 | IN_PROGRESS | Two-result scope and SSRN status reconciled; final exact-source report/render binding remains pending. |
 
@@ -44,9 +46,9 @@ P6 substeps remain individually tracked without changing the eight-task denomina
 
 | Substep | Status | Evidence required |
 |---|---|---|
-| P6a private preflight | REPLAY_PENDING for 72288e1; previous pass 34465598832 | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
-| P6b private full protected replay | REPLAY_PENDING for 72288e1; previous pass 34465598832 | Actual pass/complete report; protected 4236-job selected build, NanoDa and Lean kernel acceptance. Exact source and all pins match. |
-| P6c private Challenge render | REPLAY_PENDING for 72288e1; previous pass 34465135183 | Actual report `pass`; 18 file hashes match. Static module overview and 2/2 selected docstrings visually inspected; upstream interactive declaration isolation disclosed. |
+| P6a private preflight | VERIFIED for 72288e1, run 34475728330; receipt `readiness/ssrn-p6a-preflight-report.json` | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
+| P6b private full protected replay | RUNNING for 72288e1, job 102865879434 | Actual pass/complete report; protected 4236-job selected build, NanoDa and Lean kernel acceptance. Exact source and all pins match. |
+| P6c private Challenge render | VERIFIED for 72288e1, job 102865878985; 18 files independently hashed and byte-identical to previously visually inspected bundle | Actual report `pass`; 18 file hashes match. Static module overview and 2/2 selected docstrings visually inspected; upstream interactive declaration isolation disclosed. |
 
 
 ### SSRN-first prerequisite tasks

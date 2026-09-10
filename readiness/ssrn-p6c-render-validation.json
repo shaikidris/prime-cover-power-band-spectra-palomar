@@ -1,0 +1,10 @@
+{
+  "source_commit": "72288e1f32ba491a873e63647023b70d195f7139",
+  "status": "verified",
+  "files_verified": 18,
+  "bytes_verified": 625731,
+  "all_files_byte_identical_to_previous_inspected_bundle": true,
+  "prior_visual_inspection": "readiness/p6c-render-inspection.json",
+  "visual_evidence_basis": "All 18 files independently hashed and byte-compared with previously visually inspected actual renderer artifact; no new visual differences.",
+  "artifact_tree_sha256": "0c7542a512ededb34cafc21a5d8a90aefb546be2fe04f43428d94e9fa7dbdc1d"
+}
