@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-09-10T10:03:05.996438+00:00",
+  "goal_status": "blocked",
+  "verified_tasks": 5,
+  "task_count": 8,
+  "blocking_task": "P5",
+  "blocking_condition": "Explicit approval to make the private D31 source repository public remains pending. Protected public-source rehearsal and final reconciliation depend on that approval.",
+  "consecutive_goal_turns_with_same_condition": 3,
+  "previous_goal_turn_classification": "progress: all 15 anonymous dependency commit checks completed and receipts pushed",
+  "current_authoritative_checks": {
+    "source_head": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+    "origin_main": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+    "source_and_audit_worktrees_clean_before_record": true,
+    "github_private": true,
+    "github_visibility": "private",
+    "workflow_dispatches": []
+  },
+  "resume": "After explicit public-visibility approval, establish anonymous source access, refresh the exact current verifier pins, run prepared preflight/full/render on the frozen source, inspect receipts/render and finish P7. Do not change Palomar state."
+}

@@ -1,6 +1,6 @@
 # D31 handoff packet — not yet ready for intake
 
-**Preparation: 5/8 tasks verified.** P5 awaits public-visibility approval;
+**Preparation: BLOCKED, 5/8 tasks verified.** P5 awaits public-visibility approval;
 P6 protected Linux checks/render and P7 final reconciliation are incomplete.
 Do not submit on the strength of this draft packet.
 The active task board is `PALOMAR_RELEASE_CONE.md` on this audit branch.

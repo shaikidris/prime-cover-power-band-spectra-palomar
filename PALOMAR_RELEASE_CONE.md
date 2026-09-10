@@ -1,12 +1,15 @@
 # Paper II Palomar release-cone contract
 
-## Active pre-submission goal — 10 September 2026
+## Blocked pre-submission goal — 10 September 2026
 
 This is the continuation of the source-freeze board on the separate audit
 branch `palomar-readiness-2026-09-10`. The immutable D31 source is
 `454743470f6aff2e7f7f8ac79a7a2a7279e60ada` on `main`; verification and handoff
 must use that commit, never this later receipt commit. The user authorized
 analysis and the before-submission goal. No Palomar state change is included.
+
+**Goal status: BLOCKED at P5**, pending explicit public-visibility approval.
+The full objective and remaining gates are unchanged.
 
 **Dashboard:** P0--P4 VERIFIED; P5 WAITING_FOR_USER; P6 TODO; P7 IN_PROGRESS (advisory portion only).
 **5/8 tasks verified** counts release tasks, not equal effort or mathematical
@@ -1298,3 +1301,23 @@ availability evidence, not a protected build. Receipt:
 `readiness/p5-anonymous-dependencies.json`. No source or dependency was changed.
 Progress remains **5/8**, with P5 awaiting the same public-visibility approval,
 P6 not dispatched and P7's final reconciliation pending those results.
+
+## Blocked audit — publication decision required
+
+The same pending-publication condition has remained across three consecutive
+goal turns. The previous turn made concrete progress by verifying all 15
+pinned dependency commits anonymously. This turn rechecked the source and
+receipt worktrees and the GitHub visibility: both worktrees are clean, source
+HEAD equals `origin/main`, and the source repository remains private. No
+public-visibility approval or source-specific workflow run has arrived.
+The goal is therefore marked **BLOCKED**, not complete. P0--P4 remain verified;
+P5 needs approval/public source access, P6 needs protected replay/render and
+P7 needs final reconciliation. There is no remaining independent action that
+can satisfy those gates while the publication decision is pending.
+
+Resume from the frozen source `454743470f6aff2e7f7f8ac79a7a2a7279e60ada`:
+record explicit approval, establish and check anonymous source access, refresh
+current verifier pins, dispatch the prepared preflight/full/render workflows,
+and inspect their exact receipts before completing the manual handoff.
+No new mathematical proof work or Palomar state change is included.
+Receipt: `readiness/blocked-goal.json`.
