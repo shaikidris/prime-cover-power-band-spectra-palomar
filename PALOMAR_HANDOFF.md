@@ -1,7 +1,8 @@
 # D31 handoff packet — not yet ready for intake
 
-**Preparation: BLOCKED, 5/8 tasks verified.** P5 awaits public-visibility approval;
-P6 protected Linux checks/render and P7 final reconciliation are incomplete.
+**Preparation: 5/8 tasks verified; private checks are proceeding.** The user
+requires publication to be the last step. P6 runs privately, P7 reconciles the
+results and prepares the packet, and P5 then closes the publication/access gate.
 Do not submit on the strength of this draft packet.
 The active task board is `PALOMAR_RELEASE_CONE.md` on this audit branch.
 
@@ -25,11 +26,12 @@ audit pass. The exact 93 inherited semantic-lint findings and one style
 finding remain disclosed. Native mathematical sources are privately identified;
 novelty and a separate human review are not established.
 
-Three prepared workflow input files live under `readiness/`. The public
-rehearsal fork has been synchronized to current verifier
-`ef2fa1eadcb246c2346ddba39b52eaa53d4bb763`; no preflight, full or render run
-has yet been dispatched for this source. A fork rehearsal creates no Palomar
-submission or registration record.
+The private Actions workflow on this audit branch uses unchanged current
+verifier `ef2fa1eadcb246c2346ddba39b52eaa53d4bb763` with temporary source
+authentication during trusted preparation only. Its protected build/kernel
+and renderer execution receive no private source credential. Exact private
+reports and render inspection are required before the final publication gate.
+This rehearsal creates no Palomar submission or registration record.
 
 After all gates pass, the user performs the actual intake and ownership step
 at the [Palomar submission site](https://submit.palomar-registry.org/), using

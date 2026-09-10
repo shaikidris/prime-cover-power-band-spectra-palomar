@@ -1,6 +1,6 @@
 # Paper II Palomar release-cone contract
 
-## Blocked pre-submission goal — 10 September 2026
+## Resumed pre-submission goal — publication last
 
 This is the continuation of the source-freeze board on the separate audit
 branch `palomar-readiness-2026-09-10`. The immutable D31 source is
@@ -8,10 +8,13 @@ branch `palomar-readiness-2026-09-10`. The immutable D31 source is
 must use that commit, never this later receipt commit. The user authorized
 analysis and the before-submission goal. No Palomar state change is included.
 
-**Goal status: BLOCKED at P5**, pending explicit public-visibility approval.
-The full objective and remaining gates are unchanged.
+The user clarified: **making the repository public is the last step before
+Palomar**. P6 therefore runs privately, P7 prepares the final assessment and
+packet, and P5 is the final publication/access gate. The source SHA and full
+verification requirements are unchanged. Earlier blocked records below are
+historical and are superseded by this sequencing correction.
 
-**Dashboard:** P0--P4 VERIFIED; P5 WAITING_FOR_USER; P6 TODO; P7 IN_PROGRESS (advisory portion only).
+**Dashboard:** P0--P4 VERIFIED; P6 IN_PROGRESS privately; P7 IN_PROGRESS; P5 DEFERRED until both finish.
 **5/8 tasks verified** counts release tasks, not equal effort or mathematical
 proof percentage. R1--R8 remains 8/8 local; both sharp proofs remain open on
 the preserved `sharp-development` branch.
@@ -23,9 +26,18 @@ the preserved `sharp-development` branch.
 | P2 | Admission-free D31 tree; preserved sharp development | P1 | VERIFIED | Final full build 4239 jobs; zero Solution admissions and zero snapshot errors; sharp revision `11e71d0cec4f2e8de8e2542bb0b7a4888782607f`. |
 | P3 | Mathematical account, Challenge prose and metadata | P0, P2 | VERIFIED | Source semantics/current metadata contract pass; 2/2 selected English docstrings present. Render is P6. |
 | P4 | Local release audit of exact source | P1--P3 | VERIFIED | Strict statement/definition comparison, eight standard-axiom closures, 15 controls, zero unreachable modules; inherited lint disclosed. See `readiness/p4-final-validation.json`. |
-| P5 | Authorized public immutable source | P4 | WAITING_FOR_USER | Source and sharp branch pushed; independent SSH readback matches. All 15 pinned dependencies are anonymously accessible. Explicit public-visibility approval is pending; the source access check must follow. |
-| P6 | Current protected Linux preflight/full and Challenge render | P4, P5 | TODO | Exact verifier/Comparator/NanoDa/Landrun receipts and visible selected documentation required. |
-| P7 | Advisory review and exact manual handoff | P0--P6 | IN_PROGRESS | Source/account advisory and exact draft fields prepared; mechanical/render reconciliation remains open. No Palomar state mutation. |
+| P5 | Final authorized publication and anonymous source check | P4, P6, P7 | DEFERRED | Source and sharp branch pushed; all 15 dependencies anonymously accessible. Keep the repository private until the other readiness work is complete, then perform the final authorized publication/access check. |
+| P6 | Current protected Linux preflight/full and Challenge render, privately | P4 | IN_PROGRESS | Private Actions orchestration prepared for unchanged verifier/tool code. Require exact reports, Comparator/NanoDa/Landrun evidence and visible selected documentation. |
+| P7 | Advisory assessment and exact handoff packet | P0--P4, P6 | IN_PROGRESS | Source/account advisory and exact fields are prepared; reconcile private mechanical/render results before the final P5 publication gate. No Palomar state mutation. |
+
+P6 substeps remain individually tracked without changing the eight-task denominator:
+
+| Substep | Status | Evidence required |
+|---|---|---|
+| P6a private preflight | PREPARED | Current unmodified preparation code reports `pending` at `prepared`, with no errors and exact source binding. |
+| P6b private full protected replay | PREPARED | Unmodified current execute path reports `pass`, with successful protected Comparator and NanoDa checks. |
+| P6c private Challenge render | PREPARED | Current pinned renderer reports `pass`; inspect actual module overview and 2/2 selected theorem docstrings. |
+
 
 Full delivery scope remains: Theorem 1.3 and Corollary 1.4 are the first entry;
 Theorem 10.1 and Corollaries 10.2--10.3 are already compiled internal exports;
@@ -1321,3 +1333,28 @@ current verifier pins, dispatch the prepared preflight/full/render workflows,
 and inspect their exact receipts before completing the manual handoff.
 No new mathematical proof work or Palomar state change is included.
 Receipt: `readiness/blocked-goal.json`.
+
+## User sequencing correction — private readiness before publication
+
+The user made publication the last pre-Palomar step. The earlier assumption
+that P6 must wait for public source was too restrictive. The unchanged current
+verifier's trusted `clone_commit` accepts a repository-scoped Git authentication
+header through its process environment. That permits an exact private source
+fetch on GitHub-hosted Linux without modifying the verifier or its proof checks.
+The initial transport header is discarded before protected execution; both
+source checkouts are checked for persistent credential configuration. Neither
+Lean nor the renderer execution receives that private source token.
+
+The private workflow lives only on this audit branch. It fetches
+PalomarSubmission `ef2fa1eadcb246c2346ddba39b52eaa53d4bb763` separately;
+upstream Comparator/NanoDa/exporter/Landrun build and execute commands are
+retained unchanged. Renderer code is likewise pinned and unchanged. Source
+remains `454743470f6aff2e7f7f8ac79a7a2a7279e60ada`. Reports and render artifacts
+stay inside this private repository. This is a private Linux rehearsal, not
+anonymous availability evidence or a Palomar submission. P5 retains that final
+public-access obligation. Current verifier and policy heads were refreshed and
+still match the frozen pins. Workflow syntax, every shell block, wrapper syntax,
+credential-step scope and exact retained protected commands were reviewed.
+Private Actions is enabled. No new Lean module, theorem, source change or
+visibility change is included. P6 results remain unclaimed until the run ends
+and its bounded reports and rendering have been inspected.

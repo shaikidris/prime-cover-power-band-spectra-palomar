@@ -1,0 +1,301 @@
+# Derived from PalomarSubmission ef2fa1eadcb246c2346ddba39b52eaa53d4bb763.
+# Copyright (c) 2026 Kim Morrison; MIT notice: readiness/PalomarSubmission-MIT-LICENSE.
+# D31 private rehearsal. Tool code, protected commands and pins are upstream.
+# Source authentication is confined to trusted preparation. Publication is a later gate.
+name: D31 private readiness
+run-name: D31 private readiness ${{ github.run_id }} attempt ${{ github.run_attempt }}
+'on':
+  push:
+    branches:
+    - palomar-readiness-2026-09-10
+    paths:
+    - .github/workflows/d31-private-readiness.yml
+    - readiness/private_prepare.py
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: d31-private-readiness
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: read
+    steps:
+    - name: Record verification deadline origin
+      run: echo "PALOMAR_JOB_STARTED_AT=$(date +%s)" >> "$GITHUB_ENV"
+    - name: Checkout submission pipeline
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: pipeline
+        persist-credentials: false
+        repository: PalomarRegistry/PalomarSubmission
+        ref: ef2fa1eadcb246c2346ddba39b52eaa53d4bb763
+    - name: Checkout private rehearsal orchestration
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: orchestration
+        persist-credentials: false
+        sparse-checkout: readiness
+        sparse-checkout-cone-mode: true
+    - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+      with:
+        python-version: 3.11.10
+    - uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b
+      with:
+        ruby-version: 3.3.12
+        bundler-cache: true
+        working-directory: pipeline
+    - name: Install verifier dependencies
+      run: python -m pip install --disable-pip-version-check --require-hashes --no-deps -r pipeline/requirements.txt
+    - name: Run private preflight
+      id: preflight
+      env:
+        D31_SOURCE_TOKEN: ${{ github.token }}
+        BUNDLE_GEMFILE: ${{ github.workspace }}/pipeline/Gemfile
+      run: |
+        python orchestration/readiness/private_prepare.py \
+          --mode preflight --pipeline pipeline \
+          --inputs orchestration/readiness/preflight-inputs.json \
+          --work-dir "$RUNNER_TEMP/palomar-preflight" \
+          --output "$RUNNER_TEMP/preflight-report.json"
+    - name: Retain private preflight receipt
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: d31-private-preflight-${{ github.run_id }}-${{ github.run_attempt }}
+        path: |-
+          ${{ runner.temp }}/preflight-report.json
+          ${{ runner.temp }}/preflight-report.transport.json
+        if-no-files-found: error
+        retention-days: 90
+    - name: Prepare exact private source for full replay
+      id: prepare
+      env:
+        D31_SOURCE_TOKEN: ${{ github.token }}
+        BUNDLE_GEMFILE: ${{ github.workspace }}/pipeline/Gemfile
+      run: |
+        python orchestration/readiness/private_prepare.py \
+          --mode full --pipeline pipeline \
+          --inputs orchestration/readiness/full-inputs.json \
+          --work-dir "$RUNNER_TEMP/palomar" \
+          --output "$RUNNER_TEMP/mechanical-report.json"
+    - name: Free disk space
+      if: steps.prepare.outputs.ready == 'true'
+      uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be
+      with:
+        tool-cache: false
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: false
+        docker-images: true
+        swap-storage: false
+    - name: Install pinned elan
+      if: steps.prepare.outputs.ready == 'true'
+      run: |
+        curl --fail --location --proto '=https' --tlsv1.2 \
+          --output "$RUNNER_TEMP/elan.tar.gz" \
+          https://github.com/leanprover/elan/releases/download/v4.2.3/elan-x86_64-unknown-linux-gnu.tar.gz
+        echo "df0b2b3a439961ffcbb3985214365ffe40f49bc871df04dff268c7d8e21ca8b2  $RUNNER_TEMP/elan.tar.gz" \
+          | sha256sum --check
+        mkdir "$RUNNER_TEMP/elan"
+        tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP/elan"
+        "$RUNNER_TEMP/elan/elan-init" -y --no-modify-path --default-toolchain none
+        echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+    - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+      if: steps.prepare.outputs.ready == 'true'
+      with:
+        go-version: 1.24.0
+    - name: Build pinned landrun
+      if: steps.prepare.outputs.ready == 'true'
+      run: |
+        CGO_ENABLED=0 go install github.com/zouuup/landrun/cmd/landrun@811cfff51ceaf3d9843708aa6d22e9b84ccac8b4
+        echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+    - name: Build pinned Comparator
+      if: steps.prepare.outputs.ready == 'true'
+      run: |
+        git clone --filter=blob:none https://github.com/leanprover/comparator.git "$RUNNER_TEMP/comparator"
+        git -C "$RUNNER_TEMP/comparator" checkout 575674928e239f5bc452aab72d1dd7b0f1326494
+        cd "$RUNNER_TEMP/comparator"
+        lake build comparator
+    - name: Build pinned NanoDa kernel
+      if: steps.prepare.outputs.ready == 'true'
+      run: |
+        git clone --filter=blob:none https://github.com/robsimmons/nanoda_lib.git "$RUNNER_TEMP/nanoda"
+        git -C "$RUNNER_TEMP/nanoda" checkout 68d5ca9db226849b41a6fff59d796ff19d0a8840
+        cargo build --release --locked --manifest-path "$RUNNER_TEMP/nanoda/Cargo.toml"
+    - name: Build toolchain-matched lean4export
+      if: steps.prepare.outputs.ready == 'true'
+      env:
+        LEAN4EXPORT_COMMIT: ${{ steps.prepare.outputs.lean4export_commit }}
+        SUBMISSION_TOOLCHAIN: ${{ steps.prepare.outputs.lean_toolchain }}
+      run: |
+        git clone --filter=blob:none https://github.com/leanprover/lean4export.git "$RUNNER_TEMP/lean4export"
+        git -C "$RUNNER_TEMP/lean4export" checkout "$LEAN4EXPORT_COMMIT"
+        LEAN4EXPORT_TOOLCHAIN="$(tr -d '\r\n' < "$RUNNER_TEMP/lean4export/lean-toolchain")"
+        python -c 'import sys; sys.path.insert(0, "pipeline"); from scripts.verify_submission import compatible_lean4export_toolchain; raise SystemExit(not compatible_lean4export_toolchain(sys.argv[1], sys.argv[2]))' \
+          "$SUBMISSION_TOOLCHAIN" "$LEAN4EXPORT_TOOLCHAIN"
+        cd "$RUNNER_TEMP/lean4export"
+        ELAN_TOOLCHAIN="$SUBMISSION_TOOLCHAIN" lake build lean4export
+    - name: Require credential-free protected execution
+      run: |
+        python - <<'PYTHON'
+        import os
+        for key in ('D31_SOURCE_TOKEN', 'GIT_CONFIG_COUNT', 'GIT_CONFIG_VALUE_0', 'GIT_CONFIG_KEY_0'):
+            if key in os.environ:
+                raise SystemExit('Private source transport environment crossed into execution')
+        print('Protected execution has no private source transport credential.')
+        PYTHON
+    - name: Run Comparator and challenge provenance audit
+      if: steps.prepare.outputs.ready == 'true'
+      run: |
+        python pipeline/scripts/verify_submission.py execute \
+          --work-dir "$RUNNER_TEMP/palomar" \
+          --output "$RUNNER_TEMP/mechanical-report.json" \
+          --comparator "$RUNNER_TEMP/comparator/.lake/build/bin/comparator" \
+          --lean4export "$RUNNER_TEMP/lean4export/.lake/build/bin/lean4export" \
+          --landrun "$(go env GOPATH)/bin/landrun" \
+          --nanoda "$RUNNER_TEMP/nanoda/target/release/nanoda_bin" \
+          --comparator-commit 575674928e239f5bc452aab72d1dd7b0f1326494 \
+          --landrun-commit 811cfff51ceaf3d9843708aa6d22e9b84ccac8b4 \
+          --nanoda-commit 68d5ca9db226849b41a6fff59d796ff19d0a8840 \
+          --execution-budget-seconds 19800 \
+          --workflow-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+    - name: Upload bounded mechanical report
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: d31-private-mechanical-${{ github.run_id }}-${{ github.run_attempt }}
+        path: |-
+          ${{ runner.temp }}/preflight-report.json
+          ${{ runner.temp }}/preflight-report.transport.json
+          ${{ runner.temp }}/mechanical-report.json
+          ${{ runner.temp }}/mechanical-report.transport.json
+        if-no-files-found: error
+        retention-days: 90
+    - name: Fail the run when verification did not pass
+      if: always()
+      env:
+        PALOMAR_MODE: full
+        PALOMAR_READY: ${{ steps.prepare.outputs.ready }}
+      run: |
+        python - <<'PYTHON'
+        import json, pathlib, sys, os
+        report = json.loads(pathlib.Path(os.environ["RUNNER_TEMP"], "mechanical-report.json").read_text())
+        mode = os.environ.get("PALOMAR_MODE", "full")
+        status = report.get("status")
+        if (mode == "preflight" and os.environ.get("PALOMAR_READY") == "true"
+                and status == "pending"):
+            sys.exit(0)
+        if status == "pass":
+            sys.exit(0)
+        print(f"::error::mechanical verification did not pass: {status}")
+        for problem in report.get("errors", []):
+            print(f"::error::{problem}")
+        sys.exit(1)
+        PYTHON
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+    - name: Free disk space
+      uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be
+      with:
+        tool-cache: false
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: false
+        docker-images: true
+        swap-storage: false
+    - name: Checkout trusted renderer
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: pipeline
+        persist-credentials: false
+        repository: PalomarRegistry/PalomarSubmission
+        ref: ef2fa1eadcb246c2346ddba39b52eaa53d4bb763
+    - name: Checkout private rehearsal orchestration
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: orchestration
+        persist-credentials: false
+        sparse-checkout: readiness
+        sparse-checkout-cone-mode: true
+    - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+      with:
+        python-version: 3.11.10
+    - name: Install verifier dependencies
+      run: python -m pip install --disable-pip-version-check --require-hashes --no-deps -r pipeline/requirements.txt
+    - name: Prepare exact private Challenge source
+      id: prepare
+      env:
+        D31_SOURCE_TOKEN: ${{ github.token }}
+      run: |
+        python orchestration/readiness/private_prepare.py \
+          --mode render --pipeline pipeline \
+          --inputs orchestration/readiness/render-inputs.json \
+          --work-dir "$RUNNER_TEMP/palomar-render" \
+          --output "$RUNNER_TEMP/palomar-render/report.json"
+    - name: Install pinned elan
+      if: steps.prepare.outputs.ready == 'true'
+      run: |
+        curl --fail --location --proto '=https' --tlsv1.2 \
+          --output "$RUNNER_TEMP/elan.tar.gz" \
+          https://github.com/leanprover/elan/releases/download/v4.2.3/elan-x86_64-unknown-linux-gnu.tar.gz
+        echo "df0b2b3a439961ffcbb3985214365ffe40f49bc871df04dff268c7d8e21ca8b2  $RUNNER_TEMP/elan.tar.gz" \
+          | sha256sum --check
+        mkdir "$RUNNER_TEMP/elan"
+        tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP/elan"
+        "$RUNNER_TEMP/elan/elan-init" -y --no-modify-path --default-toolchain none
+        echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+    - name: Install accepted Lean toolchain
+      if: steps.prepare.outputs.ready == 'true'
+      env:
+        LEAN_TOOLCHAIN: ${{ steps.prepare.outputs.lean_toolchain }}
+      run: elan toolchain install "$LEAN_TOOLCHAIN"
+    - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+      if: steps.prepare.outputs.ready == 'true'
+      with:
+        go-version: 1.24.0
+    - name: Build pinned Landrun
+      if: steps.prepare.outputs.ready == 'true'
+      run: |
+        CGO_ENABLED=0 go install github.com/zouuup/landrun/cmd/landrun@811cfff51ceaf3d9843708aa6d22e9b84ccac8b4
+    - name: Require credential-free protected execution
+      run: |
+        python - <<'PYTHON'
+        import os
+        for key in ('D31_SOURCE_TOKEN', 'GIT_CONFIG_COUNT', 'GIT_CONFIG_VALUE_0', 'GIT_CONFIG_KEY_0'):
+            if key in os.environ:
+                raise SystemExit('Private source transport environment crossed into execution')
+        print('Protected execution has no private source transport credential.')
+        PYTHON
+    - name: Build, sanitize, and hash Challenge rendering under Landrun
+      if: steps.prepare.outputs.ready == 'true'
+      working-directory: pipeline
+      run: |
+        python -m scripts.render_challenge execute \
+          --work-dir "$RUNNER_TEMP/palomar-render" \
+          --output "$RUNNER_TEMP/palomar-render/report.json" \
+          --landrun "$(go env GOPATH)/bin/landrun" \
+          --renderer-commit "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763" \
+          --landrun-commit 811cfff51ceaf3d9843708aa6d22e9b84ccac8b4 \
+          --workflow-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+    - name: Upload bounded render result
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: d31-private-render-${{ github.run_id }}-${{ github.run_attempt }}
+        path: |-
+          ${{ runner.temp }}/palomar-render/report.json
+          ${{ runner.temp }}/palomar-render/report.transport.json
+          ${{ runner.temp }}/palomar-render/result
+        if-no-files-found: error
+        retention-days: 30
+    - name: Require a successful render
+      if: always()
+      run: |
+        python -c 'import json, os, pathlib, sys; p = pathlib.Path(os.environ["RUNNER_TEMP"]) / "palomar-render" / "report.json"; sys.exit(0 if json.loads(p.read_text())["status"] == "pass" else 1)'

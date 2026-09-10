@@ -1,0 +1,18 @@
+{
+  "verifier_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
+  "unchanged_protected_commands": [
+    "Build pinned landrun",
+    "Build pinned Comparator",
+    "Build pinned NanoDa kernel",
+    "Build toolchain-matched lean4export",
+    "Run Comparator and challenge provenance audit"
+  ],
+  "jobs": [
+    "verify",
+    "render"
+  ],
+  "source_and_tools_separate_checkouts": true,
+  "source_authentication": "preparation only; Actions contents read token; no persistence",
+  "public_visibility_change": false,
+  "candidate_main_source_changed": false
+}
