@@ -239,7 +239,5 @@ their axiom output is not a completed proof certificate.
 #print axioms PrimeCoverPowerBand.almostAll_sharpPowerBand
 #print axioms PrimeCoverPowerBand.eventually_terminalPowerBand_everyCenter_bound
 #print axioms PrimeCoverPowerBand.eventually_terminalPowerBand_everyCenter_subBlock
-#print axioms PrimeCoverPowerBand.palomar_terminalBand_prescribedRanks
-#print axioms PrimeCoverPowerBand.palomar_terminalBand_primeCounting
 #print axioms PrimeCoverPowerBand.palomar_almostAll_powerBand
 #print axioms PrimeCoverPowerBand.palomar_almostAll_subBlock

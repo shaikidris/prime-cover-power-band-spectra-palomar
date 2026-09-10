@@ -2,16 +2,16 @@
 
 ## Current authority — 10 September 2026
 
-Use the D31 rebase at the top of `PALOMAR_RELEASE_CONE.md`.
-The old rule that only BHP or Guth--Maynard work could proceed is superseded.
-The paper proof is internal. R1 statement alignment is validated by a fresh
-4,222-job build and local definitional comparison. R2's literal reuse audit
-also passed. R3's finite ordered comparison and controls passed. R7 now
-closes both D31 public proofs. Two sharp Solution holes remain.
-The post-push submission analysis confirms a structural Comparator blocker
-in the Challenge/Core shared definitions; see
-[PALOMAR_SUBMISSION_ANALYSIS.md](PALOMAR_SUBMISSION_ANALYSIS.md).
-R8 remains a completed local audit, not official statement compatibility.
+Use the P0--P7 source-freeze board at the top of `PALOMAR_RELEASE_CONE.md`
+and its linked audit-branch continuation for later receipts. The historical
+BHP/Guth--Maynard-only plan is superseded by D31. R1--R8 closed both D31
+public proofs locally; the two sharp proofs remain open on their preserved
+branch. P1 repaired the stricter Challenge/Core structural identity blocker.
+P2 preserved the sharp development and removed its admitted Solution and
+configuration from the D31 tree. P3 reconciled the public mathematical account;
+P4 passed the final full build and local audit. **P0--P4 VERIFIED (5/8)**;
+public immutable source, protected Linux replay/render and handoff remain
+P5--P7 at this source freeze.
 
 ## D31: project-local formalization first
 
@@ -71,7 +71,7 @@ not their proof status. `AlmostAllArithmetic` was removed from the planned
 owner set before creation. The toolchain, dependencies and dependency pins
 remain unchanged.
 
-Current source inventory after R8 is unchanged: nine modules / six proof
+The historical source inventory at R8 was nine modules / six proof
 owners / 33,559 Lean lines including lakefile. The D31 checklist is
 **8/8 validated (100%)**, MG4 **2/2 COMPLETE**, public proofs **2/4**.
 Only the sharp pair retains sorryAx. The eight audited D31 roots have
@@ -79,37 +79,31 @@ Only the sharp pair retains sorryAx. The eight audited D31 roots have
 short-interval input. The complete candidate has zero unreachable modules;
 retained shared/sharp declarations outside D31 are explicitly inventoried.
 
-Final Palomar submission readiness is **PARTIAL**:
+Final readiness is tracked by **P0--P7**, independently of the completed
+R1--R8 proof checklist:
 
-- The complete D31 source checkpoint was committed and pushed; an independent
-  SSH branch read matched it and the worktree was clean. Before intake,
-  match the final selected clean HEAD to the pushed branch and verify public access.
-  The 10 September anonymous GitHub API probe returned 404 while the authorized
-  SSH remote was reachable. Visibility has not been changed.
-- The pinned Comparator requires structural equality of non-selected
-  dependencies. A compiled-environment diagnostic confirms that the selected
-  `powerBandBadCenters` type reaches the non-selected `Vertex`, whose explicit
-  Challenge subtype differs from Core's Paper I abbreviation. Generated
-  instance references also differ. Local definitional equality does not close
-  this blocker; repair the shared surface without weakening the Challenge.
-- Isolate an admission-free D31 Solution surface. The two sharp holes are
-  outside the D31 proof closure, but the configured shared Solution fails
-  this repository's zero-Solution-hole release rule and snapshot audit.
-- Exact current Palomar preflight and full protected Linux replay, including
-  Comparator, NanoDa and the rendered Challenge, have not run. This host has
-  no supported Linux runner. Local definitional equality is separate evidence.
-- Both sharp proofs remain open for the combined four-root release.
-- A concise public mathematical-interest and source account should accompany
-  the D31 entry. Novelty has not been established by this audit.
+- P1--P4: the final full build passes 4239 jobs. Both public types, all 16
+  selected definition values and 16,491 reachable shared constants pass the
+  strict local comparison. Eight public/internal proof closures have 71,752
+  union constants and only `propext`, `Classical.choice`, `Quot.sound`.
+- The D31 tree has zero Solution admissions, nine local modules, six proof
+  owners and zero unreachable modules. The unchanged sharp obligations and
+  configuration are preserved on `sharp-development` at the revision in
+  `SOURCE_PROVENANCE.md`; they are outside this submission tree.
+- All 15 exact controls pass. Current schema and Palomar metadata-contract
+  checks pass. The semantic-lint rerun reproduces exactly the 93 inherited
+  owner findings; the single Unicode-style finding is also unchanged. No
+  clean-lint claim is made.
+- P5 must establish the reviewed, clean, pushed and anonymously available
+  source SHA. Before this gate, the authorized SSH repository remains private.
+- P6 requires the exact current protected Linux preflight/full replay and
+  rendered Challenge. An existing public verifier fork can supply the Linux
+  rehearsal; no completed protected result is claimed at source freeze.
+- P7 reconciles those receipts with the public account and exact manual intake
+  packet. Novelty remains unestablished, no separate human line-by-line review
+  is claimed, and no Palomar state change is performed by this goal.
 
-Current upstream schema and Palomar metadata validation pass, with explicit
-AI disclosure and corrected provenance roles. Toolchain/exporter compatibility
-and canonical Mathlib ancestry pass against the frozen current verifier.
-The earlier 93 semantic-lint findings and one Unicode-style finding remain
-inherited evidence on unchanged proof files. No lint rerun or clean-lint claim
-is made. The intentional missing umbrella and explicit module globs remain.
-Exact evidence and the temporary candidate-index audit are in `.lake/d31-r8/`
-and `PORT_MANIFEST.md`; the real index, HEAD, papers and pins are preserved.
-The R8 audit itself performed no commit, push or submission. The user then
-authorized this complete development checkpoint and push on 10 September.
-That authorization does not change repository visibility or Palomar state.
+The current local evidence is `.lake/palomar-readiness-2026-09-10/`; earlier
+`.lake/d31-r8/` evidence remains historical. The manuscript, toolchain,
+manifest, lakefile and D31 selection pins remain unchanged. Exact source and
+post-freeze receipts continue on the audit branch linked from the task board.

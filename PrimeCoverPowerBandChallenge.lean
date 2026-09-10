@@ -11,8 +11,23 @@ import Mathlib.Analysis.Matrix.Spectrum
 
 This Mathlib-only Challenge surface states the two principal Paper II
 theorem families and their immediate prime-counting and sub-block consequences.  The terminal
-band and almost-all families are selected by separate Comparator
-configurations, hence become separate Palomar entries.
+band and almost-all families have separate Comparator configurations. This
+snapshot selects the almost-all pair; the sharp configuration and its open
+Solution are preserved on the `sharp-development` branch.
+
+The almost-all entry covers every fixed `0 < theta < 1/2`. Its squared-error
+estimate improves the positive-star block baseline `O(sqrt(X)/log X)` on a
+density-one set of prescribed arithmetic ranks. Theorem 1.3 also controls
+terminal-band exception counts; its full-range density conclusion uses the
+same error parameters and retains the initial segment. Corollary 1.4 states
+the strict positive power improvement. The underlying comparison sorts values
+on a complete prefix, including plateaus, and uses global PNT.
+
+The sharp every-terminal-centre family retains `21/61 < theta < 1/2` and
+error `O(a/log X)`. Its current proof uses BHP and Brun--Titchmarsh; its two
+Solution obligations remain open on the preserved development branch. The weaker
+every-centre operator corollary is an internal result, not a selection here.
+All these errors concern squared eigenvalues. Neither endpoint is included.
 -/
 
 namespace PrimeCoverPowerBand

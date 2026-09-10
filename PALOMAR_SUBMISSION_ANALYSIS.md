@@ -1,5 +1,43 @@
 # Palomar submission analysis — 10 September 2026
 
+The active follow-through is tracked by P0--P7 at the top of
+`PALOMAR_RELEASE_CONE.md`. The audit below describes the frozen development
+checkpoint; later repair results are recorded by task rather than overwriting
+its historical findings.
+
+## Clarified theorem comparison (P0)
+
+The sharp Theorem 1.1 and Corollary 1.2 are unchanged: every allowed terminal
+centre, `21/61 < theta < 1/2`, squared error `O(a/log X)`. Their current proof
+still needs BHP plus Brun--Titchmarsh. The new route sorts molecule values at
+the complete-prefix arithmetic rank, including plateaus, and uses global PNT
+without a short-interval input.
+
+The relevant baseline is Proposition 2.4's every-terminal-centre squared error
+`O(sqrt(X)/log X)` throughout each fixed `0 < theta < 1/2`. Against it:
+
+| Result | Scope | Error powers at `a` of order `X^theta`, ignoring fixed logarithms | Strict positive power margin |
+|---|---|---|---|
+| Theorem 1.3 / Corollary 1.4 | density one; `0 < theta < 1/2` | `theta`, `(1-theta)/2` | below `min(theta/2, 1/2-theta)` |
+| Corollary 10.3 | every terminal centre; same range | `theta`, `(1-theta)/2`, `1/4+theta/2` | below `min(theta/2, (1-2 theta)/4)` |
+| Theorem 1.1 | every terminal centre; `21/61 < theta < 1/2` | `theta` at the sharp scale | unchanged sharp theorem |
+
+Thus the strengthening is in the additional route, with its distinct
+range/input/quantifier tradeoff. Every error here is a **squared-eigenvalue**
+error. Constants and logarithmic exponents may depend on fixed parameters;
+the terminal exception exponent `R` is chosen before its error exponent `D`.
+The full density limit retains the initial segment and does not inherit every
+terminal logarithmic exception rate. Neither endpoint is included, and no
+uniform positive power gain over all interior `theta` is asserted.
+
+The internal Corollary 10.2 also gives a sharp-scale density-one result on
+`1/3 < theta < 1/2`; it is not an extra selection in this entry. Saying BHP is
+the price of the sharp every-centre law describes this proof's dependency,
+not an impossibility theorem about alternative proofs. Novelty relative to
+the external literature remains unestablished.
+
+## Frozen checkpoint verdict
+
 **Decision: D31 is proved locally, but this checkpoint is not submission-ready.**
 Submit the two D31 results first after repairing statement compatibility and
 completing the release checks below. The sharp every-centre route remains a
@@ -129,13 +167,18 @@ bands. The sub-block consequence gives a positive power improvement on a
 density-one set. These are reasons to prepare an entry, not predictions of
 acceptance.
 
-The public account should compare this result with Paper I's fixed-centre
-regime, state the baseline and exact improvement, and explain which claims are
+The public account should compare this result with Paper I's logarithmic-window
+regime (which includes fixed centres), state the baseline and exact improvement, and explain which claims are
 formalized here. It should identify the native manuscript and proof record with
 stable source references; the README's sibling filesystem link alone is not
 usable by a reader of this repository on GitHub. Keep any inaccessible-source
 limitation explicit. This audit did not establish novelty or complete a
 literature search, so novelty remains unknown.
+
+P3 correction: the pinned Paper I README and Challenge already give a uniform
+`a <= (log X)^(1/2-epsilon)` window. The original description as a fixed-centre
+regime was incomplete. The revised public account uses that actual window and
+the sharper Proposition 2.4 error benchmark.
 
 Current policy asks for research interest and an assessable informal account;
 proof size is not evidence of significance. It allows accurately labelled

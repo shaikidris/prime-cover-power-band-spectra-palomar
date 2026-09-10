@@ -3,40 +3,14 @@ import PrimeCoverPowerBand.AlmostAllAssembly
 /-!
 # Solution surface for prescribed power-band spectra
 
-The four declarations below match the frozen Challenge surface. The two
-almost-all proofs are assembled from the checked D31 owners. The two sharp
-terminal-band holes remain tracked in `PALOMAR_RELEASE_CONE.md`.
+The two declarations below match the frozen D31 Challenge statements and
+assemble their proofs from the checked owners. The open sharp terminal-band
+entry is preserved on the `sharp-development` branch of this repository.
 -/
 
 namespace PrimeCoverPowerBand
 
 open Filter Topology
-
-/-- Every prescribed rank in a terminal power band. -/
-theorem palomar_terminalBand_prescribedRanks
-    (S : Finset ℕ) (hS : ∀ p ∈ S, p.Prime)
-    {θ : ℝ} (hθlow : (21 : ℝ) / 61 < θ) (hθhigh : θ < 1 / 2) :
-    ∃ C : ℝ, 0 < C ∧
-      ∀ᶠ X : ℕ in atTop, ∀ a : Vertex S X,
-        InTerminalPowerBand θ X (a : ℕ) →
-          FirstExitCorrectionRegular S X a ∧
-            |(lambdaAtArithmeticRank a) ^ 2
-              - (allowedPrimeCount S (X / (a : ℕ)) : ℝ)
-              - firstExitCorrection S X a| ≤
-                C * (a : ℝ) / Real.log (X : ℝ) := by
-  sorry
-
-/-- Terminal-band prime-counting consequence. -/
-theorem palomar_terminalBand_primeCounting
-    (S : Finset ℕ) (hS : ∀ p ∈ S, p.Prime)
-    {θ : ℝ} (hθlow : (21 : ℝ) / 61 < θ) (hθhigh : θ < 1 / 2) :
-    ∃ C : ℝ, 0 < C ∧
-      ∀ᶠ X : ℕ in atTop, ∀ a : Vertex S X,
-        InTerminalPowerBand θ X (a : ℕ) →
-          |(lambdaAtArithmeticRank a) ^ 2
-            - (allowedPrimeCount S (X / (a : ℕ)) : ℝ)| ≤
-              C * (a : ℝ) / Real.log (X : ℝ) := by
-  sorry
 
 /-- Manuscript Theorem 1.3 (D31). For each fixed positive terminal exception
 exponent, there are a logarithmic error exponent and positive constants such

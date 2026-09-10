@@ -1,42 +1,119 @@
 # Prescribed eigenvalues in prime-cover power bands
 
-This is the Palomar-first formalization repository for Paper II,
-*Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs*.
-Paper I is reused through its pinned public dependency. The broad historical
-Paper II Lean repository supplies proof provenance, not umbrella imports.
+This repository formalizes density-one estimates for ordered eigenvalues of
+finite prime-cover graphs. For a finite set `S` of deleted primes, the vertices
+are the positive integers at most `X` avoiding `S`; an edge joins `n` to `np`
+when `p` is a prime outside `S`. An allowed centre `a` specifies an arithmetic
+rank `j_S(a)`, so the result concerns that prescribed ordered eigenvalue.
 
-This development checkpoint includes the D31 Lean implementation, its
-statement surfaces, and pinned dependencies. The D31 local checklist is
-complete. The two sharp proofs and official submission verification remain
-open; this is not a Palomar-ready release.
+Write `pi_S(X/a)` for the number of allowed primes at most `floor(X/a)`, and
+`M_{S,a,X}` for the explicit finite first-exit correction displayed in
+[the Challenge](PrimeCoverPowerBandChallenge.lean). The error throughout this
+account is the **squared-eigenvalue error**
 
-## Current plan: D31 first
+```text
+E(a,X) = |lambda_{j_S(a)}(A_{S,X})^2 - pi_S(X/a) - M_{S,a,X}|.
+```
 
-The controlling plan is the **9 September D31 rebase** in
-[PALOMAR_RELEASE_CONE.md](PALOMAR_RELEASE_CONE.md). Its source is
-[the canonical manuscript](../prime-orthant-geometry/draft/prescribed-eigenvalues-in-prime-cover-power-bands.md).
+## The D31 entry
 
-The two proof routes are now separated:
+For every fixed finite `S` and `0 < theta < 1/2`, Theorem 1.3 bounds this error
+outside `o(X^theta)` allowed centres `a <= X^theta` by a constant times
 
-1. **Ordered mean-square / density one**, for every fixed
-   `0 < theta < 1/2`, with error
-   `a/log X + log(X)^D sqrt(X/(a log X))`.
-   This uses global PNT and full-star frame/complement estimates, but no BHP,
-   Guth--Maynard, reciprocal tiling, or local internal-core capacity.
-2. **Sharp every-centre terminal ranks**, for `21/61 < theta < 1/2`,
-   with error `O(a/log X)`. BHP and buffered capacity remain necessary
-   inputs to this proof route.
+```text
+a/log X + (log X)^D sqrt(X/(a log X)).
+```
 
-The two D31 public almost-all theorems now have compiled proofs with standard
-axioms only. Their frozen Challenge types are unchanged. The two sharp
-terminal-band proofs remain open. R8 scoped D31 verification is complete;
-final Palomar submission readiness is **PARTIAL**.
+More precisely, for every fixed `R > 0`, the logarithmic exponent `D` and
+positive constants can be chosen so that the failures in the terminal band
+`X^theta/log X <= a <= X^theta` number `O(X^theta/(log X)^R)`. The same error
+parameters give zero limiting failure density in the full power range.
+The omitted initial segment remains part of the full count; it does not
+inherit every terminal logarithmic exception rate. Failure includes
+nonregular correction denominators as well as excessive error.
 
-The [10 September submission analysis](PALOMAR_SUBMISSION_ANALYSIS.md)
-confirms a strict Comparator identity blocker in the shared Challenge/Core
-definitions, despite the passing local definitional-equality check. The source
-checkpoint is pushed. An admission-free D31 Solution surface, public source
-access and exact protected verification remain release gates.
+Corollary 1.4 states the consequence: for every
+`0 < delta < min(theta/2, 1/2-theta)`, the actual failures of
+`E(a,X) <= C X^(1/2-delta)` have cardinality `o(X^theta)`.
+The selected [Comparator configuration](almost-all-comparator.json) contains
+exactly these two results, implemented in the admission-free
+[D31 Solution](PrimeCoverPowerBandSolution.lean).
+
+## Improvement and scope
+
+The relevant comparison is the positive-star block bound, Proposition 2.4 of
+Paper II: every allowed terminal centre has squared error
+`O(sqrt(X)/log X)` throughout the same open theta range. Its formulation omits
+`M`; the correction is `O(log X)` uniformly on terminal bands and is absorbed
+at the displayed scales.
+
+| Result | Range of fixed `theta` | Centres | Error powers at `a` of order `X^theta`, apart from fixed logarithms | Prime input / formal status |
+|---|---|---|---|---|
+| Positive-star block baseline | `0 < theta < 1/2` | every terminal centre | `1/2` | no short-interval input; manuscript comparison baseline |
+| Theorem 1.3 / Corollary 1.4 | `0 < theta < 1/2` | density one | `theta`, `(1-theta)/2` | global PNT; selected D31 proofs |
+| Corollary 10.3 | `0 < theta < 1/2` | every terminal centre | `theta`, `(1-theta)/2`, `1/4+theta/2` | global PNT; compiled internal export |
+| Theorem 1.1 / Corollary 1.2 | `21/61 < theta < 1/2` | every terminal centre | `theta`, at error `O(a/log X)` | current proof uses BHP and Brun--Titchmarsh; two Lean obligations remain open |
+
+The D31 density-one margin can be any positive number strictly below
+`min(theta/2, 1/2-theta)`. Corollary 10.3 has the smaller every-centre margin
+strictly below `min(theta/2, (1-2 theta)/4)` and retains both operator terms.
+These improve the block baseline by a positive power for each fixed interior
+`theta`. No endpoint or uniform positive margin over the whole open interval
+is claimed. The sharp Theorem 1.1 is unchanged, and BHP remains an input of
+its current proof. The internal sharp density-one Corollary 10.2 has the
+separate range `1/3 < theta < 1/2`; it is not selected in this entry.
+
+The proof uses an ordered mean-square residual comparison, a global full-star
+frame and an energy-weighted complement gap. It sorts **values** on the complete
+prefix of arithmetic centres, including plateaus, so the comparison keeps the
+actual global arithmetic rank. Markov bounds and dyadic summation produce the
+density conclusion; the operator estimate also yields Corollary 10.3.
+
+This should be of interest to spectral graph theorists and analytic number
+theorists studying ordered spectra of arithmetic graphs. Pinned
+[Paper I](https://github.com/shaikidris/prime-star-spectra-formalization/tree/59176e4ce57e7d6578cafd1de0029fed6fc13ccf)
+already formalizes a uniform logarithmic centre window
+`a <= (log X)^(1/2-epsilon)`, including fixed centres. Paper II treats
+polynomially growing power bands with the stated precision/quantifier
+tradeoffs. Novelty relative to the wider literature has not been established
+by this preparation audit.
+
+## Sources, trust and readiness
+
+The native source is *Prescribed Eigenvalues in Power Bands of Finite
+Prime-Cover Graphs*, with its D31 ordered-comparison proof record, at
+`prime-orthant-geometry` commit `df32cafb021c0ed90f14f045858525882d50ab9e`.
+[SOURCE_PROVENANCE.md](SOURCE_PROVENANCE.md) gives exact paths and hashes.
+These identify the author's source; a publicly accessible manuscript archive
+has not been established here. The proof laboratory is provenance, not a Lake
+dependency. Paper I, PNTA and Mathlib are pinned dependencies.
+
+The formal D31 chain uses the sufficient molecule error `O(a/log X)` where
+the manuscript's intermediate argument asserts a stronger `o(1)` estimate.
+This adaptation retains the selected final statements. The two D31 roots and
+named internal exports have standard-axiom proofs (`propext`,
+`Classical.choice`, `Quot.sound`); the open sharp statements are isolated in
+[their preserved Solution](https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/blob/11e71d0cec4f2e8de8e2542bb0b7a4888782607f/PrimeCoverPowerBandSharpSolution.lean) and
+[configuration](https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/blob/11e71d0cec4f2e8de8e2542bb0b7a4888782607f/comparator.json) on `sharp-development`.
+This submitted tree contains no Solution admissions; the sharp statements
+remain open on that separate development branch.
+
+The source is licensed under [Apache-2.0](LICENSE). AI-assisted implementation,
+porting, documentation and verification are disclosed in
+[formalization.yaml](formalization.yaml); no separate human line-by-line
+review or external novelty review is claimed.
+
+**At source freeze, P0--P4 local checks pass (5/8 tasks).** The
+[source-freeze task board](PALOMAR_RELEASE_CONE.md) records those checks.
+Subsequent progress and exact Linux/render/handoff receipts continue on the
+[`palomar-readiness-2026-09-10` audit branch](https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/blob/palomar-readiness-2026-09-10/PALOMAR_RELEASE_CONE.md),
+preserving the source commit under verification. The
+[submission analysis](PALOMAR_SUBMISSION_ANALYSIS.md) and
+[blocker map](PALOMAR_BLOCKERS.md) distinguish local checks from protected
+Comparator/NanoDa verification, public-source availability and final handoff.
+
+<details>
+<summary>Historical R1--R8 development and local verification record</summary>
 
 ## Progress and reuse
 
@@ -318,6 +395,9 @@ See [PALOMAR_BLOCKERS.md](PALOMAR_BLOCKERS.md) for exact project-local versus
 external obligations. A successful internal paper proof is not formal closure.
 All admitted obligations and relevant statement/provenance checks must be
 discharged before a Palomar-ready claim.
+
+
+</details>
 
 ## Build
 

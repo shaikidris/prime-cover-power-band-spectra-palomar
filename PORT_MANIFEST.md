@@ -2471,6 +2471,37 @@ commit. Detailed evidence is retained in
 `.lake/palomar-submission-analysis-2026-09-10/`. R8 remains **8/8 local**,
 public proofs **2/4**, and submission readiness **PARTIAL**.
 
+## D31 pre-submission source freeze — 10 September 2026
+
+This maintenance batch closes P0--P4 in `PALOMAR_RELEASE_CONE.md`. It changes
+no selected theorem formula, paper, Lake configuration or dependency pin.
+Core now spells the literal Challenge Vertex subtype and matching instances;
+Assembly's existing lifted-rank bridge uses explicit arguments with `erw`.
+The sharp Solution/configuration and two sharp axiom-audit rows are preserved
+at `11e71d0cec4f2e8de8e2542bb0b7a4888782607f` on `sharp-development`
+(PACKAGING). The D31 source tree contains zero Solution admissions.
+
+Fresh final full build: 4239 jobs. Strict comparison: two public types,
+sixteen selected definition values and 16,491 shared constants, no failures.
+Eight D31 public/internal closures: 71,752 union constants, standard axioms
+only. Fifteen controls pass. Nine modules/six owners, 33,549 Lean lines
+including lakefile, zero unreachable and zero new modules. Semantic lint has
+exactly the same 93 inherited findings; the single old Unicode-style finding
+also remains. Current metadata/schema, provenance and strict source audit pass
+their stated checks; the helper's semantic/commit-role warnings are manually
+reconciled in the task board. Source evidence is retained under
+`.lake/palomar-readiness-2026-09-10/`.
+
+The public account now accurately distinguishes unchanged BHP-dependent sharp
+Theorem 1.1 from the strengthened D31 route, states squared-error baselines,
+strict interior power margins and the preserved initial segment, and describes
+Paper I's existing logarithmic window. Native sources remain privately
+identified by exact revision/path/hash; novelty and separate human review are
+not asserted. This commit is the local source freeze, not an anticipated
+Linux verification result. Exact source SHA, public-access/replay/render
+receipts and the manual handoff are recorded on the separate
+`palomar-readiness-2026-09-10` audit branch identified by the same task board.
+
 ## Historical next-migration table (superseded for D31)
 
 The following historical declarations were checked adapters or finite
