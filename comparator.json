@@ -1,6 +1,6 @@
 {
   "challenge_module": "PrimeCoverPowerBandChallenge",
-  "solution_module": "PrimeCoverPowerBandSolution",
+  "solution_module": "PrimeCoverPowerBandSharpSolution",
   "theorem_names": [
     "PrimeCoverPowerBand.palomar_terminalBand_prescribedRanks",
     "PrimeCoverPowerBand.palomar_terminalBand_primeCounting"

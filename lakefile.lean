@@ -28,5 +28,6 @@ lean_lib PrimeCoverPowerBandPalomar where
     .submodules `PrimeCoverPowerBand,
     .one `PrimeCoverPowerBandChallenge,
     .one `PrimeCoverPowerBandSolution,
+    .one `PrimeCoverPowerBandSharpSolution,
     .one `PrimeCoverPowerBandSubmissionAudit
   ]

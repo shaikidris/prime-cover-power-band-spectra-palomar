@@ -8,10 +8,13 @@ The paper proof is internal. R1 statement alignment is validated by a fresh
 4,222-job build and local definitional comparison. R2's literal reuse audit
 also passed. R3's finite ordered comparison and controls passed. R7 now
 closes both D31 public proofs. Two sharp Solution holes remain.
-The post-push submission analysis confirms a structural Comparator blocker
+The post-push submission analysis found a structural Comparator blocker
 in the Challenge/Core shared definitions; see
 [PALOMAR_SUBMISSION_ANALYSIS.md](PALOMAR_SUBMISSION_ANALYSIS.md).
-R8 remains a completed local audit, not official statement compatibility.
+P1 repaired that source mismatch and passed the strict shared-dependency
+diagnostic. P2 isolated the sharp entry and rebuilt the selected roots; P3
+completed the public account. P4--P7 remain tracked at the top of
+`PALOMAR_RELEASE_CONE.md`. R8 remains a historical local audit.
 
 ## D31: project-local formalization first
 
@@ -71,7 +74,7 @@ not their proof status. `AlmostAllArithmetic` was removed from the planned
 owner set before creation. The toolchain, dependencies and dependency pins
 remain unchanged.
 
-Current source inventory after R8 is unchanged: nine modules / six proof
+The historical source inventory at R8 was nine modules / six proof
 owners / 33,559 Lean lines including lakefile. The D31 checklist is
 **8/8 validated (100%)**, MG4 **2/2 COMPLETE**, public proofs **2/4**.
 Only the sharp pair retains sorryAx. The eight audited D31 roots have
@@ -86,21 +89,19 @@ Final Palomar submission readiness is **PARTIAL**:
   match the final selected clean HEAD to the pushed branch and verify public access.
   The 10 September anonymous GitHub API probe returned 404 while the authorized
   SSH remote was reachable. Visibility has not been changed.
-- The pinned Comparator requires structural equality of non-selected
-  dependencies. A compiled-environment diagnostic confirms that the selected
-  `powerBandBadCenters` type reaches the non-selected `Vertex`, whose explicit
-  Challenge subtype differs from Core's Paper I abbreviation. Generated
-  instance references also differ. Local definitional equality does not close
-  this blocker; repair the shared surface without weakening the Challenge.
-- Isolate an admission-free D31 Solution surface. The two sharp holes are
-  outside the D31 proof closure, but the configured shared Solution fails
-  this repository's zero-Solution-hole release rule and snapshot audit.
+- P1 replaced the Core abbreviation with the explicit Challenge subtype and
+  matching derived instances. All 16,491 shared-dependency constants passed
+  the strict local comparison. Full repaired Solution comparison and protected
+  export/Comparator verification are tracked separately under P4/P6.
+- P2 now supplies an admission-free D31 Solution. The unchanged sharp holes
+  are isolated in `PrimeCoverPowerBandSharpSolution`; both entry surfaces and
+  the audit build. The combined four-root project remains incomplete.
 - Exact current Palomar preflight and full protected Linux replay, including
   Comparator, NanoDa and the rendered Challenge, have not run. This host has
   no supported Linux runner. Local definitional equality is separate evidence.
 - Both sharp proofs remain open for the combined four-root release.
-- A concise public mathematical-interest and source account should accompany
-  the D31 entry. Novelty has not been established by this audit.
+- P3 supplies the public mathematical-interest and source account. Novelty
+  remains unestablished; rendered and final advisory reviews are P6/P7.
 
 Current upstream schema and Palomar metadata validation pass, with explicit
 AI disclosure and corrected provenance roles. Toolchain/exporter compatibility

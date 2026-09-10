@@ -1,4 +1,5 @@
 import PrimeCoverPowerBandSolution
+import PrimeCoverPowerBandSharpSolution
 
 #print axioms PrimeCoverPowerBand.exactPrincipalMoleculeMatrix_apply_eq_primeCover
 #print axioms PrimeCoverPowerBand.norm_exactMoleculeEmbeddingOperator

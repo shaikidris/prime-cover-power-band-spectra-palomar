@@ -4,13 +4,15 @@ version: "v0.4"
 project:
   name: "Prescribed and almost-all power-band spectra of prime-cover graphs"
   description: >-
-    Palomar-first Lean 4 formalization of prescribed ordered eigenvalues and
-    density-one sub-block estimates for finite prime-cover graphs. The sharp
-    terminal-band statements have range 21/61 < theta < 1/2. The D31 statements
-    have range 0 < theta < 1/2, error a/log(X) plus a logarithmic multiple of
-    sqrt(X/(a log(X))), quantitative terminal exception counts, and a global
-    density-zero failure set. Both D31 almost-all proofs compile with standard
-    axioms; the two sharp terminal-band proofs remain open.
+    For finite prime-cover graphs, the ordered adjacency eigenvalues at
+    prescribed arithmetic ranks obey density-one squared-error estimates in
+    every fixed power range 0 < theta < 1/2. Relative to the prime-counting
+    main term and explicit first-exit correction, the error is bounded by a
+    constant times a/log(X) + log(X)^D sqrt(X/(a log(X))), with quantitative
+    terminal exception counts and zero limiting failure density. This gives
+    a positive power improvement over the sqrt(X)/log(X) block bound.
+    Separate sharp every-terminal-centre statements on 21/61 < theta < 1/2
+    at error O(a/log(X)) remain open in this formalization.
   authors: ["Idris Ali Shaik"]
   license: "Apache-2.0"
   responsible_maintainers: ["Idris Ali Shaik"]
@@ -65,19 +67,20 @@ automation:
 status:
   scope: >-
     Development snapshot with the two D31 almost-all results proved and two
-    sharp terminal-band obligations open. R8 scoped D31 verification is complete;
-    final Palomar submission readiness is partial.
+    sharp terminal-band obligations open in a separate Solution surface.
+    R8 local verification is complete; P0--P7 submission preparation is active
+    and protected verification remains pending.
   sorry_count: 2
   sorry_in_definitions: 0
   axioms: [propext, Classical.choice, Quot.sound, sorryAx]
   main_results:
     - declaration: "PrimeCoverPowerBand.palomar_terminalBand_prescribedRanks"
-      file: "PrimeCoverPowerBandSolution.lean"
+      file: "PrimeCoverPowerBandSharpSolution.lean"
       sorry_count: 1
       axioms: [propext, Classical.choice, Quot.sound, sorryAx]
       comparator_config: "comparator.json"
     - declaration: "PrimeCoverPowerBand.palomar_terminalBand_primeCounting"
-      file: "PrimeCoverPowerBandSolution.lean"
+      file: "PrimeCoverPowerBandSharpSolution.lean"
       sorry_count: 1
       axioms: [propext, Classical.choice, Quot.sound, sorryAx]
       comparator_config: "comparator.json"
@@ -93,38 +96,30 @@ status:
       comparator_config: "almost-all-comparator.json"
 
 review:
-  status: "agent-reviewed; scoped D31 verification complete; submission readiness partial"
+  status: "agent-reviewed; D31 submission preparation active; protected verification pending"
   notes: >-
-    R1--R8 passed the local D31 checklist (8/8, 100%; MG4 2/2).
-    Both public almost-all roots have standard-axiom proofs with unchanged
-    Challenge types. Terminal and global conclusions use identical error
-    parameters and retain the initial segment. Internal Corollaries 10.2 and
-    10.3 retain the sharp density range and coherent every-centre operator
-    error. Fresh selected/full builds pass 4238/4239 jobs; a 235-root axiom
-    report leaves only the sharp pair on sorryAx. Eight public/internal D31
-    roots have 71747 constants in their transitive union, with standard axioms
-    only. Local namespace-isolated Lean comparison passes 34 shared types and
-    26 definition values, covering all selections; this is not official
-    Comparator or independent-kernel evidence. A subsequent compiled-environment
-    diagnostic confirms a strict Comparator identity blocker: the selected
-    powerBandBadCenters type reaches non-selected Vertex, defined explicitly
-    in the Challenge but as a Paper I abbreviation in Core; generated instance
-    references also differ. Public D31 root types remain structurally equal.
-    Repair this shared surface and isolate an admission-free D31 Solution;
-    the sharp holes are outside the D31 proof closure but violate the local
-    zero-Solution-hole release rule. The declaration/source-reference
-    inventory preserves shared/sharp support and does not assert that the
-    combined tree is minimal for D31 alone. Metadata schema, current Palomar
-    contract, source provenance, source editorial assessment, exporter-tag
-    compatibility and canonical Mathlib ancestry checks pass. No separate human
-    line-by-line review is asserted. Nine modules, six owners and 33559 Lean
-    lines including lakefile are unchanged, as are papers and dependency pins.
-    The inherited 93 semantic-lint findings and one Unicode-style finding were
-    not rerun. This development checkpoint contains the complete substantive
-    source, including all nine Lean modules. Commit and push were authorized
-    on 10 September 2026. Public source access and exact current Linux
-    preflight/full Comparator/NanoDa/render replay remain required; the two
-    sharp proofs also block a combined four-root release. The selected intake
-    commit must match clean HEAD and the pushed canonical branch. No
-    Palomar-ready claim or submission is made. The detailed current assessment
-    is PALOMAR_SUBMISSION_ANALYSIS.md; this audit has not established novelty.
+    R1--R8 passed the local D31 checklist. Both public almost-all roots have
+    standard-axiom proofs. Terminal and global conclusions use the same error
+    parameters and retain the initial segment. The sharp theorem and its BHP
+    input were not strengthened or removed. Internal Corollaries 10.2 and
+    10.3 have their separately stated ranges, and 10.3 retains both operator
+    terms. All error comparisons concern squared eigenvalues; strict power
+    gains are for each fixed interior theta, not uniform up to an endpoint.
+    The formal D31 proof uses a sufficient O(a/log(X)) molecule estimate in
+    place of the manuscript's stronger intermediate o(1) estimate, preserving
+    the selected final statements. Pinned Paper I already covers a uniform
+    logarithmic centre window; the current result concerns power bands.
+    A pre-repair audit found that definitional equality did not establish
+    Comparator structural identity. Core now matches the concrete Challenge
+    Vertex definition and derived instances. A fresh strict shared-dependency
+    diagnostic passed all 16491 visited constants. This is not protected
+    Comparator or independent-kernel evidence. The D31 Solution has no
+    admissions; two sharp obligations remain in PrimeCoverPowerBandSharpSolution.
+    The affected selected build passed 4238 jobs after one local rank-cast
+    rewrite repair. Full build and fresh closure audits are tracked by P4.
+    Current Linux preflight/full Comparator/NanoDa replay, rendered Challenge,
+    public source access and the final immutable handoff remain required.
+    The selected intake commit must match clean HEAD and the pushed canonical
+    branch. No separate human line-by-line review, established novelty,
+    Palomar-ready status or submission is claimed. The live task evidence is
+    in PALOMAR_RELEASE_CONE.md and PALOMAR_SUBMISSION_ANALYSIS.md.

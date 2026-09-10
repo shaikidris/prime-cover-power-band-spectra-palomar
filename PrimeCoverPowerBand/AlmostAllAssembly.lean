@@ -474,7 +474,7 @@ theorem oneExit_eigenvalues_lift_moleculeCenterEigenEquiv_eq
       (oneExitCompression_isHermitian S X)).eigenvalues rfl
       (liftRCLikeCompressionEigenIndex Q (moleculeCenterEigenEquiv S X K a)) =
         oneExitEigenvalueAtArithmeticRank a.1 := by
-  rw [lift_moleculeCenterEigenEquiv_eq]
+  erw [lift_moleculeCenterEigenEquiv_eq Q a]
   exact assemblyEigenvalues_cast _ _ finrank_euclideanSpace (oneExitArithmeticRankIndex a.1)
 
 /-- Actual same-rank ordered comparison with quadratic noise mass. The

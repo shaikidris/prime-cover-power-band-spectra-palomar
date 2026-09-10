@@ -1,5 +1,163 @@
 # Paper II Palomar release-cone contract
 
+## Active pre-submission goal — 10 September 2026
+
+The user authorized analysis of the sharp/BHP-free comparison and execution of
+the before-submission steps as a tracked goal. This is **MAINTENANCE**, starting
+from clean pushed `11ca6f6ea208aaf65b61186678440bd69f7009f5`. It preserves the
+four mathematical claims, the two D31 entry selections, Mathlib-only Challenge
+imports, Paper I reuse and all toolchain/dependency pins. No new mathematical
+research or Palomar state change is included.
+
+**Dashboard:** P0--P1 VERIFIED; P2--P4 IN_PROGRESS; P5--P7 TODO. **2/8 tasks verified**
+counts fixed release tasks, not equal effort or mathematical proof percentage.
+D31 R1--R8 remains 8/8 local; the two sharp proofs remain open. Current critical
+path: shared-definition identity -> selected Solution isolation -> validation
+-> public immutable source -> protected replay -> handoff.
+
+| ID | Output / existing owner | Depends on | Status | Exit test / evidence |
+|---|---|---|---|---|
+| P0 | Audited theorem comparison in `PALOMAR_SUBMISSION_ANALYSIS.md` | frozen manuscript and Lean statements | VERIFIED | Literal ranges, squared-error scales, quantifiers, dependencies, strict power margins and nonclaims matched; P0 record below. |
+| P1 | Structural Challenge/Core compatibility | P0 | VERIFIED | Core build 2731 jobs, 87s reported for changed Core; all 16,491 visited constants match the strict shared-dependency rule. Protected export/Comparator remains P6. |
+| P2 | Admission-free D31 source tree; preserved sharp development branch | P1 | IN_PROGRESS | Reopened by the whole-repository admission scan. Preserve the unchanged sharp entry on `sharp-development`; the submitted tree must have zero Solution admissions. |
+| P3 | Mathematical account, Challenge prose and metadata | P0; P2 for final packaging check | IN_PROGRESS | Mathematical account/schema passed; reopen the packaging references and result scope for the branch separation. Render remains P6. |
+| P4 | Local release audit of repaired exact source | P1, P2, P3 | IN_PROGRESS | Target/full build, selected type/proof closure, placeholders, reachability, source references, semantic review, relevant lint and exact diff recorded. |
+| P5 | Authorized public immutable source snapshot | P4 | TODO | Reviewed source checkpoint, clean HEAD and canonical SSH branch match; anonymous access to source and proof dependencies verified. |
+| P6 | Pinned protected Linux preflight/full replay and Challenge render | P4, P5 | TODO | Supported current verifier receipts pass; Comparator and NanoDa exit evidence; selected English documentation visibly rendered. |
+| P7 | Final advisory review and handoff packet | P0--P6 | TODO | Every gate reconciled to the same source; exact intake values and remaining limitations recorded; no Palomar state mutation. |
+
+Full delivery scope remains: Theorem 1.3 and Corollary 1.4 are the first entry;
+Theorem 10.1 and Corollaries 10.2--10.3 are already compiled internal exports;
+Theorem 1.1 and Corollary 1.2 are open sharp-route declarations. BHP and the
+sharp assembly remain visible but are not new obligations of this D31 goal.
+
+P2 admits exactly one additional **entry surface**,
+`PrimeCoverPowerBandSharpSolution.lean`, consumed by the sharp Comparator and
+the existing submission audit. It relocates the two existing sharp obligations
+without adding proof owners or declarations. The expected inventory becomes
+ten local modules, six proof owners and zero unreachable modules across the
+two configurations and genuine audit root. The D31 Solution keeps its existing
+module name. No other new Lean module is admitted. Production code growth is
+limited to the explicit shared Vertex/instance repair and entry boilerplate;
+the ceiling is 33,659 Lean lines including lakefile (at most +100 from R8).
+No new theorem family or proof infrastructure is authorized by this split.
+
+P4 refinement: a separate file still fails the required whole-repository
+admission scan. The ten-module two-entry development is therefore preserved
+on branch `sharp-development`; the D31 submission tree returns to nine
+modules/six owners, with zero Solution admissions. Its selected D31 theorem
+types and configuration remain unchanged. The four Challenge statement types
+remain available; the open sharp Solution and its configuration live on the
+preserved branch. This is a release-boundary change, not a change to Theorem
+1.1, BHP, or the mathematical task denominator.
+
+### Goal iteration P0 — theorem comparison verified
+
+Native manuscript SHA-256:
+`b145e0a4ed2078fca969ed127d00c73d8758a76b559971988501693c1b60cfa3`.
+Checked its Theorems 1.1/1.3/10.1, Corollaries 1.2/1.4/10.2/10.3 and
+Proposition 2.4 against the current Solution and named `AlmostAllAssembly`
+exports. The supplied distinction is correct: the sharp every-terminal-centre
+law and its BHP/Brun--Titchmarsh input are unchanged, while the newer route
+improves the block baseline throughout each fixed `0 < theta < 1/2`.
+
+All quoted errors concern squared eigenvalues. The density-one power margin
+is strictly below `min(theta/2, 1/2-theta)`; the every-centre operator margin
+is strictly below `min(theta/2, (1-2 theta)/4)`. Both vanish at a boundary;
+there is no uniform positive margin over the open interval. BHP is an input
+of the current sharp proof, not a proved logical necessity for all proofs.
+The internal sharp density-one corollary has `1/3 < theta < 1/2` and remains
+outside the selected entry. Terminal exception rates do not silently extend
+to the full initial segment.
+
+No theorem was promoted and no proof build was rerun for P0. Elapsed analysis
+time was not separately measured. Repair lesson: compare squared-error powers
+against the positive-star baseline before comparing ranges or inputs. Next-use
+test: P3 must retain these same powers, strict margins and quantifiers in all
+public prose. Baseline/evidence: `.lake/palomar-readiness-2026-09-10/`.
+
+### Goal iteration P1 — shared identity repaired
+
+P1 IN_PROGRESS -> VERIFIED. Core now spells the same concrete `Vertex` subtype
+and derived instances as Challenge. It remains definitionally equal to the
+Paper I type; no Challenge formula, theorem signature or definition selection
+was relaxed. `lake build PrimeCoverPowerBand.Core` passed (2,731 jobs; 87s
+reported for Core). A fresh comparison of all constants reached from the two
+Challenge theorem types and the sixteen configured definitions checked 16,491
+constants with zero failures, using the pinned Comparator's equality rule.
+This checks the shared statement dependencies against compiled Core, not the
+complete Solution proof or protected export; those remain P4/P6.
+
+Consumer obligation removed: the explicit-type/abbreviation and generated
+instance mismatch. There were no failed production builds. Repair signature:
+definitionally equal aliases do not satisfy a structural statement contract;
+match the concrete definition and its generated instance identities. The
+bounded sibling/operator/rank dependencies all passed the same traversal.
+Evidence: `p1-core-build.log`, `p1-core-comparison.log` and
+`p1-core-comparison.json` in the goal evidence directory. Next-use test: rebuild
+the actual Paper I-consuming proof owners after the P2 entry split; any
+instance-transport regression keeps P4 open.
+
+### Goal iteration P2a — split preserved; one consumer rewrite under repair
+
+Source checks preserve both sharp declarations and both D31 declarations
+verbatim. The D31 Solution has zero admissions; the separate sharp surface
+has the same two. After the split, the initial selected build rebuilt Core's
+consumers through `AlmostAllSpectralBudget`, then failed at
+`AlmostAllAssembly.lean:477`: ordinary rewriting could not match the lifted
+rank cast under instance-level transparency after `Vertex` became an explicit
+definition. The public theorem types and arithmetic rank are unchanged.
+
+The repair supplies the existing lemma's arguments and uses `erw` to allow
+definitional reduction. P2 remains IN_PROGRESS until the selected build passes.
+Initial failure log: `p2-selected-build.log`. Only this proof step in the
+existing assembly owner changes; no new lemma or hypothesis is introduced.
+
+### Goal iteration P2b/P3 — selected build and public account verified
+
+P2 and P3 IN_PROGRESS -> VERIFIED. The retry passed all 4,238 selected jobs.
+Assembly and D31 Solution rebuilt in reported times of 126s and 100s; the audit
+rebuilt in 55s. These compiler durations are not a summed wall-clock timing.
+All public declarations and their existing proof bodies remain verbatim in
+their designated surfaces. The only non-Core proof edit is the explicit
+`erw` at the existing lifted-rank bridge. The expected Paper I instance
+transport regression was repaired locally; no new mathematical obligation was
+discovered. The separate sharp surface retains its two admissions.
+
+README and Challenge prose now state the actual squared-error comparison,
+block baseline, fixed-parameter dependence, strict margins, initial segment,
+unchanged BHP-dependent sharp theorem and internal-only corollaries. The
+pinned Paper I surface has a logarithmic window, correcting the earlier
+fixed-centre shorthand. Metadata records the sufficient weaker intermediate
+molecule estimate, inaccessible native source limitation, AI involvement and
+unestablished novelty. Both selected formulas remain visible and assessable;
+zero-operator, arbitrary-bound and zero-denominator substitutions do not
+preserve the advertised interpretation. These are source checks, not a render
+or official editorial decision.
+
+Evidence: `p2-validation.json`, `p2-selected-build-final.log`,
+`p3-metadata-draft-check.json`, `p3-semantic-review.json`. Next: P4 fresh full
+build and trust/statement/source audit. The P0 prose-retention experiment is
+SUPPORTED; the P1 transport test found and repaired exactly one consumer step.
+
+### Goal iteration P4a — stricter admission gate reopens P2/P3
+
+The full build passed 4,240 jobs. Fresh comparison of both public signatures,
+all sixteen selected definition values and all 16,491 reached constants passed.
+Eight fresh public/internal proof closures have 71,752 union constants and
+only the three standard axioms. Source inventory passes with ten modules,
+zero unreachable modules and unchanged manuscripts/dependency pins.
+
+However, the strict snapshot helper scans every tracked Lean file and still
+reports two admissions in `PrimeCoverPowerBandSharpSolution.lean`. The
+repository's zero-Solution-admission release rule therefore requires a branch
+boundary, not only a module boundary. P2 and the packaging portion of P3 are
+reopened; verified-task count is honestly reduced from 4/8 to 2/8. No proved
+theorem is demoted. Preserve the complete compatible sharp development before
+removing its admitted Solution/configuration from the D31 snapshot. Audit
+declaration removals are PACKAGING, with their new branch location recorded.
+Do not suppress the helper's finding or weaken the repository rule.
+
 ## Current plan — D31 rebase, 9 September 2026
 
 This section supersedes the execution order, almost-all dependency map, and

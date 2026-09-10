@@ -8,8 +8,9 @@ import Mathlib.Analysis.Matrix.Spectrum
 # Shared statement implementation for Paper II
 
 This module is the only shared owner of the objects appearing in both Palomar
-entries.  It reuses the pinned Paper I vertex type while retaining transparent
-Paper II definitions matching the Mathlib-only Challenge surface.
+entries. Its explicit vertex definition and derived instances match the
+Mathlib-only Challenge surface. The type remains definitionally equal to
+the pinned Paper I vertex type used by the proof owners.
 
 Source provenance: the definitions are extracted from `Basic.lean`,
 `PowerBands.lean`, `TargetEnergies.lean`, `HeadlineAssembly.lean`, and the
@@ -23,8 +24,10 @@ open scoped BigOperators Classical InnerProductSpace
 
 noncomputable section
 
-/-- Paper II reuses the allowed-vertex type from the pinned Paper I package. -/
-abbrev Vertex := PrimeStar.Vertex
+/-- Positive integers at most `X` avoiding every prime in `S`. -/
+def Vertex (S : Finset ℕ) (X : ℕ) :=
+  {n : Fin (X + 1) // 0 < n.1 ∧ ∀ p ∈ S, ¬p ∣ n.1}
+  deriving DecidableEq, Fintype
 
 namespace Vertex
 
