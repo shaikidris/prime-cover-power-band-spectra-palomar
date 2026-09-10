@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "palomar_contract": "pass",
+  "upstream_schema_errors": [],
+  "schema_commit": "99c678e569c7c4c0772db297c5ddd5e4c9b6322e",
+  "verifier_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
+  "selected_results_match": true,
+  "config_results": [
+    "almost-all-comparator.json"
+  ],
+  "metadata_sha256": "ef8442300dff197cdf31b97178c065d4986f9c000e61d699f1511f66465edf51",
+  "license_path": "LICENSE",
+  "template_sentinels": {}
+}

@@ -1,0 +1,6 @@
+{
+  "url": "https://submit.palomar-registry.org/llms.txt",
+  "checked_at": "2026-09-10T09:57:10.131461+00:00",
+  "sha256": "1931e560d673eb3fb308943e60e84bcb9c91a215091a96b8606b58bd745c2ec1",
+  "scope": "public read only; no state endpoint called"
+}

@@ -1,0 +1,99 @@
+{
+  "checked_at": "2026-09-10T09:50:11.217558+00:00",
+  "status": "local P0-P4 pass; P5-P7 open",
+  "full_build": {
+    "exit": 0,
+    "jobs": 4239,
+    "log": "p4-d31-only-full-build.log"
+  },
+  "strict_comparison": {
+    "visited_constants": 16491,
+    "scope": "Fresh compiled Challenge/Solution theorem signatures, all selected definition values and non-selected dependency comparison; no protected export or independent kernel run",
+    "pass": true,
+    "failures": [],
+    "comparator_algorithm_revision": "575674928e239f5bc452aab72d1dd7b0f1326494"
+  },
+  "kernel_closure": {
+    "roots": 8,
+    "union_constants": 71752,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "proof_sources_unchanged_by_branch_packaging": true
+  },
+  "exact_controls": {
+    "exit": 0,
+    "count": 15
+  },
+  "lint": {
+    "previous_owner_findings": 93,
+    "current_owner_findings": 93,
+    "same_owner_diagnostics": true,
+    "new_owner_diagnostics": [],
+    "source_sorry_scope": "Sharp development preserved separately; D31 candidate has zero Solution admissions"
+  },
+  "style": {
+    "inherited_findings": 1,
+    "new_findings": 0,
+    "file": "PrimeCoverPowerBand/AlmostAllSpectralBudget.lean",
+    "line": 9340
+  },
+  "snapshot": {
+    "errors": 0,
+    "warnings": 3,
+    "semantic_warning": "P0/P3 assessability review passed",
+    "commit_role_warning": "ordinary substantive source commit supplied at intake, not self-embedded; provenance table reconciled"
+  },
+  "inventory": {
+    "module_count": 9,
+    "proof_owners": 6,
+    "unreachable_modules": [],
+    "lean_lines_including_lakefile": 33549,
+    "pin_files_unchanged": true,
+    "lean_hashes": {
+      "PrimeCoverPowerBand/AlmostAllAssembly.lean": "75482f2071a0847f75ccb5ac6cf83127bb6502c5bfdfbf7cd2a03b95839d2699",
+      "PrimeCoverPowerBand/AlmostAllSpectralBudget.lean": "76599df27c70e7cb5a3fa96c996b7fa51ccb0ab91d568c6d74cd00103107b4a2",
+      "PrimeCoverPowerBand/Core.lean": "69dddd4509a349e9baf04ef5700bc60ae11365e56b9e20c8d476269faa1bd559",
+      "PrimeCoverPowerBand/FirstExitTarget.lean": "da285d9d16535a2cfab3deb16685e3a65d6b081995471d50ed2534d643daea36",
+      "PrimeCoverPowerBand/FullSpectrumTransfer.lean": "804178f0d34c51a3594b76ecf7eda1172ad6ee479b53493adfd37121c02c2e39",
+      "PrimeCoverPowerBand/TerminalSchur.lean": "0c1a7c81c898e1c5f9b487127a157da984ac5e769370c1cb5095594b161ef159",
+      "PrimeCoverPowerBandChallenge.lean": "d2e99fd97cf315102f5d3918e4aa5ee403f2e4be41217dfec88f98d8cbc0ec96",
+      "PrimeCoverPowerBandSolution.lean": "48fa71cf846ae34d32e810182f17d96b15b0a12f0f2f8317fed836a15927d645",
+      "PrimeCoverPowerBandSubmissionAudit.lean": "fb23cd3293005ba12a89a5363b2ff57fe55f9555f0fd18f3e49a7770911a811c",
+      "lakefile.lean": "b30c2d624309b8bf3327a38f99faeb2f00dfc7bfa26ed473be2861b7e13aae23"
+    },
+    "paper_hashes": {
+      "../prime-orthant-geometry/draft/prescribed-eigenvalues-in-prime-cover-power-bands.md": "b145e0a4ed2078fca969ed127d00c73d8758a76b559971988501693c1b60cfa3",
+      "../prime-orthant-geometry/draft/prime-star-localization-and-second-order-spectra.md": "627cc9d3e3a217c952e1811e46a796051ad2d1e9e428d3c00cbc034407305170"
+    }
+  },
+  "metadata": {
+    "status": "pass",
+    "palomar_contract": "pass",
+    "upstream_schema_errors": [],
+    "schema_commit": "99c678e569c7c4c0772db297c5ddd5e4c9b6322e",
+    "verifier_commit": "ef2fa1eadcb246c2346ddba39b52eaa53d4bb763",
+    "selected_results_match": true,
+    "config_results": [
+      "almost-all-comparator.json"
+    ],
+    "metadata_sha256": "ef8442300dff197cdf31b97178c065d4986f9c000e61d699f1511f66465edf51",
+    "license_path": "LICENSE",
+    "template_sentinels": {}
+  },
+  "sharp_preservation": {
+    "commit": "11e71d0cec4f2e8de8e2542bb0b7a4888782607f",
+    "branch": "sharp-development",
+    "preserved_files": {
+      "PrimeCoverPowerBandSharpSolution.lean": "993ea4d3e9d4f4153aba0dcd605c4038d25c817738effef639e0368cb8f2c1b2",
+      "comparator.json": "6ad39f9549235383343ed8ee43f46914b65ac00dfef8cc8bac93ceb323586811"
+    },
+    "main_HEAD_unchanged": true,
+    "working_files_preserved": true,
+    "remote_push": false
+  },
+  "exact_diff_check": true,
+  "supersedes_interim_admission_classification": "The initial same-tree sharp admission finding was repaired with a preserved branch; it was not waived."
+}

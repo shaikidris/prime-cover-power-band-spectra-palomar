@@ -1,0 +1,6 @@
+{"visited_constants": 16491,
+ "scope":
+ "Fresh compiled Challenge/Solution theorem signatures, all selected definition values and non-selected dependency comparison; no protected export or independent kernel run",
+ "pass": true,
+ "failures": [],
+ "comparator_algorithm_revision": "575674928e239f5bc452aab72d1dd7b0f1326494"}

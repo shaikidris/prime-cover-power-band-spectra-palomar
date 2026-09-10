@@ -1,0 +1,11 @@
+{
+  "commit": "11e71d0cec4f2e8de8e2542bb0b7a4888782607f",
+  "branch": "sharp-development",
+  "preserved_files": {
+    "PrimeCoverPowerBandSharpSolution.lean": "993ea4d3e9d4f4153aba0dcd605c4038d25c817738effef639e0368cb8f2c1b2",
+    "comparator.json": "6ad39f9549235383343ed8ee43f46914b65ac00dfef8cc8bac93ceb323586811"
+  },
+  "main_HEAD_unchanged": true,
+  "working_files_preserved": true,
+  "remote_push": false
+}

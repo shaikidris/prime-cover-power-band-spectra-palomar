@@ -1,36 +1,28 @@
 # Paper II Palomar release-cone contract
 
-## Pre-submission goal at source freeze — 10 September 2026
+## Active pre-submission goal — 10 September 2026
 
-The user authorized analysis of the sharp/BHP-free comparison and execution of
-the before-submission steps as a tracked goal. This is **MAINTENANCE**, starting
-from clean pushed `11ca6f6ea208aaf65b61186678440bd69f7009f5`. It preserves the
-four mathematical claims, the two D31 entry selections, Mathlib-only Challenge
-imports, Paper I reuse and all toolchain/dependency pins. No new mathematical
-research or Palomar state change is included.
+This is the continuation of the source-freeze board on the separate audit
+branch `palomar-readiness-2026-09-10`. The immutable D31 source is
+`454743470f6aff2e7f7f8ac79a7a2a7279e60ada` on `main`; verification and handoff
+must use that commit, never this later receipt commit. The user authorized
+analysis and the before-submission goal. No Palomar state change is included.
 
-**Dashboard at source freeze:** P0--P4 VERIFIED; P5--P7 TODO. **5/8 tasks verified**
-counts fixed release tasks, not equal effort or mathematical proof percentage.
-D31 R1--R8 remains 8/8 local; the two sharp proofs remain open. Current critical
-path: public immutable source -> protected replay -> handoff.
-
-After the source commit is frozen, this same task board continues on the
-[`palomar-readiness-2026-09-10` audit branch](https://github.com/shaikidris/prime-cover-power-band-spectra-palomar/blob/palomar-readiness-2026-09-10/PALOMAR_RELEASE_CONE.md).
-That branch records the exact source SHA and subsequent receipts. This main
-branch copy is the source-freeze record; later receipt commits must not change
-the source being verified. Until the audit branch exists, this is the current
-record. No Linux or final-readiness success is anticipated here.
+**Dashboard:** P0--P4 VERIFIED; P5 WAITING_FOR_USER; P6 TODO; P7 IN_PROGRESS (advisory portion only).
+**5/8 tasks verified** counts release tasks, not equal effort or mathematical
+proof percentage. R1--R8 remains 8/8 local; both sharp proofs remain open on
+the preserved `sharp-development` branch.
 
 | ID | Output / existing owner | Depends on | Status | Exit test / evidence |
 |---|---|---|---|---|
-| P0 | Audited theorem comparison in `PALOMAR_SUBMISSION_ANALYSIS.md` | frozen manuscript and Lean statements | VERIFIED | Literal ranges, squared-error scales, quantifiers, dependencies, strict power margins and nonclaims matched; P0 record below. |
-| P1 | Structural Challenge/Core compatibility | P0 | VERIFIED | Core build 2731 jobs, 87s reported for changed Core; all 16,491 visited constants match the strict shared-dependency rule. Protected export/Comparator remains P6. |
-| P2 | Admission-free D31 source tree; preserved sharp development branch | P1 | VERIFIED | Sharp development preserved at `11e71d0cec4f2e8de8e2542bb0b7a4888782607f`; final full build 4239 jobs; strict D31 snapshot has zero Solution admissions and zero errors. |
-| P3 | Mathematical account, Challenge prose and metadata | P0; P2 for final packaging check | VERIFIED | Public account, branch references, selected result scope and current schema/metadata contract reconciled. Both selected English docstrings are present. Render remains P6. |
-| P4 | Local release audit of repaired exact source | P1, P2, P3 | VERIFIED | Final full build, strict statement/definition comparison, eight standard-axiom proof closures, fifteen controls, source reachability/provenance, inherited-lint comparison and exact source diff pass their stated gates. See P4b. |
-| P5 | Authorized public immutable source snapshot | P4 | TODO | Reviewed source checkpoint, clean HEAD and canonical SSH branch match; anonymous access to source and proof dependencies verified. |
-| P6 | Pinned protected Linux preflight/full replay and Challenge render | P4, P5 | TODO | Supported current verifier receipts pass; Comparator and NanoDa exit evidence; selected English documentation visibly rendered. |
-| P7 | Final advisory review and handoff packet | P0--P6 | TODO | Every gate reconciled to the same source; exact intake values and remaining limitations recorded; no Palomar state mutation. |
+| P0 | Source-faithful theorem comparison | frozen manuscript and Lean | VERIFIED | Squared-error scales, literal quantifiers/ranges, strict gains and unchanged BHP route reconciled in the source analysis. |
+| P1 | Structural Challenge/Core compatibility | P0 | VERIFIED | Explicit shared Vertex/instances; 16,491 constants pass strict comparison. |
+| P2 | Admission-free D31 tree; preserved sharp development | P1 | VERIFIED | Final full build 4239 jobs; zero Solution admissions and zero snapshot errors; sharp revision `11e71d0cec4f2e8de8e2542bb0b7a4888782607f`. |
+| P3 | Mathematical account, Challenge prose and metadata | P0, P2 | VERIFIED | Source semantics/current metadata contract pass; 2/2 selected English docstrings present. Render is P6. |
+| P4 | Local release audit of exact source | P1--P3 | VERIFIED | Strict statement/definition comparison, eight standard-axiom closures, 15 controls, zero unreachable modules; inherited lint disclosed. See `readiness/p4-final-validation.json`. |
+| P5 | Authorized public immutable source | P4 | WAITING_FOR_USER | Source and sharp branch pushed; independent SSH readback matches. Explicit public-visibility approval is pending; anonymous source check must follow. |
+| P6 | Current protected Linux preflight/full and Challenge render | P4, P5 | TODO | Exact verifier/Comparator/NanoDa/Landrun receipts and visible selected documentation required. |
+| P7 | Advisory review and exact manual handoff | P0--P6 | IN_PROGRESS | Source/account advisory and exact draft fields prepared; mechanical/render reconciliation remains open. No Palomar state mutation. |
 
 Full delivery scope remains: Theorem 1.3 and Corollary 1.4 are the first entry;
 Theorem 10.1 and Corollaries 10.2--10.3 are already compiled internal exports;
@@ -1278,3 +1270,15 @@ Historical Paper II proof source:
 `a6f8efa91346a6401ba9191d1b12f8552727e380`, plus an uncommitted working batch
 that must receive an immutable checkpoint before any of its declarations are
 ported as authoritative proof source.
+
+## Post-freeze iteration — source pushed; publication approval pending
+
+Both canonical source `454743470f6aff2e7f7f8ac79a7a2a7279e60ada` and preserved
+sharp branch `11e71d0cec4f2e8de8e2542bb0b7a4888782607f` were pushed through
+the configured personal SSH remote; an independent readback matched both.
+The source worktree is clean. The exact current verifier was fast-forwarded
+without modification into the existing public rehearsal fork. Inputs for
+preflight/full/render are prepared but not dispatched. The source visibility
+has not been changed while the explicit approval question is pending.
+P7's source/account advisory and draft handoff are prepared independently;
+its mechanical/render evidence gates remain open. Progress remains 5/8.

@@ -1,0 +1,25 @@
+{
+  "status": "P3 VERIFIED; source/editorial-account scope only",
+  "checks": {
+    "selected_theorem_types_and_proof_bodies_preserved": true,
+    "squared_error_normalization": true,
+    "block_baseline_and_correction_absorption": true,
+    "fixed_parameter_and_R_before_D_order": true,
+    "terminal_vs_global_exception_counts": true,
+    "strict_density_and_every_center_power_margins": true,
+    "sharp_theorem_and_BHP_status_preserved": true,
+    "Paper_I_actual_logarithmic_window": true,
+    "novelty_unestablished_disclosed": true,
+    "graph_operator_and_correction_formulas_visible": true,
+    "regularity_failure_included": true,
+    "finite_zero_or_one_scales_do_not_change_eventual_claim": true,
+    "fixed_error_parameters_prevent_arbitrary_scale_dependent_bound": true,
+    "no_opaque_zero_operator_or_arbitrary_witness_substitution": true,
+    "selected_English_docstrings_preserved": true,
+    "metadata_schema_and_current_contract": true,
+    "source_roles_and_private_manuscript_limitation": true,
+    "AI_assistance_and_human_review_limits_disclosed": true
+  },
+  "protected_render_review": "pending P6",
+  "research_interest_review": "advisory; no external novelty or acceptance claim"
+}

@@ -1,0 +1,11 @@
+{
+  "repository": "shaikidris/prime-cover-power-band-spectra-palomar",
+  "commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+  "challenge_sha256": "d2e99fd97cf315102f5d3918e4aa5ee403f2e4be41217dfec88f98d8cbc0ec96",
+  "request_id": "7a2b5be9f89ae308e9ccf234da9d3a1e",
+  "challenge_path": "PrimeCoverPowerBandChallenge.lean",
+  "solution_path": "PrimeCoverPowerBandSolution.lean",
+  "comparator_config_path": "almost-all-comparator.json",
+  "lakefile_path": "lakefile.lean",
+  "lean_toolchain_path": "lean-toolchain"
+}

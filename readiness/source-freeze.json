@@ -1,0 +1,33 @@
+{
+  "source_repository": "shaikidris/prime-cover-power-band-spectra-palomar",
+  "source_commit": "454743470f6aff2e7f7f8ac79a7a2a7279e60ada",
+  "source_branch": "main",
+  "audit_branch": "palomar-readiness-2026-09-10",
+  "scope": "exact committed substantive D31 source; post-freeze receipts are on the audit branch",
+  "tracked_files": {
+    ".gitignore": "17b43b59635e8422352c9a26ba27a4b701226581180d47b1d41ac4dcd4b2995c",
+    "AGENTS.md": "b5ce9feea07b9e2290fa2e991997ab3355f1b320f4f0947625b41c2d6b6692a8",
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "PALOMAR_BLOCKERS.md": "51d7539a90e2246aba2eb51f898060e323c238a803783148615ae1cda7be6175",
+    "PALOMAR_RELEASE_CONE.md": "35a442ae178e68b721228ec6f1e203e51badc8ccde107b219f7ccdd574b654c5",
+    "PALOMAR_SUBMISSION_ANALYSIS.md": "e0d528e8ca0ea5aca88234ff3f504558adcab6cdf542115661125d91801a190c",
+    "PORT_MANIFEST.md": "ee425cdbae56d5ee850e51850dfc92985a2383a23161991a35cfcc0994cfa68c",
+    "PrimeCoverPowerBand/AlmostAllAssembly.lean": "75482f2071a0847f75ccb5ac6cf83127bb6502c5bfdfbf7cd2a03b95839d2699",
+    "PrimeCoverPowerBand/AlmostAllSpectralBudget.lean": "76599df27c70e7cb5a3fa96c996b7fa51ccb0ab91d568c6d74cd00103107b4a2",
+    "PrimeCoverPowerBand/Core.lean": "69dddd4509a349e9baf04ef5700bc60ae11365e56b9e20c8d476269faa1bd559",
+    "PrimeCoverPowerBand/FirstExitTarget.lean": "da285d9d16535a2cfab3deb16685e3a65d6b081995471d50ed2534d643daea36",
+    "PrimeCoverPowerBand/FullSpectrumTransfer.lean": "804178f0d34c51a3594b76ecf7eda1172ad6ee479b53493adfd37121c02c2e39",
+    "PrimeCoverPowerBand/TerminalSchur.lean": "0c1a7c81c898e1c5f9b487127a157da984ac5e769370c1cb5095594b161ef159",
+    "PrimeCoverPowerBandChallenge.lean": "d2e99fd97cf315102f5d3918e4aa5ee403f2e4be41217dfec88f98d8cbc0ec96",
+    "PrimeCoverPowerBandSolution.lean": "48fa71cf846ae34d32e810182f17d96b15b0a12f0f2f8317fed836a15927d645",
+    "PrimeCoverPowerBandSubmissionAudit.lean": "fb23cd3293005ba12a89a5363b2ff57fe55f9555f0fd18f3e49a7770911a811c",
+    "README.md": "7394dc9e540cbcc5595a96bd55548dd0df34715369b40b8cadf4ff51fd33011b",
+    "SOURCE_PROVENANCE.md": "eacd090160f1e858de4dfec1cbed190ce18348f44f618e22bddc92841aa12a6b",
+    "almost-all-comparator.json": "4d5e30bf1d9895f8b9d433d6a694528a350d013385ddec4ce3a5ae975ecb2838",
+    "formalization.yaml": "ef8442300dff197cdf31b97178c065d4986f9c000e61d699f1511f66465edf51",
+    "lake-manifest.json": "80b0516b6a6972fb8696cb994eec168344f80f5f536cff04d81ed352fc1405d5",
+    "lakefile.lean": "b30c2d624309b8bf3327a38f99faeb2f00dfc7bfa26ed473be2861b7e13aae23",
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+  },
+  "source_clean": true
+}
