@@ -1,0 +1,23 @@
+{
+  "challenge_module": "PrimeCoverPowerBandChallenge",
+  "solution_module": "PrimeCoverPowerBandSolution",
+  "theorem_names": [
+    "PrimeCoverPowerBand.palomar_terminalBand_prescribedRanks",
+    "PrimeCoverPowerBand.palomar_terminalBand_primeCounting"
+  ],
+  "definition_names": [
+    "PrimeCoverPowerBand.arithmeticStarDegree",
+    "PrimeCoverPowerBand.actualUpStarRatio",
+    "PrimeCoverPowerBand.upStarCorrection",
+    "PrimeCoverPowerBand.downStarCorrection",
+    "PrimeCoverPowerBand.firstExitCorrection",
+    "PrimeCoverPowerBand.FirstExitCorrectionRegular",
+    "PrimeCoverPowerBand.powerScale",
+    "PrimeCoverPowerBand.InTerminalPowerBand"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

@@ -3,8 +3,12 @@
 ## Current plan — D31 rebase, 9 September 2026
 
 This section supersedes the execution order, almost-all dependency map, and
-progress denominator in the historical contract below. This is a planning
-revision, not a Lean implementation or a new theorem-completion claim.
+progress denominator in the historical contract below. MG1 (R1--R2),
+MG2 (R3--R4), MG3 (R5--R6), and MG4 (R7--R8) are validated locally.
+D31 is 8/8; final Palomar submission readiness is PARTIAL.
+Both D31 public proofs are closed; the sharp pair remains open. The
+10 September R5 reconciliation below uses saved validation evidence,
+freshly matched to the unchanged source hashes.
 
 Repository mode remains `PALOMAR-FIRST`. Keep this repository and reuse its
 checked code; do not create another repository or restart formalization.
@@ -37,13 +41,13 @@ formalization project are outside this revision.
    D31 does not discharge those obligations. BHP work remains a separate
    dependency project; it is not a prerequisite of the first route.
 
-The current Challenge/Solution files still encode D26': lower endpoint
-`1/6`, an extra `X/a^2` error, and a sub-Weyl rather than sub-block margin.
-They do NOT yet encode the revised paper. All four Solution holes remain.
-Do not change their types piecemeal or report the native 4/4 proof products
-as formal completion.
+Challenge/Core/Solution, Comparator names and metadata now encode D31:
+lower endpoint `0`, error `a/L + L^D sqrt(X/(a L))`, quantitative terminal
+exceptions and a sub-block margin. R7 closes the two almost-all Solution
+holes with unchanged public types; the two sharp holes remain. Formal
+completion is supported by the R7 proof/build/axiom evidence below.
 
-### Next statement-surface amendment (R1)
+### Validated statement-surface amendment (R1)
 
 Keep four selected declarations across the two existing Comparator entries.
 The sharp pair remains unchanged. Amend the almost-all pair together with
@@ -72,8 +76,9 @@ selections. Their finite/asymptotic statements are part of R6--R7.
 `FirstExitTarget.exactPrincipalMoleculeSupport` already contains the entire
 boundary star and `firstExitCompressionSupport`; the latter includes isolated
 targets. Its matrix retains boundary--target small-prime edges. Thus there is
-no reason to recreate the molecule. R2 must still check the normalized vector,
+no reason to recreate the molecule. R2 has checked the normalized vector,
 principal-submatrix identification, and source/target maps against the repair.
+Projected collective synthesis remains R4, not an R2 completion claim.
 
 The existing S1 theorem gives only `O(a/L)`, not the stronger native `o(1)`
 molecule defect. That is sufficient for this consumer if its objects match:
@@ -92,11 +97,124 @@ The previously compiled coherent `coreBudget` is a local compression budget.
 It is not the global residual operator/HS estimate required by D31. Likewise
 the old summed residual `O(B^2/L)` is not a producer for `O(B L^C)`.
 
+### R4 completion snapshot
+
+| Subtask | Status / next literal consumer |
+|---|---|
+| R4a actual projected columns and exact identities | CLOSED |
+| R4b quantitative tail and one-source continuation | CLOSED: actual residual squared norm <= C log^5 X, uniformly in the power window |
+| R4c complete-prefix HS/operator/Gram estimates | CLOSED: actual projected HS/operator residual bounds and collective raw/projected Gram smallness. The energy-weighted Schur sum retains K/a + omega(a), giving raw Gram error <= C log^5(X) (eta_X K/X + K^2/X), uniformly tending to zero on K <= X^theta, theta < 1/2. |
+| R4d reorthonormalized isometry | CLOSED: Q = V(V*V)^(-1/2) is the actual complete-prefix isometry, remains in the one-exit space, and retains BOTH residual bounds. Its exact Euclidean linear-isometry map is exposed for R3. |
+
+R4c exit verification: targeted 4,234/full 4,238-job builds pass. Five new
+public roots have standard axioms only. Empty-prefix, restricted-neighbour,
+down-divisor, coherent-row, orthonormal and endpoint controls pass. Semantic
+lint has the same 93 inherited findings and no additions; style passes.
+R4d exit verification: targeted 4,234/full 4,238-job builds pass. Ten new
+audit roots have standard axioms only; seven exact controls pass. Semantic
+lint has the same 93 inherited findings, no additions; style passes. The
+actual whitened residual has HS squared bound C K log^5 X and operator
+squared bound C log^5 X (1+K^2/sqrt X), uniformly for K <= X^theta,
+fixed theta < 1/2. No free Gram, injectivity or residual-budget premise.
+
+All four R4 exit products are now closed, so R4 earns one checklist unit.
+At that exit, D31 was **4/8 (50%)**, MG2 **2/2 COMPLETE**, selected Solution roots **0/4**.
+The completion audit and exact port provenance are in `PORT_MANIFEST.md`.
+No R5 complement hypothesis or later public theorem is credited here.
+
+### R5 exit reconciliation — 10 September 2026
+
+R5 is CLOSED. The unchanged owner/audit hashes match the handoff, and
+`.lake/d31-r5/full.log` records the final 4,238-job build including the
+one-exit corollary. Ten new roots have standard axioms only; the four selected
+Solution roots still use sorryAx. Saved controls/style pass; semantic lint
+has 93 inherited findings, none in the new R5 section. These are inherited
+validation results, freshly inspected here, not a build replay.
+The actual A/G complement gap is mu_B/16 at K=12288 B, and the actual
+residual squared norm is eventually below both epsilon B/log X and
+epsilon mu_B^2. At this R5 checkpoint D31 was 5/8, MG3 1/2; R6 was next.
+
+### R6 exit — 10 September 2026
+
+R6 is CLOSED. `AlmostAllAssembly` identifies the complete-prefix index with
+the global arithmetic rank and applies weak VALUE sorting, including ties.
+S1 and correction regularity supply the required uniform C B/log X model
+error; PNT puts sorted dyadic roots in [mu_B/8, 8 mu_B]. The actual R4--R5
+isometry, HS/operator bounds and mu_B/16 complement gap discharge every
+premise of R3. S2 transfers to A at that same global rank.
+
+For the literal defect d_a = |lambda_{j_S(a)}(A)^2 - pi_S(X/a) - M_a|,
+the new exports prove, uniformly on X^theta/log X <= B <= X^theta for
+each fixed 0 < theta < 1/2:
+
+- sum over the actual closed dyadic band of d_a^2 is at most
+  C X log^5 X + C B^3/log^2 X;
+- for every t>0, the number of band centres with
+  d_a > C0 B/log X + C1 t mu_B is at most C2 B log^5 X/t^2.
+
+These are actual graph conclusions, with no free frame, gap or residual
+budget hypotheses. The deterministic term remains outside the Markov noise.
+Fresh targeted/full builds pass 4,237/4,239 jobs; all fifteen new audit roots
+use standard axioms only and eight exact controls pass. Semantic lint has
+the same 93 inherited findings. Fresh style reports one inherited Unicode
+issue at unchanged `AlmostAllSpectralBudget.lean:9340`, no R6 findings.
+The nine modules are reachable from the declared Challenge/Audit roots;
+`mk_all --check` reports the intentionally absent umbrella module.
+Exact source hashes, growth, statement audit and logs are in `PORT_MANIFEST.md`.
+At the R6 exit D31 was **6/8 (75%)**, MG3 **2/2 COMPLETE**, public roots **0/4**.
+The following R7 exit supersedes that progress snapshot.
+
+### R7 exit — 10 September 2026
+
+R7 is CLOSED. The unchanged public types of `palomar_almostAll_powerBand`
+and `palomar_almostAll_subBlock` now have proofs. The terminal failure count
+is at most Cexc X^theta/log(X)^R for every fixed R>0 after choosing D; the
+same C,D give global density zero, with initial count X^theta/log X + 1
+retained. Finite dyadic induction handles natural endpoints and prime deletions.
+
+Internal Corollary 10.2 has tail C X log^6(X)/B^2 and full sharp-error density
+zero for 1/3 < theta < 1/2. Corollary 10.3 retains both operator scales,
+sqrt(X/(a log X)) and X^(1/4) sqrt(a/log X), with logarithmic exponent 5.
+It also proves error <= C X^(1/2-delta)/log X for every strict
+delta < min(theta/2, (1-2 theta)/4). The latter margin is positive on
+0 < theta < 1/2. The R6 noise producer now exposes its already-proved maximum
+bound; the R4 and R5 proofs are unchanged.
+
+Fresh targeted/full builds pass 4,237/4,239 jobs. Fifteen new internal roots
+and both almost-all public roots have only propext, Classical.choice and
+Quot.sound; only the sharp pair retains sorryAx. Fifteen exact controls pass.
+Owner semantic lint has the identical 93 inherited findings, Solution lint
+passes, and style has the same inherited Unicode finding. Public statement
+text matches the frozen Challenge, with Core, papers and pins unchanged.
+There are nine modules / six owners / 33,559 Lean lines including lakefile;
+all modules are reachable from Challenge/Audit. R7 adds 725 Lean lines total.
+Exact provenance, hashes, control repair and evidence are in `PORT_MANIFEST.md`.
+D31 is **7/8 (87.5%)**, MG4 **1/2**, public proofs **2/4**.
+R8 official release verification and the separate sharp route remain open.
+
+### R8 exit — 10 September 2026
+
+R8 is CLOSED for the frozen local D31 audit. Fresh selected/full builds pass
+4,238/4,239 jobs; the 235-root axiom report leaves only the sharp pair on
+sorryAx. The transitive closure of two public and six named internal roots
+contains 71,747 constants, with standard axioms only and no conditional
+short-interval input. Local Lean comparison checks 34 shared types and
+26 definition values, covering all 20 distinct Comparator selections.
+The declaration/source-reference inventory, provenance, metadata and source
+editorial checks are complete; all nine modules are reachable. No Lean,
+manuscript or pin changed. See `PORT_MANIFEST.md` for the exact scope,
+retained non-D31 support and evidence in `.lake/d31-r8/`.
+
+D31 **8/8 (100%)**, MG4 **2/2 COMPLETE**, public proofs **2/4**. This is not
+a Palomar-ready snapshot: an authorized complete source checkpoint and exact
+current Linux preflight/full Comparator/NanoDa/render replay remain pending.
+The two sharp proofs additionally block the combined four-root release.
+
 ### Frozen D31 obligation checklist
 
 Each row has one exit test. Stages have two rows each; close them in order.
-All rows are OPEN / NOT REVALIDATED for the revised consumer. No percentage
-credit is inferred from inspection, native proofs, or historical builds.
+R1--R8 are CLOSED for the scoped D31 checklist. No percentage credit is inferred
+from inspection, native proofs, or historical builds.
 
 | Stage / task | Exact obligation and exit test | Owner / reuse |
 |---|---|---|
@@ -109,15 +227,70 @@ credit is inferred from inspection, native proofs, or historical builds.
 | D / R7 | Theorem 1.3, Corollary 1.4, and internal Corollaries 10.2--10.3 assemble with correct terminal/global exception counts; both revised almost-all Solution holes close | `AlmostAllAssembly` plus Solution/audit |
 | D / R8 | Selected-root build, axioms, exact statement match, declaration reachability/provenance and documentation checked; no conditional analytic input remains in D31 | existing audit/Comparator surfaces; release checks scoped separately |
 
-Current revised checklist: **0/8 validated (0%)**. This is eight remaining
+Current revised checklist: **8/8 validated (100%)**. This is eight bounded
 consumer checks, not a claim that no reusable Lean work exists. Historical
 progress remains **15/28**, measured against the superseded D26' contract;
-do not add or compare those percentages. Public theorem closure is **0/4**.
-No code or build was performed during this planning revision.
+do not add or compare those percentages. Public theorem closure is **2/4**.
+R1 evidence: full build 4,222 jobs, exit 0; local Lean definitional comparison
+of 28 declaration types and 24 definition values passed. JSON/YAML parse and
+four-name selection checks passed. The sharp pair is byte-for-byte unchanged.
+Boundary checks cover the zero and half endpoints, terminal-set inclusion,
+and irregular denominators. The local comparison is not an official
+Comparator or independent-kernel proof certificate.
+
+R2 evidence: final full build 4,222 jobs, exit 0. The full-star principal
+matrix, unit vector, two-mode/kernel decomposition, root positivity, S1,
+correction regularity/logarithmic size and S2 ordered-index bridge are on
+the expanded axiom surface. Reused inputs and adapters have standard axioms
+only; all four selected proofs still contain `sorryAx`. Eight declarations
+(217 source lines) were reused verbatim; two small bridge lemmas were added.
+No new proof module. Total Lean source including lakefile is 20,541 lines,
+net +298 from the 20,243-line planning snapshot. Proof-owner files have no
+`sorry`, `admit`, project `axiom` or trusted-computation escape.
 
 R1 is a statement-alignment gate, not successful verification of an admitted
 Solution. Official selected-proof Comparator and independent-kernel evidence
 must wait for the relevant holes to close and the release stage to begin.
+
+R4b continuation checkpoint: exterior incoming multiplicity is now proved
+as omega(a)+omega(v) on the actual full first-exit support. The resulting
+raw residual bound is `(2 log(X)/log(2)) sum degree_H |interior|^2`, with
+no assumed collision bound. The remaining one-source obligation is its
+weighted coefficient sum, followed by R4c/d global budgets/isometry.
+Full build 4,238 jobs, four new standard-axiom roots; no checklist unit
+closes. That checkpoint used 24,851 local Lean lines.
+
+R4b weighted-response checkpoint: actual down-star degree growth preserves
+q, giving the moving-label coefficient bound 10000/(q mu_a). The entire
+degree-weighted kernel contribution is O(log^3 X). After integrating it,
+the actual residual squared norm is at most `(4 log(X)/log(2))` times the
+signed weighted response sum plus O(log^4 X). The next obligation is ONLY
+that signed sum, then R4c/d. Full build 4,238 jobs; four new standard-axiom
+roots. That checkpoint used 25,157 local Lean lines, in the
+same eight modules/five owners. Checklist 3/8, MG2 1/2, public 0/4.
+Exact evidence is in `PORT_MANIFEST.md`.
+
+R4b next row CLOSED: `eventually_powerRange_degreeWeightedDownCenters_le_logSq`
+proves the entire actual down-centre weighted sum is O(log^2 X), uniformly
+in moving a and q. The new finite degree majorant X/w+omega(w) is already
+consumed by this sum. Up-centre/leaf rows and their support assembly remain
+OPEN, followed by R4c/d. Targeted 4,234/full 4,238 jobs pass; three new roots
+have standard axioms only. The 93 semantic-lint findings are identical to
+the previous baseline; none in this owner. Four exact scalar controls pass.
+That checkpoint used 25,322 local Lean lines; same eight modules/five owners. Checklist
+3/8 (37.5%), MG2 1/2, selected proofs 0/4. No commit/push or paper change.
+
+R4b up-centre row CLOSED: `eventually_powerRange_degreeWeightedUpCenters_le_logSq`
+now proves the complete actual up-centre weighted sum is O(log^2 X).
+The centre resolvent identity includes zero-degree/isolated targets, and
+the actual power-window bound is 600/mu_a. The harmonic reciprocal-prime
+sum is retained before bounding the number of up-labels by sqrt(X).
+Only leaf rows and their support-sum assembly remain in the signed weighted
+response. R4c/d global estimates/isometry remain open. Targeted 4,234/full
+4,238 jobs pass, four new roots use standard axioms, four exact scalar
+controls pass. Semantic lint has the same 93 inherited errors; style passes.
+Current local Lean 25,564 (+242); eight modules/five owners. D31 3/8,
+MG2 1/2, selected proofs 0/4. Manuscripts/pins unchanged; no commit/push.
 
 ### Four mini-goals and iteration markers
 
@@ -127,10 +300,10 @@ existing proofs before writing new ones.
 
 | Mini-goal | Tasks | Exit | Current completion |
 |---|---|---|---|
-| MG1 — align and reuse | R1, R2 | revised statements and audited full-star/S1/S2 inputs agree with D31 | 0/2; R1 NEXT |
-| MG2 — finite comparison and actual frame | R3, R4 | same-index finite comparison and graph-specific global residual estimates | 0/2 |
-| MG3 — close the spectral estimate | R5, R6 | actual complement gap and ordered mean-square/tail theorem | 0/2 |
-| MG4 — public consequences and verification | R7, R8 | two D31 public proofs and their scoped verification | 0/2 |
+| MG1 — align and reuse | R1, R2 | revised statements and audited full-star/S1/S2 inputs agree with D31 | 2/2 COMPLETE |
+| MG2 — finite comparison and actual frame | R3, R4 | same-index finite comparison and graph-specific global residual estimates | 2/2 COMPLETE |
+| MG3 — close the spectral estimate | R5, R6 | actual complement gap and ordered mean-square/tail theorem | 2/2 COMPLETE |
+| MG4 — public consequences and verification | R7, R8 | two D31 public proofs and their scoped verification | 2/2 COMPLETE |
 
 One closed R-row earns one of eight checklist units. Mini-goal boundaries
 are therefore 25%, 50%, 75%, and 100% of this D31 checklist; these are not
@@ -141,7 +314,7 @@ At the end of every iteration, report this compact marker, followed by the
 literal theorem or hypothesis change and its verification evidence:
 
 ```text
-D31 | active R1 | MG1 0/2 | checklist 0/8 (0%) | public roots 0/4
+D31 | R8 CLOSED locally | MG4 2/2 | checklist 8/8 (100%) | public roots 2/4
 Delta: [closed row, strictly reduced hypothesis, or no mathematical change]
 Evidence: [target build; axiom result; statement/consumer match]
 Reuse/growth: [reused declarations; owner; line delta; new modules]
@@ -152,7 +325,275 @@ Update counts only when the row's exit test passes. A narrowed row remains
 open, with the eliminated and remaining hypotheses named explicitly. After
 two code-growing iterations without closure or strict hypothesis reduction,
 stop that route and review the same row; do not open another helper module.
-The present checkpoint freezes the plan only: **0/8**, next **R1**.
+Current local checklist: **8/8**, R8 CLOSED. Release readiness is PARTIAL.
+The historical `e887e0b` checkpoint contains planning documents only. This
+substantive development checkpoint includes all R1--R8 sources; the user
+authorized commit and push on 10 September. Match the exact clean HEAD and
+pushed canonical branch before handoff, and separately verify public access.
+
+MG3 is complete. All three subpoints below are CLOSED; they do not add
+checklist units beyond R5 and R6:
+
+1. R5 recovered the native energy-weighted complement inequality and matched
+   its producers to the actual whitened prefix Q.
+2. R5 instantiated the fixed-fraction complement gap and both smallness
+   absorptions uniformly on retained bands.
+3. R6 fed R2--R5 into the finite same-index comparison, identified the global
+   arithmetic rank, transferred G to A, and proved the mean-square/tail outputs.
+
+MG3 closed at 6/8; R7 public Solution assembly takes MG4 to 1/2 and the
+checklist to 7/8. R8 then closes scoped verification at 8/8 and MG4 at 2/2.
+Exact submission replay remains separate. No new BHP task,
+manuscript edit, or publication action is authorized.
+
+R5 iteration 1 — finite complement consumer CLOSED, actual gap still OPEN.
+`re_inner_add_le_of_weighted_frame_error` proves the complement form bound
+beta + tau^2 + eta from the forest prefix energy and weighted discrepancy
+W(F-U)*. For x orthogonal to F, U*x = -(F-U)*x; orthogonal decomposition
+therefore pays the prefix energy directly. No graph-map inverse or inverse
+energy conjugation is required for this consumer. The compiled
+`eventually_powerRange_whitenedFrame_adjoint_eq_zero_iff` identifies the
+actual whitened and raw projected complements. Thus the remaining literal
+inputs are the energy-weighted actual V-U operator bound, the forest prefix
+top, and power-range absorptions. Pointwise column estimates or an unweighted
+frame norm are not substitutes for that operator bound.
+Four new roots have standard axioms, targeted/full builds and four exact
+controls pass. Semantic lint remains 93 inherited findings, with none added.
+Owner +133 lines, audit +4; local Lean 30,610, still eight modules/five owners.
+No checklist unit closes: MG3 0/2, D31 4/8 (50%), public proofs 0/4.
+Next: actual energy-weighted projected-frame discrepancy, not R6 assembly.
+
+R5 iteration 2 — actual energy-weighted INTERIOR operator estimate CLOSED.
+The full-interior shared-target proof now covers all distinct centres,
+including adjacent ones; the old non-adjacent molecule theorem reuses it.
+For J with column sqrt(mu_a) times the actual full interior, the compiled
+bound is norm(J)^2 <= C log(X)^2 sqrt(K/log(X)), uniformly on every positive
+complete prefix K <= X^theta, theta < 1/2. The Schur weights sqrt(mu_a)
+retain the source energies; no maximum-energy substitution is used.
+Boundary alignment, projection/normalization transfer, forest prefix top
+and absorptions remain open. R5 and R6 earn no checklist units yet.
+Target/full builds pass; three new roots use standard axioms. Semantic
+lint remains the identical 93 inherited findings; style passes.
+Owner +217 lines, audit +3, total local Lean 30,830; no new module/import.
+Next: bound the phase-aligned boundary discrepancy using disjoint source
+star supports, then combine it with the now-closed interior estimate.
+
+R5 iteration 3 — actual weighted projected discrepancy CLOSED.
+The phase-aligned boundary error obeys mu_a norm(error_a) <= 700 eta;
+disjoint source-star supports give a diagonal weighted Gram estimate with
+no prefix-cardinality loss. Combining the full boundary and interior gives
+norm((F_raw-U) sqrt(Lambda))^2 <= C log(X)^2 sqrt(K/log X).
+Projection contracts this bound because it fixes U. Both actual column
+normalization and actual whitening preserve the orthogonal complement;
+therefore the finite R5 consumer can use the unnormalized projected frame.
+No separate normalization-error estimate or inverse graph-map is required.
+The actual weighted input and complement identification are now CLOSED.
+Forest-prefix top, fixed-fraction gap and both smallness absorptions remain
+OPEN. Next is the forest-prefix top using the existing nonpositive forest
+core and positive-star energy matrix; do not start R6 yet.
+Target/full builds 4234/4238 pass. Nine new roots use only standard axioms;
+six exact controls pass. Semantic lint remains the identical 93 inherited
+findings; style passes. Owner +433, audit +9, local Lean 31,272; no new
+module/import. MG3 0/2, D31 4/8 (50%), selected public proofs 0/4.
+
+R3 iteration: finite Lemma 5.4 and weak sorting contraction CLOSED. The
+same ordered index survives the low-complement Schur comparison; the new
+root `ordered_residual_squaredEnergy_comparison` includes the positive-root
+window, actual TQ-QD residual and the mean-square conclusion. Target build:
+4,234 jobs; full build 4,238 jobs. Five finite controls pass, including ties and the high-complement
+negative control. New public audit inputs use standard axioms only; the
+four selected proof holes remain explicit. Thirteen declarations reused,
+eight finite assembly/bridge theorems added, four unused reuse candidates
+pruned, one preapproved owner; local Lean 20,541 -> 21,352 (+811).
+Both manuscript hashes and all pins unchanged.
+
+R4a now proves actual complete-prefix phase alignment and unit columns, with
+projected norm in [1/2,1], exact normalized Gram subtraction and the residual
+identity retaining A Z. Its Pythagorean identity identifies the normalization
+with the manuscript formula. The specialization A Z = H Z remains R4b, along
+with the repaired down-kernel term and per-source continuation bounds.
+Then come R4c global Gram/operator estimates and R4d reorthonormalization.
+Only R4 is active; do not start R5 or another owner. This strictly narrows R4
+but earns no additional checklist unit: 3/8, MG2 1/2, public roots 0/4.
+R4a full build: 4,238 jobs; new audit roots use standard axioms only.
+Local Lean 21,352 -> 21,704 (+352); no new module or dependency.
+
+R4b checkpoint: the actual one-exit projection captures spectral components
+of already captured sources, including repeated eigenspaces without assuming
+global degree uniqueness. The positive zero source is captured; the negative
+zero source retains exactly minus twice the projected half-difference source.
+The actual discarded boundary kernel is annihilated by
+L and has squared norm O(a log(X)^3 / X^(3/2)). This concerns one component,
+not the full molecule tail Z. Negative-response capture and the full
+tail/continuation bounds remain R4b; global budgets and isometry remain R4c/d.
+Full build: 4,238 jobs, exit 0; four additional audit roots use standard
+axioms only. Local Lean 21,704 -> 21,962 (+258); no new module/import/pin.
+Checklist remains 3/8, MG2 1/2, public proofs 0/4. No publication action.
+
+R4b down-target checkpoint: `signedZeroModeSourceDifference_eq_sum_downKernels`
+identifies the actual half-difference with the canonical down-target kernels.
+`norm_sq_signedZeroModeSourceDifference_le` bounds its squared norm by
+omega(a)/2, using disjoint stars and the exact boundary leaf count. Uniform
+up-leaf data has zero kernel projection, including inactive up-targets.
+This closes the down-target/divisor subtask, not negative-response capture or
+the full molecule tail. Full build: 4,238 jobs, exit 0; four new audit roots
+use standard axioms only. Five exact rational controls pass. Local Lean
+21,962 -> 22,330 (+368); no new module/import/pin. Checklist remains 3/8,
+MG2 1/2, public proofs 0/4. Next: source-local negative-mode capture, then
+the full tail and one-source continuation bounds; R4c/d remain open.
+
+R4b source-local checkpoint: the actual canonical down-source spectral
+component is captured under degree separation from the other source blocks.
+Its exact signed coefficient is compiled, including arbitrary leaf data;
+isolated up-targets are removed exactly. This replaces the unsuitable
+historical global-simplicity certificate at the finite level. The remaining
+eventual specialization chooses the source ell*a and down-prime ell, proves
+local separation and nonvanishing, and obtains the normalized negative mode.
+Negative target responses/kernel responses and full tail estimates are not
+closed by the finite extraction. Owner +288 lines, audit +4; total 22,622,
+eight modules. Targeted build passed (4,234 jobs). Progress remains 3/8,
+MG2 1/2 and public 0/4. No manuscript or publication change.
+Final source-local gate: full build 4,238 jobs, exit 0; four new audit roots
+have standard axioms only. Six finite controls pass. Semantic lint retains
+93 inherited findings outside this owner; no new owner finding.
+
+R4b negative-mode checkpoint: the exact canonical down coefficient is
+nonzero when source and target degrees differ. Combined with the preceding
+source-local extraction, this captures the actual normalized negative
+down-star mode without global degree uniqueness or a free nonzero-coefficient
+premise. The remaining local degree premises are explicit. Pinned global PNT
+now also supplies strict allowed-prime count growth from k*n to (k+1)*n
+for each fixed positive k. Its use at the smallest-prime source ell*a,
+including graph-degree identification and all other down-targets, remains
+the next obligation. Full negative responses, full tail/continuations and
+R4c/d remain open. Targeted build: 4,234 jobs, exit 0. Six exact rational
+and integer controls pass, including the zero coefficient at equal degrees.
+Owner +200 lines; audit +3; local Lean 22,622 -> 22,825 (+203), no new
+module/import/pin. Checklist remains 3/8 (37.5%), MG2 1/2, public proofs 0/4.
+Final gate: full build 4,238 jobs passed; the three new roots have only
+propext, Classical.choice and Quot.sound. Six controls and style lint pass.
+The pinned semantic linter reports the same 93 inherited findings, none
+in this owner; only the inspected-declaration counts changed. Both manuscripts and all pins
+remain unchanged; diff check passes. No stage, commit or push.
+
+R4b smallest-prime checkpoint: eventual negative BOUNDARY-mode capture is
+CLOSED on every fixed theta < 1/2 power range. The theorem constructs the
+least allowed prime ell, separates its down-target from every other down
+target by a fixed-multiple PNT interval, and uses the existing up/down ratios
+for the remaining source-local inequalities. The source ell*a is placed in
+a slightly larger fixed power range below 1/2. No prime choice, coefficient,
+degree separation or spectral gap remains as a theorem premise.
+Negative TARGET responses, especially repeated target degrees, still need
+the equal-initial-segment argument; this does not prove LZ=0 for the entire
+molecule. Full tail/continuations, R4c/d remain open. Targeted build 4,234
+jobs passed. Owner 2,093 -> 2,311 (+218), audit +3; total 23,046 (+221),
+no new module/import/pin. Checklist 3/8 (37.5%), MG2 1/2, public 0/4.
+Final gate: full build 4,238 jobs passed. All three new public audit inputs
+use only propext, Classical.choice and Quot.sound; selected Solution roots
+still report sorryAx. Four exact prime-count controls pass, including a
+deleted-prime example and the nonleast-prime/repeated-label negative cases.
+Style lint passes; semantic lint retains exactly the previous 93 inherited
+findings, none in this owner. Both manuscripts and all pins match; no
+placeholder/trusted-computation escape in the owner. No stage/commit/push.
+
+R4b signed-target-response checkpoint: CLOSED for the actual negative
+signed first-exit response, not yet for the boundary-kernel-driven response.
+The finite up/down sign factors depend only on the spectral parameter;
+actual up/down ratio bounds keep the two families on opposite sides of
+the boundary degree. Repeated target degrees are allowed. Existing forest
+resolvent equations transfer captured sources to captured responses.
+Separately, equal-degree up-targets have identical boundary-leaf segments,
+the compatibility input still needed by the kernel-driven response.
+No full-molecule LZ=0 or global frame budget is claimed.
+
+Exit evidence: targeted 4,234 and full 4,238 jobs pass; eight new public
+audit inputs use only propext, Classical.choice and Quot.sound. Seven exact
+controls pass, including distinct equal-degree targets, wrong-factor and
+resonance negative controls. Style lint passes (existing optional nolints
+file warning); semantic lint has the identical 93 inherited findings, none
+in this owner. Owner 2,311 -> 2,675 (+364), audit +8; local Lean
+23,046 -> 23,418 (+372). Eight modules/five proof owners unchanged; no new
+import or pin. Both manuscript hashes match. Checklist remains 3/8 (37.5%),
+MG2 1/2, public proofs 0/4. No stage, commit or push.
+
+R4b kernel-coefficient checkpoint: the actual kernel source equals H*zeta.
+Symmetry and the existing reverse canonical source restrictions give its
+exact signed-mode coefficients: the up contribution is a partial kernel
+leaf sum times the target normalization/energy; every down contribution is
+zero because it uses the whole mean-zero leaf segment. Equal-degree active
+up-targets have exactly equal coefficients. This closes the coefficient
+calculation, NOT the spectral-projection assembly. The next exit test is
+capture of the whole negative spectral component, permitting repeated
+degrees, followed by the existing resolvent transfer. Only then can the
+full discarded-tail identity be assembled. No alternate coordinates or
+new resolvent construction were added.
+Owner 2,675 -> 2,861 (+186); audit +5; local Lean 23,418 -> 23,609 (+191).
+Checklist remains 3/8 (37.5%), MG2 1/2, public proofs 0/4. No new module,
+import, dependency, manuscript change, stage, commit or push.
+Final gate: full 4,238-job build passes, five new roots use standard axioms
+only, all five controls pass. Style passes; semantic lint has exactly the
+previous 93 inherited findings after the docstring fix, with no owner
+findings. Both manuscripts/pins match and diff/owner-placeholder checks pass.
+
+R4b kernel-spectral checkpoint: CLOSED for the actual negative kernel-source
+and kernel-response components on every fixed power range theta < 1/2.
+The proof groups equal-degree canonical blocks, identifies their common
+coefficient ratio to the captured positive source, and transfers capture
+through the existing first-exit equation. No global degree uniqueness is
+assumed. The eventual target-degree straddle producer discharges the finite
+up/down inequalities. This closes the preceding coefficient checkpoint's
+spectral assembly, not the full discarded-tail theorem.
+
+Next exit test: assemble L z_a = 0 for the full molecule, retaining the
+negative signed down-kernel correction in the quantitative tail bound;
+then price one-source continuations. R4c/d global budgets/isometry remain
+open. Checklist 3/8 (37.5%), MG2 1/2, public Solution proofs 0/4 unchanged.
+Owner 2,861 -> 3,269 (+408); audit +6; local Lean 23,609 -> 24,023 (+414).
+Targeted build 4,234 and full build 4,238 jobs pass. Six new audit roots use
+only standard axioms; five exact controls pass, including equal-degree
+incompatible-coefficient rejection. Style passes; semantic lint retains
+exactly 93 inherited findings and no owner findings. Frozen manuscripts,
+pins and eight-module/five-owner inventory unchanged. No stage/commit/push.
+
+R4b full-tail checkpoint: `eventually_powerRange_largePrime_discardedFullMolecule_eq_zero`
+assembles the actual boundary, signed response and kernel response. The
+finite spectral criterion uses the existing positive-star capture and the
+proved negative-component capture; only the zero eigenspace can remain.
+`eventually_powerRange_fullStarFrameTail_largePrime_zero` supplies L Z = 0
+and A Z = H Z uniformly for all complete prefixes K <= X^theta, theta < 1/2.
+This is the literal zero-mode specialization previously deferred by R4a.
+It does not say Z = 0 or discard the signed down-kernel correction.
+
+Next exit test: the full quantitative tail estimate retaining that correction,
+then raw one-source continuation counts. R4c/d budgets/isometry remain OPEN.
+Three new audit roots use standard axioms only; targeted 4,234 and full
+4,238-job builds pass. Semantic lint has the identical 93 inherited findings,
+none in this owner; style passes with the existing optional nolints warning.
+Owner 3,269 -> 3,465 (+196), audit +3, total local Lean 24,023 -> 24,222 (+199).
+Four exact matrix controls pass, including omitted-negative-mode failure
+and a nonzero zero-mode tail. YAML parse and diff checks pass.
+Eight modules/five owners, manuscript hashes and pins unchanged.
+Checklist 3/8 (37.5%), MG2 1/2, public proofs 0/4 unchanged. No commit/push.
+
+R4b quantitative-tail checkpoint: CLOSED for the actual full molecule.
+`eventually_powerRange_discardedSignedResponses_eq` gives Q response-plus = 0
+and Q response-minus = (-2/nu) Q D, with D the actual down-kernel source.
+The negative-mode scalar equation and existing first-exit gap give
+|alpha-minus| <= 100 eta^2/mu^2 and norm(kernel-response) <= norm(zeta).
+`eventually_powerRange_discardedFullMolecule_sq_le_scale` then proves
+
+    norm(Q f_a)^2 <= C (a log^3(X)/X^(3/2) + a^3 omega(a) log(X)/X^2).
+
+Quantifiers: fixed S and theta < 1/2, eventually all actual allowed a <= X^theta;
+no capture, gap or residual-norm premise is left. The first log-cubed term
+is the compiled producer's rate, not the paper's sharper log-squared rate.
+This is sufficient for R4's fixed-log-power budget; it is not a claim that
+the sharper rate has been formalized. Six new audited roots use standard
+axioms; full build 4,238 passes. Owner +410 lines, audit +6; no new module,
+import, coordinate or analytic dependency. Total local Lean 24,638.
+Next exit test: raw one-source continuation count, then R4c/d global
+budgets/isometry. Checklist stays 3/8 (37.5%), MG2 1/2, public proofs 0/4.
+Both manuscripts and pins remain unchanged. No commit/push.
 
 After R8, resume the separate sharp track: audited BHP input, remaining
 buffered/internal alignment and rank assembly, then its two public roots.
@@ -164,9 +605,9 @@ repository's zero-admission release gate.
 ### Owner and growth control
 
 - Existing owners: `Core`, `FirstExitTarget`, `FullSpectrumTransfer`,
-  `TerminalSchur`. Keep them; delete no historical proof in this planning pass.
-- Next preapproved owners: `AlmostAllSpectralBudget` and
-  `AlmostAllAssembly`. No separate file for Lemma 5.4, sorting, or a corollary.
+  `TerminalSchur`, `AlmostAllSpectralBudget`, and `AlmostAllAssembly`.
+  Keep them; the two D31 owners were admitted under this plan. No separate
+  file for Lemma 5.4, sorting, or a corollary.
 - `AlmostAllArithmetic` is retired before creation: no Guth--Maynard or
   reciprocal-tiling implementation belongs to D31.
 - Later sharp owners remain `TerminalArithmetic` and `TerminalAssembly`.
@@ -179,7 +620,7 @@ repository's zero-admission release gate.
   Report line deltas and justify necessary growth by an R-row; do not invent
   a higher fixed ceiling or copy whole historical modules. Maintain at most
   the approved eight proof owners and zero unexplained release-only modules.
-- Before admitting either next owner, record exact source declarations and
+- Before admitting any further preapproved owner, record exact source declarations and
   dependencies in `PORT_MANIFEST.md`; shared facts are extracted once.
 - Two successive code-growing batches without closure or a strict reduction
   of the active row's hypotheses trigger replanning, not another helper file.
@@ -189,8 +630,11 @@ type; stage completion; 0--8 total; actual public holes; owner/new-module and
 line deltas; targeted build/axiom results; next single task. Do not count a
 successful build alone as a discharged mathematical obligation.
 
-The next task is R1, followed by R2. This plan does not authorize publication,
-dependency changes, or resumption of unrelated analytic research.
+R8 scoped D31 verification is complete. This complete source checkpoint and
+push were explicitly authorized. The next release gates are public source
+access and exact current Palomar preflight/full replay on Linux. The separate sharp proof route remains
+open. This plan does not authorize publication, dependency changes, or
+resumption of unrelated analytic research.
 
 ## Historical contract through 8 September 2026
 

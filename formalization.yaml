@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Prescribed and almost-all power-band spectra of prime-cover graphs"
+  description: >-
+    Palomar-first Lean 4 formalization of prescribed ordered eigenvalues and
+    density-one sub-block estimates for finite prime-cover graphs. The sharp
+    terminal-band statements have range 21/61 < theta < 1/2. The D31 statements
+    have range 0 < theta < 1/2, error a/log(X) plus a logarithmic multiple of
+    sqrt(X/(a log(X))), quantitative terminal exception counts, and a global
+    density-zero failure set. Both D31 almost-all proofs compile with standard
+    axioms; the two sharp terminal-band proofs remain open.
+  authors: ["Idris Ali Shaik"]
+  license: "Apache-2.0"
+  responsible_maintainers: ["Idris Ali Shaik"]
+
+classification:
+  arxiv: [math.CO, math.NT]
+  msc2020: [05C50, 11N05]
+
+sources:
+  - title: "Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs"
+    authors: ["Idris Ali Shaik"]
+    type: "paper"
+    relationship: "formalizes"
+    note: >-
+      Paper II mathematical source at prime-orthant-geometry commit
+      df32cafb021c0ed90f14f045858525882d50ab9e, file
+      draft/prescribed-eigenvalues-in-prime-cover-power-bands.md, SHA-256
+      b145e0a4ed2078fca969ed127d00c73d8758a76b559971988501693c1b60cfa3.
+      This identifies the native paper, not a completed Lean proof.
+    license: "unknown"
+    author_endorsement: "participated"
+  - title: "Ordered comparison and density-one power-band estimates"
+    authors: ["Idris Ali Shaik"]
+    type: "other"
+    relationship: "formalizes"
+    note: >-
+      D31 native proof record at the same mathematical-source commit, file
+      analysis/paper2-ordered-comparison-strengthening-2026-09-09.md.
+      Uses global PNT and full-star frame/complement estimates, not BHP or
+      Guth--Maynard. This is native provenance, not formal closure.
+    license: "unknown"
+    author_endorsement: "participated"
+
+related_formalizations:
+  - id: "https://github.com/shaikidris/prime-star-spectra-formalization/tree/59176e4ce57e7d6578cafd1de0029fed6fc13ccf"
+    relationship: "builds-on"
+    note: "Pinned Paper I graph, star-forest, first-exit, and analytic infrastructure."
+
+automation:
+  methods:
+    - method: "agent"
+      framework: "OpenAI Codex"
+      tool_setup: >-
+        Human-directed mathematical specification and staged Lean proof work,
+        using the repository proof ledger, pinned Lean/Mathlib dependencies,
+        Lake builds, axiom audits, and local statement/dependency checks.
+  notes: >-
+    AI agents assisted with proof implementation, porting, documentation and
+    verification. This records the workflow without asserting an exact model
+    inventory for earlier runs or a separate human line-by-line proof review.
+
+status:
+  scope: >-
+    Development snapshot with the two D31 almost-all results proved and two
+    sharp terminal-band obligations open. R8 scoped D31 verification is complete;
+    final Palomar submission readiness is partial.
+  sorry_count: 2
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound, sorryAx]
+  main_results:
+    - declaration: "PrimeCoverPowerBand.palomar_terminalBand_prescribedRanks"
+      file: "PrimeCoverPowerBandSolution.lean"
+      sorry_count: 1
+      axioms: [propext, Classical.choice, Quot.sound, sorryAx]
+      comparator_config: "comparator.json"
+    - declaration: "PrimeCoverPowerBand.palomar_terminalBand_primeCounting"
+      file: "PrimeCoverPowerBandSolution.lean"
+      sorry_count: 1
+      axioms: [propext, Classical.choice, Quot.sound, sorryAx]
+      comparator_config: "comparator.json"
+    - declaration: "PrimeCoverPowerBand.palomar_almostAll_powerBand"
+      file: "PrimeCoverPowerBandSolution.lean"
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: "almost-all-comparator.json"
+    - declaration: "PrimeCoverPowerBand.palomar_almostAll_subBlock"
+      file: "PrimeCoverPowerBandSolution.lean"
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: "almost-all-comparator.json"
+
+review:
+  status: "agent-reviewed; scoped D31 verification complete; submission readiness partial"
+  notes: >-
+    R1--R8 passed the local D31 checklist (8/8, 100%; MG4 2/2).
+    Both public almost-all roots have standard-axiom proofs with unchanged
+    Challenge types. Terminal and global conclusions use identical error
+    parameters and retain the initial segment. Internal Corollaries 10.2 and
+    10.3 retain the sharp density range and coherent every-centre operator
+    error. Fresh selected/full builds pass 4238/4239 jobs; a 235-root axiom
+    report leaves only the sharp pair on sorryAx. Eight public/internal D31
+    roots have 71747 constants in their transitive union, with standard axioms
+    only. Local namespace-isolated Lean comparison passes 34 shared types and
+    26 definition values, covering all selections; this is not official
+    Comparator or independent-kernel evidence. The declaration/source-reference
+    inventory preserves shared/sharp support and does not assert that the
+    combined tree is minimal for D31 alone. Metadata schema, current Palomar
+    contract, source provenance, source editorial assessment, exporter-tag
+    compatibility and canonical Mathlib ancestry checks pass. No separate human
+    line-by-line review is asserted. Nine modules, six owners and 33559 Lean
+    lines including lakefile are unchanged, as are papers and dependency pins.
+    The inherited 93 semantic-lint findings and one Unicode-style finding were
+    not rerun. This development checkpoint contains the complete substantive
+    source, including all nine Lean modules. Commit and push were authorized
+    on 10 September 2026. Public source access and exact current Linux
+    preflight/full Comparator/NanoDa/render replay remain required; the two
+    sharp proofs also block a combined four-root release. The selected intake
+    commit must match clean HEAD and the pushed canonical branch. No
+    Palomar-ready claim or submission is made.
